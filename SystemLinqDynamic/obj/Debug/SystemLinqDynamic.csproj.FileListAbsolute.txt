@@ -1,0 +1,5 @@
+C:\Users\z26970\Project\TheArmsSystem\ARMS\SystemLinqDynamic\bin\Debug\SystemLinqDynamic.dll
+C:\Users\z26970\Project\TheArmsSystem\ARMS\SystemLinqDynamic\bin\Debug\SystemLinqDynamic.pdb
+C:\Users\z26970\Project\TheArmsSystem\ARMS\SystemLinqDynamic\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\z26970\Project\TheArmsSystem\ARMS\SystemLinqDynamic\obj\Debug\SystemLinqDynamic.dll
+C:\Users\z26970\Project\TheArmsSystem\ARMS\SystemLinqDynamic\obj\Debug\SystemLinqDynamic.pdb

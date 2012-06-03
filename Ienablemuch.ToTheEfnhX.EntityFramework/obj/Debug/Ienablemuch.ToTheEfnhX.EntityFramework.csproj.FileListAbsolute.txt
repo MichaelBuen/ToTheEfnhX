@@ -1,0 +1,11 @@
+C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\bin\Debug\Ienablemuch.ToTheEfnhX.EntityFramework.dll
+C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\bin\Debug\Ienablemuch.ToTheEfnhX.EntityFramework.pdb
+C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\bin\Debug\EntityFramework.dll
+C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\bin\Debug\Ienablemuch.ToTheEfnhX.dll
+C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\bin\Debug\SystemLinqDynamic.dll
+C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\bin\Debug\SystemLinqDynamic.pdb
+C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\bin\Debug\Ienablemuch.ToTheEfnhX.pdb
+C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\bin\Debug\EntityFramework.xml
+C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\obj\Debug\Ienablemuch.ToTheEfnhX.EntityFramework.dll
+C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\obj\Debug\Ienablemuch.ToTheEfnhX.EntityFramework.pdb

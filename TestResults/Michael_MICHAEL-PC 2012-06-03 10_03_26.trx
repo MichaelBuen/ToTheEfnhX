@@ -1,0 +1,1124 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="3b338620-db53-487c-aa0b-debcdf0dd213" name="Michael@MICHAEL-PC 2012-06-03 10:03:26" runUser="Michael-PC\Michael" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="7d9e14f4-f525-48ee-bea8-a34d9f4cc18d">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Michael_MICHAEL-PC 2012-06-03 10_03_26">
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.Memory\bin\Release\Ienablemuch.ToTheEfnhX.Memory.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\packages\FluentNHibernate.1.3.0.717\lib\FluentNHibernate.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhx.CommonExtensions\bin\Release\Ienablemuch.ToTheEfnhx.CommonExtensions.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\packages\NHibernate.3.3.0.4000\lib\Net35\NHibernate.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\packages\EntityFramework.4.3.1\lib\net40\EntityFramework.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.NHibernate\bin\Release\Ienablemuch.ToTheEfnhX.NHibernate.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\bin\Release\Ienablemuch.ToTheEfnhX.EntityFramework.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\ToTheEfnhX\bin\Release\Ienablemuch.ToTheEfnhX.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-06-03T10:03:26.1730000+08:00" queuing="2012-06-03T10:03:26.2340000+08:00" start="2012-06-03T10:03:26.2770000+08:00" finish="2012-06-03T10:03:30.4450000+08:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="52" executed="52" passed="28" error="0" failed="24" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Nh_CanHaveIncrementingKey" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="c8ff8ef9-a95a-0779-90f7-6e8188ebefd1">
+      <Execution id="4d39b8b7-9b38-4b37-84eb-69ea4686b3f6" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_CanHaveIncrementingKey" />
+    </UnitTest>
+    <UnitTest name="Nh_SessionTransaction_can_detect_its_own_transaction_commitness_only" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="83330a72-51da-0d0d-d2b2-826b2f6cfd00">
+      <Execution id="8494f91e-b13c-442d-9741-616c806ca2d0" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_SessionTransaction_can_detect_its_own_transaction_commitness_only" />
+    </UnitTest>
+    <UnitTest name="Nh_CanDetectUpdateConflictingDelete" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="5d13769c-6ed9-df33-8e6d-b0cc79c073f2">
+      <Execution id="6fa8f592-a4f0-4d61-8dcf-095275a9ac80" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_CanDetectUpdateConflictingDelete" />
+    </UnitTest>
+    <UnitTest name="Nh_Can_Orm_Merge_Can_Create" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="8af4731e-1204-41e4-f479-73db6099844b">
+      <Execution id="5ccf17ad-4084-4fea-b750-f956a1b964a0" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_Can_Orm_Merge_Can_Create" />
+    </UnitTest>
+    <UnitTest name="Nh_Can_Orm_do_cascaded_deletions" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="170c0ff1-28bc-09a2-839b-5ab24853aea8">
+      <Execution id="a3d4f35e-f994-4990-be05-b51cf97fcabd" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_Can_Orm_do_cascaded_deletions" />
+    </UnitTest>
+    <UnitTest name="Saving_is_ok" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="5b9ac5c8-7814-fd36-cd57-f0de0de0fae7">
+      <Execution id="a7897fb7-7e67-46ee-9130-6755e761f130" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Saving_is_ok" />
+    </UnitTest>
+    <UnitTest name="Fetching_strategies_of_NHibernate_helper_has_no_problem_on_mocked_IQueryable" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="24f780e7-822d-62ed-f13e-e2daddc611e1">
+      <Execution id="38731fdb-78c3-4849-9f88-d95534a4207e" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Fetching_strategies_of_NHibernate_helper_has_no_problem_on_mocked_IQueryable" />
+    </UnitTest>
+    <UnitTest name="Ef_CanDetectUpdateConflictingUpdate" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="ca3ec696-2df9-55bd-c53c-f732b5c80a68">
+      <Execution id="e0b26913-3867-4a31-bf59-b8ea258e128d" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_CanDetectUpdateConflictingUpdate" />
+    </UnitTest>
+    <UnitTest name="Nh_CanUpdate" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="63d9977f-78b2-ba78-f19b-1e84d68eabe8">
+      <Execution id="400cbd42-5d91-4377-9a21-f50a0e947f8e" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_CanUpdate" />
+    </UnitTest>
+    <UnitTest name="Memory_CanUpdate" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="f5049a26-85f5-2d61-7d0d-3fe36d498d57">
+      <Execution id="156ae1cc-548a-4b34-b819-9ab69a877698" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Memory_CanUpdate" />
+    </UnitTest>
+    <UnitTest name="Ef_CanDetectDeleteConflictingDelete" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="4bb22a57-9102-06ea-257b-caae673d46d7">
+      <Execution id="49693aad-0395-4e96-971f-e6f7ebfeb9f3" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_CanDetectDeleteConflictingDelete" />
+    </UnitTest>
+    <UnitTest name="Ef_Can_save_transaction" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="f473cffe-6acb-bc8c-3c44-48f67f9567de">
+      <Execution id="aa0ddd6e-065e-4cc0-84d9-c3b31e9d31b2" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_Can_save_transaction" />
+    </UnitTest>
+    <UnitTest name="Memory_CanDetectDeleteConflictingDelete" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="d409929f-129a-9686-590d-6472fdfa28e4">
+      <Execution id="24785d77-1fc8-4084-8fe0-9225c179048d" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Memory_CanDetectDeleteConflictingDelete" />
+    </UnitTest>
+    <UnitTest name="TestArray" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="e4d36185-e99e-9b3f-8afc-2b7c501afd9a">
+      <Execution id="ff55b265-5918-499d-bf88-154c8f2252dd" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestArray" />
+    </UnitTest>
+    <UnitTest name="Ef_CanDetectUpdateConflictingDelete" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="cdd1ec05-a33a-edaf-1560-6637f27329d2">
+      <Execution id="2b64ad62-df22-4fcb-8195-85f68691aa7e" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_CanDetectUpdateConflictingDelete" />
+    </UnitTest>
+    <UnitTest name="Nh_SessionTransaction_cannot_detect_transaction_commitness" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="dad118fb-1088-58a3-350a-fc5e47173fa9">
+      <Execution id="e7e40328-67da-4c88-a62f-f413ce5a1386" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_SessionTransaction_cannot_detect_transaction_commitness" />
+    </UnitTest>
+    <UnitTest name="Ef_Can_Orm_Merge_Can_Create" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="a9ed84c2-917f-5ccb-44a7-7e3cea9cd5e0">
+      <Execution id="fd5c3917-a7d2-4f89-a5eb-9d271a0d5705" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_Can_Orm_Merge_Can_Create" />
+    </UnitTest>
+    <UnitTest name="Nh_Can_Orm_Merge_Can_Update" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="b9cbda9a-23ca-3458-8bf7-8aa6598f8754">
+      <Execution id="03aad3fd-5f8b-4a4e-b6be-f1c8e235535f" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_Can_Orm_Merge_Can_Update" />
+    </UnitTest>
+    <UnitTest name="Memory_CanSaveHeaderDetail" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="c2e9f01d-6387-7f00-c2a6-71385a796942">
+      <Execution id="265297f1-b826-4d3f-986e-a7c605214ae6" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Memory_CanSaveHeaderDetail" />
+    </UnitTest>
+    <UnitTest name="Ef_CanSave" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="6a52032d-db59-8802-47db-20699e8ef053">
+      <Execution id="282e186c-6739-43c2-b50e-7eef8b3ac681" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_CanSave" />
+    </UnitTest>
+    <UnitTest name="Ef_HasRowVersion" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="86150143-fb0b-c807-6c85-448e509331e0">
+      <Execution id="a7bd29df-517c-49a2-a814-47e9ff7ced40" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_HasRowVersion" />
+    </UnitTest>
+    <UnitTest name="Ef_CanUpdate" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="9ce2ff54-3bea-2c09-7986-c83994c1d685">
+      <Execution id="1796daa3-c35d-43a0-9d49-310303bdd0e2" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_CanUpdate" />
+    </UnitTest>
+    <UnitTest name="Nh_CanDetectDeleteConflictingUpdate" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="467d17f0-5ec4-24a5-9089-e15ef18964f7">
+      <Execution id="2a0e51ca-46f2-4271-ad2d-f8abdb278c52" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_CanDetectDeleteConflictingUpdate" />
+    </UnitTest>
+    <UnitTest name="Nh_HasRowVersion" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="919c9ab6-d8de-ff18-95fc-25bc030735bd">
+      <Execution id="ad46a865-2f60-43d6-9ff6-74b2c3b0b60a" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_HasRowVersion" />
+    </UnitTest>
+    <UnitTest name="Ef_Can_Orm_do_cascaded_deletions" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="a2256363-4989-1fab-e208-96edc389fe3c">
+      <Execution id="6a22f025-1017-4b37-80fc-0444c874b40f" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_Can_Orm_do_cascaded_deletions" />
+    </UnitTest>
+    <UnitTest name="Memory_CanSaveTransaction" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="6b805790-9c4f-2071-6e55-fbbb337c0021">
+      <Execution id="6f6e9276-ccbf-4479-9f1a-8feb01aa3871" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Memory_CanSaveTransaction" />
+    </UnitTest>
+    <UnitTest name="Ef_Can_Orm_Merge_Can_Update" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="3a1e9fe6-a4ce-9adb-c086-11052cee98b6">
+      <Execution id="81da69d5-4cce-4fe9-a200-e78fcb4047fd" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_Can_Orm_Merge_Can_Update" />
+    </UnitTest>
+    <UnitTest name="Ef_CanDelete" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="c3da4334-35ea-a9c1-5cbf-c1daa7323978">
+      <Execution id="9638edef-e7f6-4b4f-90bf-0f825c2b987d" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_CanDelete" />
+    </UnitTest>
+    <UnitTest name="Ef_Can_queue_changes" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="ffcba511-cdf9-ce52-fd62-900fe7820ecc">
+      <Execution id="d7fc3501-faae-4024-816b-da36a9645cd9" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_Can_queue_changes" />
+    </UnitTest>
+    <UnitTest name="Fetching_strategies_of_EntityFramework_helper_has_no_problem_on_mocked_IQueryable" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="c8cf96fa-83e0-e026-64af-f003abc95103">
+      <Execution id="213cc81c-7f5d-4bf9-80a7-8cdc3b613e79" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Fetching_strategies_of_EntityFramework_helper_has_no_problem_on_mocked_IQueryable" />
+    </UnitTest>
+    <UnitTest name="Memory_CanDetectUpdateConflictingDelete" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="314cd11d-882d-0d0a-f196-b0f474ca8700">
+      <Execution id="bdbebad9-c368-44f8-a931-e468eb5c9807" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Memory_CanDetectUpdateConflictingDelete" />
+    </UnitTest>
+    <UnitTest name="Nh_Can_queue_changes" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="8ae0b4b0-ccc4-fc93-736a-72af24764f70">
+      <Execution id="8fcf25c7-a827-469a-a72f-4d04aca2e5f7" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_Can_queue_changes" />
+    </UnitTest>
+    <UnitTest name="Nh_Can_Detect_Transaction_From_Session_Begin_Transaction" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="55b9acb6-c8fa-83e2-62ec-c3bb6a6ae6ad">
+      <Execution id="8e8e5b1c-0e08-466f-9c80-ce901d4950bd" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_Can_Detect_Transaction_From_Session_Begin_Transaction" />
+    </UnitTest>
+    <UnitTest name="Nh_CanDetectDeleteConflictingDelete" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="8557e6ab-47d2-b8b1-2926-0bb94a2d505d">
+      <Execution id="dba099b0-c8a8-422e-9e1b-2fbfa7f88f72" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_CanDetectDeleteConflictingDelete" />
+    </UnitTest>
+    <UnitTest name="Memory_CanSave" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="8c5d9d25-e5b8-63c8-9c42-cebb67787fde">
+      <Execution id="44d256c3-40ab-4e05-89bb-ed17a62c42ee" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Memory_CanSave" />
+    </UnitTest>
+    <UnitTest name="Can_do_deep_clone" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="f7d7cfdb-4468-5c56-7540-afe0d55e093a">
+      <Execution id="33db4e6f-2dd0-4158-946d-d5547ebf5680" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_do_deep_clone" />
+    </UnitTest>
+    <UnitTest name="Ef_CanDetectDeleteConflictingUpdate" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="8bf5c997-85a0-f72e-564a-9d66e659263c">
+      <Execution id="dbfed9ed-4008-4078-9b39-3aae4eb9681b" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_CanDetectDeleteConflictingUpdate" />
+    </UnitTest>
+    <UnitTest name="Memory_CanDelete" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="4eb22f5f-6a6e-dede-7dcd-8a02b2b7eecd">
+      <Execution id="67d4d8ad-2c39-4273-a659-4804a40b62b6" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Memory_CanDelete" />
+    </UnitTest>
+    <UnitTest name="Memory_CanHaveIncrementingKey" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="c5220795-75d7-ce76-adb5-6a1d661e1fb0">
+      <Execution id="c6d92bd5-31b8-475e-b52d-f23aa6d19c8f" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Memory_CanHaveIncrementingKey" />
+    </UnitTest>
+    <UnitTest name="Memory_CanDetectUpdateConflictingUpdate" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="385b97ed-767a-46eb-ce77-8402dbdb924a">
+      <Execution id="7b8be629-0265-41ea-ae60-d02affe99e84" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Memory_CanDetectUpdateConflictingUpdate" />
+    </UnitTest>
+    <UnitTest name="Ef_Can_rollback_transaction" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="ef9db0bb-63c6-f8c2-c180-d50d1ce2ca5b">
+      <Execution id="1cb61ce7-d6cf-4212-9849-01601b4a1d0d" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_Can_rollback_transaction" />
+    </UnitTest>
+    <UnitTest name="Nh_Can_save_transaction" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="d14d6d4a-1363-e36e-8cf9-c1c992b9e243">
+      <Execution id="130f3071-752c-49a6-a6a4-0651dd62df47" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_Can_save_transaction" />
+    </UnitTest>
+    <UnitTest name="Nh_CanSaveHeaderDetail" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="f68ad391-23ca-2766-d2b2-8731589ef39b">
+      <Execution id="f6a6c569-5cfc-4bff-b30e-6c2032d85038" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_CanSaveHeaderDetail" />
+    </UnitTest>
+    <UnitTest name="Nh_Can_rollback_transaction" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="498581d4-9097-59b7-1a75-c07c04a53675">
+      <Execution id="becc6cbc-f3ed-41a2-9c04-8403cc981d23" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_Can_rollback_transaction" />
+    </UnitTest>
+    <UnitTest name="Memory_CanDetectDeleteConflictingUpdate" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="9608206a-383a-828f-299c-2c493d95d886">
+      <Execution id="3e480a9e-f441-4a92-ad55-a7fc4321c710" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Memory_CanDetectDeleteConflictingUpdate" />
+    </UnitTest>
+    <UnitTest name="Nh_CanDetectUpdateConflictingUpdate" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="7b0e110e-2e6a-879c-359f-7b225fdba37f">
+      <Execution id="890aa7d2-95c8-422a-b4a0-ff1c8986bcac" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_CanDetectUpdateConflictingUpdate" />
+    </UnitTest>
+    <UnitTest name="Nh_Can_Detect_Transaction_From_Session_Transaction_Begin" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="35cdc240-50c9-1325-cb02-2e20cf8d0e6b">
+      <Execution id="d58db0be-b369-4501-849d-d6762d6d1b59" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_Can_Detect_Transaction_From_Session_Transaction_Begin" />
+    </UnitTest>
+    <UnitTest name="Ef_CanHaveIncrementingKey" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="e392eca5-e91b-ff0f-619e-8a24d0ecbe68">
+      <Execution id="d24a2299-eefe-4fb3-bbc9-b1b68bf59e56" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_CanHaveIncrementingKey" />
+    </UnitTest>
+    <UnitTest name="Nh_CanSave" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="c9750689-b2a7-1965-bbd3-0c2f5eda3fb2">
+      <Execution id="b5bca089-c1e5-4432-b510-241141e90084" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_CanSave" />
+    </UnitTest>
+    <UnitTest name="Nh_CanDelete" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="f3b46671-4362-7dc3-90a0-0fcbe80e34d8">
+      <Execution id="0ed6498a-4ad4-446a-859a-a8f63f29ba09" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_CanDelete" />
+    </UnitTest>
+    <UnitTest name="Ef_CanSaveHeaderDetail" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="ecf5b477-cdd8-3508-c195-40a64bc26f00">
+      <Execution id="1d3730d7-b1e8-4671-be20-fdc9706a1eb8" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_CanSaveHeaderDetail" />
+    </UnitTest>
+    <UnitTest name="Memory_HasRowVersion" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="0947b967-fff8-9b8d-6688-507250130b49">
+      <Execution id="540b8b79-3a72-479b-afb8-2ec734c3213f" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Memory_HasRowVersion" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="0947b967-fff8-9b8d-6688-507250130b49" executionId="540b8b79-3a72-479b-afb8-2ec734c3213f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="170c0ff1-28bc-09a2-839b-5ab24853aea8" executionId="a3d4f35e-f994-4990-be05-b51cf97fcabd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="24f780e7-822d-62ed-f13e-e2daddc611e1" executionId="38731fdb-78c3-4849-9f88-d95534a4207e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="314cd11d-882d-0d0a-f196-b0f474ca8700" executionId="bdbebad9-c368-44f8-a931-e468eb5c9807" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="35cdc240-50c9-1325-cb02-2e20cf8d0e6b" executionId="d58db0be-b369-4501-849d-d6762d6d1b59" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="385b97ed-767a-46eb-ce77-8402dbdb924a" executionId="7b8be629-0265-41ea-ae60-d02affe99e84" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3a1e9fe6-a4ce-9adb-c086-11052cee98b6" executionId="81da69d5-4cce-4fe9-a200-e78fcb4047fd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="467d17f0-5ec4-24a5-9089-e15ef18964f7" executionId="2a0e51ca-46f2-4271-ad2d-f8abdb278c52" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="498581d4-9097-59b7-1a75-c07c04a53675" executionId="becc6cbc-f3ed-41a2-9c04-8403cc981d23" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4bb22a57-9102-06ea-257b-caae673d46d7" executionId="49693aad-0395-4e96-971f-e6f7ebfeb9f3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4eb22f5f-6a6e-dede-7dcd-8a02b2b7eecd" executionId="67d4d8ad-2c39-4273-a659-4804a40b62b6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="55b9acb6-c8fa-83e2-62ec-c3bb6a6ae6ad" executionId="8e8e5b1c-0e08-466f-9c80-ce901d4950bd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5b9ac5c8-7814-fd36-cd57-f0de0de0fae7" executionId="a7897fb7-7e67-46ee-9130-6755e761f130" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5d13769c-6ed9-df33-8e6d-b0cc79c073f2" executionId="6fa8f592-a4f0-4d61-8dcf-095275a9ac80" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="63d9977f-78b2-ba78-f19b-1e84d68eabe8" executionId="400cbd42-5d91-4377-9a21-f50a0e947f8e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6a52032d-db59-8802-47db-20699e8ef053" executionId="282e186c-6739-43c2-b50e-7eef8b3ac681" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6b805790-9c4f-2071-6e55-fbbb337c0021" executionId="6f6e9276-ccbf-4479-9f1a-8feb01aa3871" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7b0e110e-2e6a-879c-359f-7b225fdba37f" executionId="890aa7d2-95c8-422a-b4a0-ff1c8986bcac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="83330a72-51da-0d0d-d2b2-826b2f6cfd00" executionId="8494f91e-b13c-442d-9741-616c806ca2d0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8557e6ab-47d2-b8b1-2926-0bb94a2d505d" executionId="dba099b0-c8a8-422e-9e1b-2fbfa7f88f72" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="86150143-fb0b-c807-6c85-448e509331e0" executionId="a7bd29df-517c-49a2-a814-47e9ff7ced40" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8ae0b4b0-ccc4-fc93-736a-72af24764f70" executionId="8fcf25c7-a827-469a-a72f-4d04aca2e5f7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8af4731e-1204-41e4-f479-73db6099844b" executionId="5ccf17ad-4084-4fea-b750-f956a1b964a0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8bf5c997-85a0-f72e-564a-9d66e659263c" executionId="dbfed9ed-4008-4078-9b39-3aae4eb9681b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8c5d9d25-e5b8-63c8-9c42-cebb67787fde" executionId="44d256c3-40ab-4e05-89bb-ed17a62c42ee" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="919c9ab6-d8de-ff18-95fc-25bc030735bd" executionId="ad46a865-2f60-43d6-9ff6-74b2c3b0b60a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9608206a-383a-828f-299c-2c493d95d886" executionId="3e480a9e-f441-4a92-ad55-a7fc4321c710" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9ce2ff54-3bea-2c09-7986-c83994c1d685" executionId="1796daa3-c35d-43a0-9d49-310303bdd0e2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a2256363-4989-1fab-e208-96edc389fe3c" executionId="6a22f025-1017-4b37-80fc-0444c874b40f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a9ed84c2-917f-5ccb-44a7-7e3cea9cd5e0" executionId="fd5c3917-a7d2-4f89-a5eb-9d271a0d5705" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b9cbda9a-23ca-3458-8bf7-8aa6598f8754" executionId="03aad3fd-5f8b-4a4e-b6be-f1c8e235535f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c2e9f01d-6387-7f00-c2a6-71385a796942" executionId="265297f1-b826-4d3f-986e-a7c605214ae6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c3da4334-35ea-a9c1-5cbf-c1daa7323978" executionId="9638edef-e7f6-4b4f-90bf-0f825c2b987d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c5220795-75d7-ce76-adb5-6a1d661e1fb0" executionId="c6d92bd5-31b8-475e-b52d-f23aa6d19c8f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c8cf96fa-83e0-e026-64af-f003abc95103" executionId="213cc81c-7f5d-4bf9-80a7-8cdc3b613e79" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c8ff8ef9-a95a-0779-90f7-6e8188ebefd1" executionId="4d39b8b7-9b38-4b37-84eb-69ea4686b3f6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c9750689-b2a7-1965-bbd3-0c2f5eda3fb2" executionId="b5bca089-c1e5-4432-b510-241141e90084" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ca3ec696-2df9-55bd-c53c-f732b5c80a68" executionId="e0b26913-3867-4a31-bf59-b8ea258e128d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cdd1ec05-a33a-edaf-1560-6637f27329d2" executionId="2b64ad62-df22-4fcb-8195-85f68691aa7e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d14d6d4a-1363-e36e-8cf9-c1c992b9e243" executionId="130f3071-752c-49a6-a6a4-0651dd62df47" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d409929f-129a-9686-590d-6472fdfa28e4" executionId="24785d77-1fc8-4084-8fe0-9225c179048d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dad118fb-1088-58a3-350a-fc5e47173fa9" executionId="e7e40328-67da-4c88-a62f-f413ce5a1386" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e392eca5-e91b-ff0f-619e-8a24d0ecbe68" executionId="d24a2299-eefe-4fb3-bbc9-b1b68bf59e56" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e4d36185-e99e-9b3f-8afc-2b7c501afd9a" executionId="ff55b265-5918-499d-bf88-154c8f2252dd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ecf5b477-cdd8-3508-c195-40a64bc26f00" executionId="1d3730d7-b1e8-4671-be20-fdc9706a1eb8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ef9db0bb-63c6-f8c2-c180-d50d1ce2ca5b" executionId="1cb61ce7-d6cf-4212-9849-01601b4a1d0d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f3b46671-4362-7dc3-90a0-0fcbe80e34d8" executionId="0ed6498a-4ad4-446a-859a-a8f63f29ba09" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f473cffe-6acb-bc8c-3c44-48f67f9567de" executionId="aa0ddd6e-065e-4cc0-84d9-c3b31e9d31b2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f5049a26-85f5-2d61-7d0d-3fe36d498d57" executionId="156ae1cc-548a-4b34-b819-9ab69a877698" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f68ad391-23ca-2766-d2b2-8731589ef39b" executionId="f6a6c569-5cfc-4bff-b30e-6c2032d85038" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f7d7cfdb-4468-5c56-7540-afe0d55e093a" executionId="33db4e6f-2dd0-4158-946d-d5547ebf5680" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ffcba511-cdf9-ce52-fd62-900fe7820ecc" executionId="d7fc3501-faae-4024-816b-da36a9645cd9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="540b8b79-3a72-479b-afb8-2ec734c3213f" testId="0947b967-fff8-9b8d-6688-507250130b49" testName="Memory_HasRowVersion" computerName="MICHAEL-PC" duration="00:00:00.0279520" startTime="2012-06-03T10:03:26.2850000+08:00" endTime="2012-06-03T10:03:26.5730000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="540b8b79-3a72-479b-afb8-2ec734c3213f">
+    </UnitTestResult>
+    <UnitTestResult executionId="a3d4f35e-f994-4990-be05-b51cf97fcabd" testId="170c0ff1-28bc-09a2-839b-5ab24853aea8" testName="Nh_Can_Orm_do_cascaded_deletions" computerName="MICHAEL-PC" duration="00:00:01.2248625" startTime="2012-06-03T10:03:26.5810000+08:00" endTime="2012-06-03T10:03:27.8250000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a3d4f35e-f994-4990-be05-b51cf97fcabd">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Nh_Can_Orm_do_cascaded_deletions threw exception: 
+FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Visitors.ValidationException: The entity 'Answer' doesn't have an Id mapped. Use the Id method to map your identity property. For example: Id(x =&gt; x.Id).</Message>
+          <StackTrace>    at FluentNHibernate.Visitors.ValidationVisitor.ProcessClass(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\ValidationVisitor.cs:line 20
+   at FluentNHibernate.MappingModel.ClassBased.ClassMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\ClassBased\ClassMapping.cs:line 78
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 89
+   at FluentNHibernate.MappingModel.HibernateMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\HibernateMapping.cs:line 37
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.&lt;Visit&gt;b__0(HibernateMapping x) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.Utils.CollectionExtensions.Each[T](IEnumerable`1 enumerable, Action`1 each) in d:\Builds\FluentNH\src\FluentNHibernate\Utils\CollectionExtensions.cs:line 15
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.PersistenceModel.ApplyVisitors(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 214
+   at FluentNHibernate.PersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 169
+   at FluentNHibernate.Automapping.AutoPersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 134
+   at FluentNHibernate.PersistenceModel.EnsureMappingsBuilt() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 221
+   at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 277
+   at FluentNHibernate.Automapping.AutoPersistenceModel.Configure(Configuration configuration) in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 201
+   at FluentNHibernate.Cfg.AutoMappingsContainer.Apply(Configuration cfg, PersistenceModel model) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\AutoMappingsContainer.cs:line 86
+   at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 80
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+   at TestProject.NhModelsMapper.GetSessionFactory(String connectionString) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\NhDbMapper.cs:line 63
+   at TestProject.TestTheIRepository.Nh_Can_Orm_do_cascaded_deletions() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 998
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="38731fdb-78c3-4849-9f88-d95534a4207e" testId="24f780e7-822d-62ed-f13e-e2daddc611e1" testName="Fetching_strategies_of_NHibernate_helper_has_no_problem_on_mocked_IQueryable" computerName="MICHAEL-PC" duration="00:00:00.0091885" startTime="2012-06-03T10:03:27.8400000+08:00" endTime="2012-06-03T10:03:27.8530000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="38731fdb-78c3-4849-9f88-d95534a4207e">
+    </UnitTestResult>
+    <UnitTestResult executionId="bdbebad9-c368-44f8-a931-e468eb5c9807" testId="314cd11d-882d-0d0a-f196-b0f474ca8700" testName="Memory_CanDetectUpdateConflictingDelete" computerName="MICHAEL-PC" duration="00:00:00.0021125" startTime="2012-06-03T10:03:27.8570000+08:00" endTime="2012-06-03T10:03:27.8630000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bdbebad9-c368-44f8-a931-e468eb5c9807">
+    </UnitTestResult>
+    <UnitTestResult executionId="d58db0be-b369-4501-849d-d6762d6d1b59" testId="35cdc240-50c9-1325-cb02-2e20cf8d0e6b" testName="Nh_Can_Detect_Transaction_From_Session_Transaction_Begin" computerName="MICHAEL-PC" duration="00:00:00.0202813" startTime="2012-06-03T10:03:27.8670000+08:00" endTime="2012-06-03T10:03:27.8900000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d58db0be-b369-4501-849d-d6762d6d1b59">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Nh_Can_Detect_Transaction_From_Session_Transaction_Begin threw exception: 
+FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Visitors.ValidationException: The entity 'Answer' doesn't have an Id mapped. Use the Id method to map your identity property. For example: Id(x =&gt; x.Id).</Message>
+          <StackTrace>    at FluentNHibernate.Visitors.ValidationVisitor.ProcessClass(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\ValidationVisitor.cs:line 20
+   at FluentNHibernate.MappingModel.ClassBased.ClassMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\ClassBased\ClassMapping.cs:line 78
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 89
+   at FluentNHibernate.MappingModel.HibernateMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\HibernateMapping.cs:line 37
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.&lt;Visit&gt;b__0(HibernateMapping x) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.Utils.CollectionExtensions.Each[T](IEnumerable`1 enumerable, Action`1 each) in d:\Builds\FluentNH\src\FluentNHibernate\Utils\CollectionExtensions.cs:line 15
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.PersistenceModel.ApplyVisitors(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 214
+   at FluentNHibernate.PersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 169
+   at FluentNHibernate.Automapping.AutoPersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 134
+   at FluentNHibernate.PersistenceModel.EnsureMappingsBuilt() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 221
+   at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 277
+   at FluentNHibernate.Automapping.AutoPersistenceModel.Configure(Configuration configuration) in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 201
+   at FluentNHibernate.Cfg.AutoMappingsContainer.Apply(Configuration cfg, PersistenceModel model) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\AutoMappingsContainer.cs:line 86
+   at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 80
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+   at TestProject.NhModelsMapper.GetSessionFactory(String connectionString) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\NhDbMapper.cs:line 63
+   at TestProject.TestTheIRepository.Nh_Can_Detect_Transaction_From_Session_Transaction_Begin() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 1307
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7b8be629-0265-41ea-ae60-d02affe99e84" testId="385b97ed-767a-46eb-ce77-8402dbdb924a" testName="Memory_CanDetectUpdateConflictingUpdate" computerName="MICHAEL-PC" duration="00:00:00.0014306" startTime="2012-06-03T10:03:27.8940000+08:00" endTime="2012-06-03T10:03:27.9060000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7b8be629-0265-41ea-ae60-d02affe99e84">
+    </UnitTestResult>
+    <UnitTestResult executionId="81da69d5-4cce-4fe9-a200-e78fcb4047fd" testId="3a1e9fe6-a4ce-9adb-c086-11052cee98b6" testName="Ef_Can_Orm_Merge_Can_Update" computerName="MICHAEL-PC" duration="00:00:00.0727898" startTime="2012-06-03T10:03:27.9110000+08:00" endTime="2012-06-03T10:03:27.9900000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="81da69d5-4cce-4fe9-a200-e78fcb4047fd">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Ef_Can_Orm_Merge_Can_Update threw exception: 
+System.MissingMethodException: Method 'TestProject.SampleModel.Question.QuestionID' not found.</Message>
+          <StackTrace>    at System.RuntimeType.InvokeMember(String name, BindingFlags bindingFlags, Binder binder, Object target, Object[] providedArgs, ParameterModifier[] modifiers, CultureInfo culture, String[] namedParams)
+   at Ienablemuch.ToTheEfnhX.EntityFramework.EfRepository`1.Merge(TEnt ent, Byte[] version) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\EfRepository.cs:line 155
+   at TestProject.TestTheIRepository.Refactored_Common_Merge_Arrange_Create(IRepository`1 repo) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 847
+   at TestProject.TestTheIRepository.Common_Orm_Merge_Can_Update(IRepository`1 repo) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 799
+   at TestProject.TestTheIRepository.Ef_Can_Orm_Merge_Can_Update() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 780
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2a0e51ca-46f2-4271-ad2d-f8abdb278c52" testId="467d17f0-5ec4-24a5-9089-e15ef18964f7" testName="Nh_CanDetectDeleteConflictingUpdate" computerName="MICHAEL-PC" duration="00:00:00.0386076" startTime="2012-06-03T10:03:27.9940000+08:00" endTime="2012-06-03T10:03:28.0460000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2a0e51ca-46f2-4271-ad2d-f8abdb278c52">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Nh_CanDetectDeleteConflictingUpdate threw exception FluentNHibernate.Cfg.FluentConfigurationException, but exception Ienablemuch.ToTheEfnhX.DbChangesConcurrencyException was expected. Exception message: FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Visitors.ValidationException: The entity 'Answer' doesn't have an Id mapped. Use the Id method to map your identity property. For example: Id(x =&gt; x.Id).</Message>
+          <StackTrace>    at FluentNHibernate.Visitors.ValidationVisitor.ProcessClass(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\ValidationVisitor.cs:line 20
+   at FluentNHibernate.MappingModel.ClassBased.ClassMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\ClassBased\ClassMapping.cs:line 78
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 89
+   at FluentNHibernate.MappingModel.HibernateMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\HibernateMapping.cs:line 37
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.&lt;Visit&gt;b__0(HibernateMapping x) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.Utils.CollectionExtensions.Each[T](IEnumerable`1 enumerable, Action`1 each) in d:\Builds\FluentNH\src\FluentNHibernate\Utils\CollectionExtensions.cs:line 15
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.PersistenceModel.ApplyVisitors(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 214
+   at FluentNHibernate.PersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 169
+   at FluentNHibernate.Automapping.AutoPersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 134
+   at FluentNHibernate.PersistenceModel.EnsureMappingsBuilt() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 221
+   at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 277
+   at FluentNHibernate.Automapping.AutoPersistenceModel.Configure(Configuration configuration) in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 201
+   at FluentNHibernate.Cfg.AutoMappingsContainer.Apply(Configuration cfg, PersistenceModel model) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\AutoMappingsContainer.cs:line 86
+   at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 80
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+   at TestProject.NhModelsMapper.GetSessionFactory(String connectionString) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\NhDbMapper.cs:line 63
+   at TestProject.TestTheIRepository.Nh_CanDetectDeleteConflictingUpdate() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 561
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="becc6cbc-f3ed-41a2-9c04-8403cc981d23" testId="498581d4-9097-59b7-1a75-c07c04a53675" testName="Nh_Can_rollback_transaction" computerName="MICHAEL-PC" duration="00:00:00.0205360" startTime="2012-06-03T10:03:28.0570000+08:00" endTime="2012-06-03T10:03:28.0840000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="becc6cbc-f3ed-41a2-9c04-8403cc981d23">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Nh_Can_rollback_transaction threw exception: 
+FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Visitors.ValidationException: The entity 'Answer' doesn't have an Id mapped. Use the Id method to map your identity property. For example: Id(x =&gt; x.Id).</Message>
+          <StackTrace>    at FluentNHibernate.Visitors.ValidationVisitor.ProcessClass(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\ValidationVisitor.cs:line 20
+   at FluentNHibernate.MappingModel.ClassBased.ClassMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\ClassBased\ClassMapping.cs:line 78
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 89
+   at FluentNHibernate.MappingModel.HibernateMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\HibernateMapping.cs:line 37
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.&lt;Visit&gt;b__0(HibernateMapping x) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.Utils.CollectionExtensions.Each[T](IEnumerable`1 enumerable, Action`1 each) in d:\Builds\FluentNH\src\FluentNHibernate\Utils\CollectionExtensions.cs:line 15
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.PersistenceModel.ApplyVisitors(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 214
+   at FluentNHibernate.PersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 169
+   at FluentNHibernate.Automapping.AutoPersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 134
+   at FluentNHibernate.PersistenceModel.EnsureMappingsBuilt() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 221
+   at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 277
+   at FluentNHibernate.Automapping.AutoPersistenceModel.Configure(Configuration configuration) in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 201
+   at FluentNHibernate.Cfg.AutoMappingsContainer.Apply(Configuration cfg, PersistenceModel model) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\AutoMappingsContainer.cs:line 86
+   at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 80
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+   at TestProject.NhModelsMapper.GetSessionFactory(String connectionString) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\NhDbMapper.cs:line 63
+   at TestProject.TestTheIRepository.Nh_Can_rollback_transaction() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 1131
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="49693aad-0395-4e96-971f-e6f7ebfeb9f3" testId="4bb22a57-9102-06ea-257b-caae673d46d7" testName="Ef_CanDetectDeleteConflictingDelete" computerName="MICHAEL-PC" duration="00:00:01.1093230" startTime="2012-06-03T10:03:28.0880000+08:00" endTime="2012-06-03T10:03:29.2060000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="49693aad-0395-4e96-971f-e6f7ebfeb9f3">
+    </UnitTestResult>
+    <UnitTestResult executionId="67d4d8ad-2c39-4273-a659-4804a40b62b6" testId="4eb22f5f-6a6e-dede-7dcd-8a02b2b7eecd" testName="Memory_CanDelete" computerName="MICHAEL-PC" duration="00:00:00.0102723" startTime="2012-06-03T10:03:29.2100000+08:00" endTime="2012-06-03T10:03:29.2270000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="67d4d8ad-2c39-4273-a659-4804a40b62b6">
+    </UnitTestResult>
+    <UnitTestResult executionId="8e8e5b1c-0e08-466f-9c80-ce901d4950bd" testId="55b9acb6-c8fa-83e2-62ec-c3bb6a6ae6ad" testName="Nh_Can_Detect_Transaction_From_Session_Begin_Transaction" computerName="MICHAEL-PC" duration="00:00:00.0244638" startTime="2012-06-03T10:03:29.2300000+08:00" endTime="2012-06-03T10:03:29.2600000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8e8e5b1c-0e08-466f-9c80-ce901d4950bd">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Nh_Can_Detect_Transaction_From_Session_Begin_Transaction threw exception: 
+FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Visitors.ValidationException: The entity 'Answer' doesn't have an Id mapped. Use the Id method to map your identity property. For example: Id(x =&gt; x.Id).</Message>
+          <StackTrace>    at FluentNHibernate.Visitors.ValidationVisitor.ProcessClass(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\ValidationVisitor.cs:line 20
+   at FluentNHibernate.MappingModel.ClassBased.ClassMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\ClassBased\ClassMapping.cs:line 78
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 89
+   at FluentNHibernate.MappingModel.HibernateMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\HibernateMapping.cs:line 37
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.&lt;Visit&gt;b__0(HibernateMapping x) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.Utils.CollectionExtensions.Each[T](IEnumerable`1 enumerable, Action`1 each) in d:\Builds\FluentNH\src\FluentNHibernate\Utils\CollectionExtensions.cs:line 15
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.PersistenceModel.ApplyVisitors(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 214
+   at FluentNHibernate.PersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 169
+   at FluentNHibernate.Automapping.AutoPersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 134
+   at FluentNHibernate.PersistenceModel.EnsureMappingsBuilt() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 221
+   at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 277
+   at FluentNHibernate.Automapping.AutoPersistenceModel.Configure(Configuration configuration) in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 201
+   at FluentNHibernate.Cfg.AutoMappingsContainer.Apply(Configuration cfg, PersistenceModel model) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\AutoMappingsContainer.cs:line 86
+   at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 80
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+   at TestProject.NhModelsMapper.GetSessionFactory(String connectionString) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\NhDbMapper.cs:line 63
+   at TestProject.TestTheIRepository.Nh_Can_Detect_Transaction_From_Session_Begin_Transaction() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 1239
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a7897fb7-7e67-46ee-9130-6755e761f130" testId="5b9ac5c8-7814-fd36-cd57-f0de0de0fae7" testName="Saving_is_ok" computerName="MICHAEL-PC" duration="00:00:00.0025243" startTime="2012-06-03T10:03:29.2620000+08:00" endTime="2012-06-03T10:03:29.2740000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a7897fb7-7e67-46ee-9130-6755e761f130">
+    </UnitTestResult>
+    <UnitTestResult executionId="6fa8f592-a4f0-4d61-8dcf-095275a9ac80" testId="5d13769c-6ed9-df33-8e6d-b0cc79c073f2" testName="Nh_CanDetectUpdateConflictingDelete" computerName="MICHAEL-PC" duration="00:00:00.0200692" startTime="2012-06-03T10:03:29.2770000+08:00" endTime="2012-06-03T10:03:29.3020000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6fa8f592-a4f0-4d61-8dcf-095275a9ac80">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Nh_CanDetectUpdateConflictingDelete threw exception FluentNHibernate.Cfg.FluentConfigurationException, but exception Ienablemuch.ToTheEfnhX.DbChangesConcurrencyException was expected. Exception message: FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Visitors.ValidationException: The entity 'Answer' doesn't have an Id mapped. Use the Id method to map your identity property. For example: Id(x =&gt; x.Id).</Message>
+          <StackTrace>    at FluentNHibernate.Visitors.ValidationVisitor.ProcessClass(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\ValidationVisitor.cs:line 20
+   at FluentNHibernate.MappingModel.ClassBased.ClassMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\ClassBased\ClassMapping.cs:line 78
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 89
+   at FluentNHibernate.MappingModel.HibernateMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\HibernateMapping.cs:line 37
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.&lt;Visit&gt;b__0(HibernateMapping x) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.Utils.CollectionExtensions.Each[T](IEnumerable`1 enumerable, Action`1 each) in d:\Builds\FluentNH\src\FluentNHibernate\Utils\CollectionExtensions.cs:line 15
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.PersistenceModel.ApplyVisitors(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 214
+   at FluentNHibernate.PersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 169
+   at FluentNHibernate.Automapping.AutoPersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 134
+   at FluentNHibernate.PersistenceModel.EnsureMappingsBuilt() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 221
+   at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 277
+   at FluentNHibernate.Automapping.AutoPersistenceModel.Configure(Configuration configuration) in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 201
+   at FluentNHibernate.Cfg.AutoMappingsContainer.Apply(Configuration cfg, PersistenceModel model) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\AutoMappingsContainer.cs:line 86
+   at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 80
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+   at TestProject.NhModelsMapper.GetSessionFactory(String connectionString) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\NhDbMapper.cs:line 63
+   at TestProject.TestTheIRepository.Nh_CanDetectUpdateConflictingDelete() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 510
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="400cbd42-5d91-4377-9a21-f50a0e947f8e" testId="63d9977f-78b2-ba78-f19b-1e84d68eabe8" testName="Nh_CanUpdate" computerName="MICHAEL-PC" duration="00:00:00.0200120" startTime="2012-06-03T10:03:29.3050000+08:00" endTime="2012-06-03T10:03:29.3390000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="400cbd42-5d91-4377-9a21-f50a0e947f8e">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Nh_CanUpdate threw exception: 
+FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Visitors.ValidationException: The entity 'Answer' doesn't have an Id mapped. Use the Id method to map your identity property. For example: Id(x =&gt; x.Id).</Message>
+          <StackTrace>    at FluentNHibernate.Visitors.ValidationVisitor.ProcessClass(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\ValidationVisitor.cs:line 20
+   at FluentNHibernate.MappingModel.ClassBased.ClassMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\ClassBased\ClassMapping.cs:line 78
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 89
+   at FluentNHibernate.MappingModel.HibernateMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\HibernateMapping.cs:line 37
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.&lt;Visit&gt;b__0(HibernateMapping x) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.Utils.CollectionExtensions.Each[T](IEnumerable`1 enumerable, Action`1 each) in d:\Builds\FluentNH\src\FluentNHibernate\Utils\CollectionExtensions.cs:line 15
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.PersistenceModel.ApplyVisitors(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 214
+   at FluentNHibernate.PersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 169
+   at FluentNHibernate.Automapping.AutoPersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 134
+   at FluentNHibernate.PersistenceModel.EnsureMappingsBuilt() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 221
+   at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 277
+   at FluentNHibernate.Automapping.AutoPersistenceModel.Configure(Configuration configuration) in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 201
+   at FluentNHibernate.Cfg.AutoMappingsContainer.Apply(Configuration cfg, PersistenceModel model) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\AutoMappingsContainer.cs:line 86
+   at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 80
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+   at TestProject.NhModelsMapper.GetSessionFactory(String connectionString) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\NhDbMapper.cs:line 63
+   at TestProject.TestTheIRepository.Nh_CanUpdate() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 312
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="282e186c-6739-43c2-b50e-7eef8b3ac681" testId="6a52032d-db59-8802-47db-20699e8ef053" testName="Ef_CanSave" computerName="MICHAEL-PC" duration="00:00:00.0168039" startTime="2012-06-03T10:03:29.3440000+08:00" endTime="2012-06-03T10:03:29.3680000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="282e186c-6739-43c2-b50e-7eef8b3ac681">
+    </UnitTestResult>
+    <UnitTestResult executionId="6f6e9276-ccbf-4479-9f1a-8feb01aa3871" testId="6b805790-9c4f-2071-6e55-fbbb337c0021" testName="Memory_CanSaveTransaction" computerName="MICHAEL-PC" duration="00:00:00.0040934" startTime="2012-06-03T10:03:29.3710000+08:00" endTime="2012-06-03T10:03:29.3790000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6f6e9276-ccbf-4479-9f1a-8feb01aa3871">
+    </UnitTestResult>
+    <UnitTestResult executionId="890aa7d2-95c8-422a-b4a0-ff1c8986bcac" testId="7b0e110e-2e6a-879c-359f-7b225fdba37f" testName="Nh_CanDetectUpdateConflictingUpdate" computerName="MICHAEL-PC" duration="00:00:00.0197705" startTime="2012-06-03T10:03:29.3820000+08:00" endTime="2012-06-03T10:03:29.4060000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="890aa7d2-95c8-422a-b4a0-ff1c8986bcac">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Nh_CanDetectUpdateConflictingUpdate threw exception FluentNHibernate.Cfg.FluentConfigurationException, but exception Ienablemuch.ToTheEfnhX.DbChangesConcurrencyException was expected. Exception message: FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Visitors.ValidationException: The entity 'Answer' doesn't have an Id mapped. Use the Id method to map your identity property. For example: Id(x =&gt; x.Id).</Message>
+          <StackTrace>    at FluentNHibernate.Visitors.ValidationVisitor.ProcessClass(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\ValidationVisitor.cs:line 20
+   at FluentNHibernate.MappingModel.ClassBased.ClassMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\ClassBased\ClassMapping.cs:line 78
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 89
+   at FluentNHibernate.MappingModel.HibernateMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\HibernateMapping.cs:line 37
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.&lt;Visit&gt;b__0(HibernateMapping x) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.Utils.CollectionExtensions.Each[T](IEnumerable`1 enumerable, Action`1 each) in d:\Builds\FluentNH\src\FluentNHibernate\Utils\CollectionExtensions.cs:line 15
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.PersistenceModel.ApplyVisitors(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 214
+   at FluentNHibernate.PersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 169
+   at FluentNHibernate.Automapping.AutoPersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 134
+   at FluentNHibernate.PersistenceModel.EnsureMappingsBuilt() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 221
+   at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 277
+   at FluentNHibernate.Automapping.AutoPersistenceModel.Configure(Configuration configuration) in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 201
+   at FluentNHibernate.Cfg.AutoMappingsContainer.Apply(Configuration cfg, PersistenceModel model) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\AutoMappingsContainer.cs:line 86
+   at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 80
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+   at TestProject.NhModelsMapper.GetSessionFactory(String connectionString) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\NhDbMapper.cs:line 63
+   at TestProject.TestTheIRepository.Nh_CanDetectUpdateConflictingUpdate() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 464
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8494f91e-b13c-442d-9741-616c806ca2d0" testId="83330a72-51da-0d0d-d2b2-826b2f6cfd00" testName="Nh_SessionTransaction_can_detect_its_own_transaction_commitness_only" computerName="MICHAEL-PC" duration="00:00:00.0189510" startTime="2012-06-03T10:03:29.4100000+08:00" endTime="2012-06-03T10:03:29.4350000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8494f91e-b13c-442d-9741-616c806ca2d0">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Nh_SessionTransaction_can_detect_its_own_transaction_commitness_only threw exception: 
+FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Visitors.ValidationException: The entity 'Answer' doesn't have an Id mapped. Use the Id method to map your identity property. For example: Id(x =&gt; x.Id).</Message>
+          <StackTrace>    at FluentNHibernate.Visitors.ValidationVisitor.ProcessClass(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\ValidationVisitor.cs:line 20
+   at FluentNHibernate.MappingModel.ClassBased.ClassMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\ClassBased\ClassMapping.cs:line 78
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 89
+   at FluentNHibernate.MappingModel.HibernateMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\HibernateMapping.cs:line 37
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.&lt;Visit&gt;b__0(HibernateMapping x) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.Utils.CollectionExtensions.Each[T](IEnumerable`1 enumerable, Action`1 each) in d:\Builds\FluentNH\src\FluentNHibernate\Utils\CollectionExtensions.cs:line 15
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.PersistenceModel.ApplyVisitors(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 214
+   at FluentNHibernate.PersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 169
+   at FluentNHibernate.Automapping.AutoPersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 134
+   at FluentNHibernate.PersistenceModel.EnsureMappingsBuilt() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 221
+   at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 277
+   at FluentNHibernate.Automapping.AutoPersistenceModel.Configure(Configuration configuration) in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 201
+   at FluentNHibernate.Cfg.AutoMappingsContainer.Apply(Configuration cfg, PersistenceModel model) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\AutoMappingsContainer.cs:line 86
+   at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 80
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+   at TestProject.NhModelsMapper.GetSessionFactory(String connectionString) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\NhDbMapper.cs:line 63
+   at TestProject.TestTheIRepository.Nh_SessionTransaction_can_detect_its_own_transaction_commitness_only() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 1292
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="dba099b0-c8a8-422e-9e1b-2fbfa7f88f72" testId="8557e6ab-47d2-b8b1-2926-0bb94a2d505d" testName="Nh_CanDetectDeleteConflictingDelete" computerName="MICHAEL-PC" duration="00:00:00.0224447" startTime="2012-06-03T10:03:29.4380000+08:00" endTime="2012-06-03T10:03:29.4700000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dba099b0-c8a8-422e-9e1b-2fbfa7f88f72">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Nh_CanDetectDeleteConflictingDelete threw exception FluentNHibernate.Cfg.FluentConfigurationException, but exception Ienablemuch.ToTheEfnhX.DbChangesConcurrencyException was expected. Exception message: FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Visitors.ValidationException: The entity 'Answer' doesn't have an Id mapped. Use the Id method to map your identity property. For example: Id(x =&gt; x.Id).</Message>
+          <StackTrace>    at FluentNHibernate.Visitors.ValidationVisitor.ProcessClass(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\ValidationVisitor.cs:line 20
+   at FluentNHibernate.MappingModel.ClassBased.ClassMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\ClassBased\ClassMapping.cs:line 78
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 89
+   at FluentNHibernate.MappingModel.HibernateMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\HibernateMapping.cs:line 37
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.&lt;Visit&gt;b__0(HibernateMapping x) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.Utils.CollectionExtensions.Each[T](IEnumerable`1 enumerable, Action`1 each) in d:\Builds\FluentNH\src\FluentNHibernate\Utils\CollectionExtensions.cs:line 15
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.PersistenceModel.ApplyVisitors(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 214
+   at FluentNHibernate.PersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 169
+   at FluentNHibernate.Automapping.AutoPersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 134
+   at FluentNHibernate.PersistenceModel.EnsureMappingsBuilt() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 221
+   at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 277
+   at FluentNHibernate.Automapping.AutoPersistenceModel.Configure(Configuration configuration) in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 201
+   at FluentNHibernate.Cfg.AutoMappingsContainer.Apply(Configuration cfg, PersistenceModel model) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\AutoMappingsContainer.cs:line 86
+   at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 80
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+   at TestProject.NhModelsMapper.GetSessionFactory(String connectionString) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\NhDbMapper.cs:line 63
+   at TestProject.TestTheIRepository.Nh_CanDetectDeleteConflictingDelete() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 609
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a7bd29df-517c-49a2-a814-47e9ff7ced40" testId="86150143-fb0b-c807-6c85-448e509331e0" testName="Ef_HasRowVersion" computerName="MICHAEL-PC" duration="00:00:00.0170118" startTime="2012-06-03T10:03:29.4740000+08:00" endTime="2012-06-03T10:03:29.4960000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a7bd29df-517c-49a2-a814-47e9ff7ced40">
+    </UnitTestResult>
+    <UnitTestResult executionId="8fcf25c7-a827-469a-a72f-4d04aca2e5f7" testId="8ae0b4b0-ccc4-fc93-736a-72af24764f70" testName="Nh_Can_queue_changes" computerName="MICHAEL-PC" duration="00:00:00.0202531" startTime="2012-06-03T10:03:29.4990000+08:00" endTime="2012-06-03T10:03:29.5360000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8fcf25c7-a827-469a-a72f-4d04aca2e5f7">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Nh_Can_queue_changes threw exception: 
+FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Visitors.ValidationException: The entity 'Answer' doesn't have an Id mapped. Use the Id method to map your identity property. For example: Id(x =&gt; x.Id).</Message>
+          <StackTrace>    at FluentNHibernate.Visitors.ValidationVisitor.ProcessClass(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\ValidationVisitor.cs:line 20
+   at FluentNHibernate.MappingModel.ClassBased.ClassMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\ClassBased\ClassMapping.cs:line 78
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 89
+   at FluentNHibernate.MappingModel.HibernateMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\HibernateMapping.cs:line 37
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.&lt;Visit&gt;b__0(HibernateMapping x) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.Utils.CollectionExtensions.Each[T](IEnumerable`1 enumerable, Action`1 each) in d:\Builds\FluentNH\src\FluentNHibernate\Utils\CollectionExtensions.cs:line 15
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.PersistenceModel.ApplyVisitors(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 214
+   at FluentNHibernate.PersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 169
+   at FluentNHibernate.Automapping.AutoPersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 134
+   at FluentNHibernate.PersistenceModel.EnsureMappingsBuilt() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 221
+   at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 277
+   at FluentNHibernate.Automapping.AutoPersistenceModel.Configure(Configuration configuration) in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 201
+   at FluentNHibernate.Cfg.AutoMappingsContainer.Apply(Configuration cfg, PersistenceModel model) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\AutoMappingsContainer.cs:line 86
+   at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 80
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+   at TestProject.NhModelsMapper.GetSessionFactory(String connectionString) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\NhDbMapper.cs:line 63
+   at TestProject.TestTheIRepository.Nh_Can_queue_changes() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 881
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5ccf17ad-4084-4fea-b750-f956a1b964a0" testId="8af4731e-1204-41e4-f479-73db6099844b" testName="Nh_Can_Orm_Merge_Can_Create" computerName="MICHAEL-PC" duration="00:00:00.0200588" startTime="2012-06-03T10:03:29.5390000+08:00" endTime="2012-06-03T10:03:29.5690000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5ccf17ad-4084-4fea-b750-f956a1b964a0">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Nh_Can_Orm_Merge_Can_Create threw exception: 
+FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Visitors.ValidationException: The entity 'Answer' doesn't have an Id mapped. Use the Id method to map your identity property. For example: Id(x =&gt; x.Id).</Message>
+          <StackTrace>    at FluentNHibernate.Visitors.ValidationVisitor.ProcessClass(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\ValidationVisitor.cs:line 20
+   at FluentNHibernate.MappingModel.ClassBased.ClassMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\ClassBased\ClassMapping.cs:line 78
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 89
+   at FluentNHibernate.MappingModel.HibernateMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\HibernateMapping.cs:line 37
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.&lt;Visit&gt;b__0(HibernateMapping x) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.Utils.CollectionExtensions.Each[T](IEnumerable`1 enumerable, Action`1 each) in d:\Builds\FluentNH\src\FluentNHibernate\Utils\CollectionExtensions.cs:line 15
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.PersistenceModel.ApplyVisitors(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 214
+   at FluentNHibernate.PersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 169
+   at FluentNHibernate.Automapping.AutoPersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 134
+   at FluentNHibernate.PersistenceModel.EnsureMappingsBuilt() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 221
+   at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 277
+   at FluentNHibernate.Automapping.AutoPersistenceModel.Configure(Configuration configuration) in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 201
+   at FluentNHibernate.Cfg.AutoMappingsContainer.Apply(Configuration cfg, PersistenceModel model) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\AutoMappingsContainer.cs:line 86
+   at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 80
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+   at TestProject.NhModelsMapper.GetSessionFactory(String connectionString) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\NhDbMapper.cs:line 63
+   at TestProject.TestTheIRepository.Nh_Can_Orm_Merge_Can_Create() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 719
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="dbfed9ed-4008-4078-9b39-3aae4eb9681b" testId="8bf5c997-85a0-f72e-564a-9d66e659263c" testName="Ef_CanDetectDeleteConflictingUpdate" computerName="MICHAEL-PC" duration="00:00:00.0099313" startTime="2012-06-03T10:03:29.5720000+08:00" endTime="2012-06-03T10:03:29.5910000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dbfed9ed-4008-4078-9b39-3aae4eb9681b">
+    </UnitTestResult>
+    <UnitTestResult executionId="44d256c3-40ab-4e05-89bb-ed17a62c42ee" testId="8c5d9d25-e5b8-63c8-9c42-cebb67787fde" testName="Memory_CanSave" computerName="MICHAEL-PC" duration="00:00:00.0015786" startTime="2012-06-03T10:03:29.5940000+08:00" endTime="2012-06-03T10:03:29.5990000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="44d256c3-40ab-4e05-89bb-ed17a62c42ee">
+    </UnitTestResult>
+    <UnitTestResult executionId="ad46a865-2f60-43d6-9ff6-74b2c3b0b60a" testId="919c9ab6-d8de-ff18-95fc-25bc030735bd" testName="Nh_HasRowVersion" computerName="MICHAEL-PC" duration="00:00:00.0200320" startTime="2012-06-03T10:03:29.6020000+08:00" endTime="2012-06-03T10:03:29.6260000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ad46a865-2f60-43d6-9ff6-74b2c3b0b60a">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Nh_HasRowVersion threw exception: 
+FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Visitors.ValidationException: The entity 'Answer' doesn't have an Id mapped. Use the Id method to map your identity property. For example: Id(x =&gt; x.Id).</Message>
+          <StackTrace>    at FluentNHibernate.Visitors.ValidationVisitor.ProcessClass(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\ValidationVisitor.cs:line 20
+   at FluentNHibernate.MappingModel.ClassBased.ClassMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\ClassBased\ClassMapping.cs:line 78
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 89
+   at FluentNHibernate.MappingModel.HibernateMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\HibernateMapping.cs:line 37
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.&lt;Visit&gt;b__0(HibernateMapping x) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.Utils.CollectionExtensions.Each[T](IEnumerable`1 enumerable, Action`1 each) in d:\Builds\FluentNH\src\FluentNHibernate\Utils\CollectionExtensions.cs:line 15
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.PersistenceModel.ApplyVisitors(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 214
+   at FluentNHibernate.PersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 169
+   at FluentNHibernate.Automapping.AutoPersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 134
+   at FluentNHibernate.PersistenceModel.EnsureMappingsBuilt() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 221
+   at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 277
+   at FluentNHibernate.Automapping.AutoPersistenceModel.Configure(Configuration configuration) in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 201
+   at FluentNHibernate.Cfg.AutoMappingsContainer.Apply(Configuration cfg, PersistenceModel model) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\AutoMappingsContainer.cs:line 86
+   at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 80
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+   at TestProject.NhModelsMapper.GetSessionFactory(String connectionString) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\NhDbMapper.cs:line 63
+   at TestProject.TestTheIRepository.Nh_HasRowVersion() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 419
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3e480a9e-f441-4a92-ad55-a7fc4321c710" testId="9608206a-383a-828f-299c-2c493d95d886" testName="Memory_CanDetectDeleteConflictingUpdate" computerName="MICHAEL-PC" duration="00:00:00.0007064" startTime="2012-06-03T10:03:29.6290000+08:00" endTime="2012-06-03T10:03:29.6370000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3e480a9e-f441-4a92-ad55-a7fc4321c710">
+    </UnitTestResult>
+    <UnitTestResult executionId="1796daa3-c35d-43a0-9d49-310303bdd0e2" testId="9ce2ff54-3bea-2c09-7986-c83994c1d685" testName="Ef_CanUpdate" computerName="MICHAEL-PC" duration="00:00:00.0994170" startTime="2012-06-03T10:03:29.6400000+08:00" endTime="2012-06-03T10:03:29.7440000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1796daa3-c35d-43a0-9d49-310303bdd0e2">
+    </UnitTestResult>
+    <UnitTestResult executionId="6a22f025-1017-4b37-80fc-0444c874b40f" testId="a2256363-4989-1fab-e208-96edc389fe3c" testName="Ef_Can_Orm_do_cascaded_deletions" computerName="MICHAEL-PC" duration="00:00:00.0059027" startTime="2012-06-03T10:03:29.7490000+08:00" endTime="2012-06-03T10:03:29.7620000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6a22f025-1017-4b37-80fc-0444c874b40f">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Ef_Can_Orm_do_cascaded_deletions threw exception: 
+System.MissingMethodException: Method 'TestProject.SampleModel.Question.QuestionID' not found.</Message>
+          <StackTrace>    at System.RuntimeType.InvokeMember(String name, BindingFlags bindingFlags, Binder binder, Object target, Object[] providedArgs, ParameterModifier[] modifiers, CultureInfo culture, String[] namedParams)
+   at Ienablemuch.ToTheEfnhX.EntityFramework.EfRepository`1.Merge(TEnt ent, Byte[] version) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\EfRepository.cs:line 155
+   at TestProject.TestTheIRepository.Refactored_Common_Merge_Arrange_Create(IRepository`1 repo) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 847
+   at TestProject.TestTheIRepository.Common_Can_Orm_do_cascaded_deletions(IRepository`1 db) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 1012
+   at TestProject.TestTheIRepository.Ef_Can_Orm_do_cascaded_deletions() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 1007
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="fd5c3917-a7d2-4f89-a5eb-9d271a0d5705" testId="a9ed84c2-917f-5ccb-44a7-7e3cea9cd5e0" testName="Ef_Can_Orm_Merge_Can_Create" computerName="MICHAEL-PC" duration="00:00:00.0093443" startTime="2012-06-03T10:03:29.7640000+08:00" endTime="2012-06-03T10:03:29.7850000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fd5c3917-a7d2-4f89-a5eb-9d271a0d5705">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Ef_Can_Orm_Merge_Can_Create threw exception: 
+System.MissingMethodException: Method 'TestProject.SampleModel.Question.QuestionID' not found.</Message>
+          <StackTrace>    at System.RuntimeType.InvokeMember(String name, BindingFlags bindingFlags, Binder binder, Object target, Object[] providedArgs, ParameterModifier[] modifiers, CultureInfo culture, String[] namedParams)
+   at Ienablemuch.ToTheEfnhX.EntityFramework.EfRepository`1.Merge(TEnt ent, Byte[] version) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\EfRepository.cs:line 155
+   at TestProject.TestTheIRepository.Refactored_Common_Merge_Arrange_Create(IRepository`1 repo) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 847
+   at TestProject.TestTheIRepository.Common_Can_Orm_Merge_Can_Create(IRepository`1 repo) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 728
+   at TestProject.TestTheIRepository.Ef_Can_Orm_Merge_Can_Create() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 708
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="03aad3fd-5f8b-4a4e-b6be-f1c8e235535f" testId="b9cbda9a-23ca-3458-8bf7-8aa6598f8754" testName="Nh_Can_Orm_Merge_Can_Update" computerName="MICHAEL-PC" duration="00:00:00.0198241" startTime="2012-06-03T10:03:29.7900000+08:00" endTime="2012-06-03T10:03:29.8170000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="03aad3fd-5f8b-4a4e-b6be-f1c8e235535f">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Nh_Can_Orm_Merge_Can_Update threw exception: 
+FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Visitors.ValidationException: The entity 'Answer' doesn't have an Id mapped. Use the Id method to map your identity property. For example: Id(x =&gt; x.Id).</Message>
+          <StackTrace>    at FluentNHibernate.Visitors.ValidationVisitor.ProcessClass(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\ValidationVisitor.cs:line 20
+   at FluentNHibernate.MappingModel.ClassBased.ClassMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\ClassBased\ClassMapping.cs:line 78
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 89
+   at FluentNHibernate.MappingModel.HibernateMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\HibernateMapping.cs:line 37
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.&lt;Visit&gt;b__0(HibernateMapping x) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.Utils.CollectionExtensions.Each[T](IEnumerable`1 enumerable, Action`1 each) in d:\Builds\FluentNH\src\FluentNHibernate\Utils\CollectionExtensions.cs:line 15
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.PersistenceModel.ApplyVisitors(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 214
+   at FluentNHibernate.PersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 169
+   at FluentNHibernate.Automapping.AutoPersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 134
+   at FluentNHibernate.PersistenceModel.EnsureMappingsBuilt() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 221
+   at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 277
+   at FluentNHibernate.Automapping.AutoPersistenceModel.Configure(Configuration configuration) in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 201
+   at FluentNHibernate.Cfg.AutoMappingsContainer.Apply(Configuration cfg, PersistenceModel model) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\AutoMappingsContainer.cs:line 86
+   at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 80
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+   at TestProject.NhModelsMapper.GetSessionFactory(String connectionString) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\NhDbMapper.cs:line 63
+   at TestProject.TestTheIRepository.Nh_Can_Orm_Merge_Can_Update() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 788
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="265297f1-b826-4d3f-986e-a7c605214ae6" testId="c2e9f01d-6387-7f00-c2a6-71385a796942" testName="Memory_CanSaveHeaderDetail" computerName="MICHAEL-PC" duration="00:00:00.0026333" startTime="2012-06-03T10:03:29.8200000+08:00" endTime="2012-06-03T10:03:29.8310000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="265297f1-b826-4d3f-986e-a7c605214ae6">
+    </UnitTestResult>
+    <UnitTestResult executionId="9638edef-e7f6-4b4f-90bf-0f825c2b987d" testId="c3da4334-35ea-a9c1-5cbf-c1daa7323978" testName="Ef_CanDelete" computerName="MICHAEL-PC" duration="00:00:00.0169215" startTime="2012-06-03T10:03:29.8340000+08:00" endTime="2012-06-03T10:03:29.8550000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9638edef-e7f6-4b4f-90bf-0f825c2b987d">
+    </UnitTestResult>
+    <UnitTestResult executionId="c6d92bd5-31b8-475e-b52d-f23aa6d19c8f" testId="c5220795-75d7-ce76-adb5-6a1d661e1fb0" testName="Memory_CanHaveIncrementingKey" computerName="MICHAEL-PC" duration="00:00:00.0011523" startTime="2012-06-03T10:03:29.8580000+08:00" endTime="2012-06-03T10:03:29.8650000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c6d92bd5-31b8-475e-b52d-f23aa6d19c8f">
+    </UnitTestResult>
+    <UnitTestResult executionId="213cc81c-7f5d-4bf9-80a7-8cdc3b613e79" testId="c8cf96fa-83e0-e026-64af-f003abc95103" testName="Fetching_strategies_of_EntityFramework_helper_has_no_problem_on_mocked_IQueryable" computerName="MICHAEL-PC" duration="00:00:00.0019214" startTime="2012-06-03T10:03:29.8670000+08:00" endTime="2012-06-03T10:03:29.8750000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="213cc81c-7f5d-4bf9-80a7-8cdc3b613e79">
+    </UnitTestResult>
+    <UnitTestResult executionId="4d39b8b7-9b38-4b37-84eb-69ea4686b3f6" testId="c8ff8ef9-a95a-0779-90f7-6e8188ebefd1" testName="Nh_CanHaveIncrementingKey" computerName="MICHAEL-PC" duration="00:00:00.0202254" startTime="2012-06-03T10:03:29.8770000+08:00" endTime="2012-06-03T10:03:29.9020000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4d39b8b7-9b38-4b37-84eb-69ea4686b3f6">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Nh_CanHaveIncrementingKey threw exception: 
+FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Visitors.ValidationException: The entity 'Answer' doesn't have an Id mapped. Use the Id method to map your identity property. For example: Id(x =&gt; x.Id).</Message>
+          <StackTrace>    at FluentNHibernate.Visitors.ValidationVisitor.ProcessClass(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\ValidationVisitor.cs:line 20
+   at FluentNHibernate.MappingModel.ClassBased.ClassMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\ClassBased\ClassMapping.cs:line 78
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 89
+   at FluentNHibernate.MappingModel.HibernateMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\HibernateMapping.cs:line 37
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.&lt;Visit&gt;b__0(HibernateMapping x) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.Utils.CollectionExtensions.Each[T](IEnumerable`1 enumerable, Action`1 each) in d:\Builds\FluentNH\src\FluentNHibernate\Utils\CollectionExtensions.cs:line 15
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.PersistenceModel.ApplyVisitors(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 214
+   at FluentNHibernate.PersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 169
+   at FluentNHibernate.Automapping.AutoPersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 134
+   at FluentNHibernate.PersistenceModel.EnsureMappingsBuilt() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 221
+   at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 277
+   at FluentNHibernate.Automapping.AutoPersistenceModel.Configure(Configuration configuration) in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 201
+   at FluentNHibernate.Cfg.AutoMappingsContainer.Apply(Configuration cfg, PersistenceModel model) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\AutoMappingsContainer.cs:line 86
+   at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 80
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+   at TestProject.NhModelsMapper.GetSessionFactory(String connectionString) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\NhDbMapper.cs:line 63
+   at TestProject.TestTheIRepository.Nh_CanHaveIncrementingKey() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 652
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b5bca089-c1e5-4432-b510-241141e90084" testId="c9750689-b2a7-1965-bbd3-0c2f5eda3fb2" testName="Nh_CanSave" computerName="MICHAEL-PC" duration="00:00:00.0439823" startTime="2012-06-03T10:03:29.9050000+08:00" endTime="2012-06-03T10:03:29.9580000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b5bca089-c1e5-4432-b510-241141e90084">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Nh_CanSave threw exception: 
+FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Visitors.ValidationException: The entity 'Answer' doesn't have an Id mapped. Use the Id method to map your identity property. For example: Id(x =&gt; x.Id).</Message>
+          <StackTrace>    at FluentNHibernate.Visitors.ValidationVisitor.ProcessClass(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\ValidationVisitor.cs:line 20
+   at FluentNHibernate.MappingModel.ClassBased.ClassMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\ClassBased\ClassMapping.cs:line 78
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 89
+   at FluentNHibernate.MappingModel.HibernateMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\HibernateMapping.cs:line 37
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.&lt;Visit&gt;b__0(HibernateMapping x) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.Utils.CollectionExtensions.Each[T](IEnumerable`1 enumerable, Action`1 each) in d:\Builds\FluentNH\src\FluentNHibernate\Utils\CollectionExtensions.cs:line 15
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.PersistenceModel.ApplyVisitors(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 214
+   at FluentNHibernate.PersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 169
+   at FluentNHibernate.Automapping.AutoPersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 134
+   at FluentNHibernate.PersistenceModel.EnsureMappingsBuilt() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 221
+   at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 277
+   at FluentNHibernate.Automapping.AutoPersistenceModel.Configure(Configuration configuration) in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 201
+   at FluentNHibernate.Cfg.AutoMappingsContainer.Apply(Configuration cfg, PersistenceModel model) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\AutoMappingsContainer.cs:line 86
+   at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 80
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+   at TestProject.NhModelsMapper.GetSessionFactory(String connectionString) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\NhDbMapper.cs:line 63
+   at TestProject.TestTheIRepository.Nh_CanSave() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 95
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e0b26913-3867-4a31-bf59-b8ea258e128d" testId="ca3ec696-2df9-55bd-c53c-f732b5c80a68" testName="Ef_CanDetectUpdateConflictingUpdate" computerName="MICHAEL-PC" duration="00:00:00.0601792" startTime="2012-06-03T10:03:29.9610000+08:00" endTime="2012-06-03T10:03:30.0310000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e0b26913-3867-4a31-bf59-b8ea258e128d">
+    </UnitTestResult>
+    <UnitTestResult executionId="2b64ad62-df22-4fcb-8195-85f68691aa7e" testId="cdd1ec05-a33a-edaf-1560-6637f27329d2" testName="Ef_CanDetectUpdateConflictingDelete" computerName="MICHAEL-PC" duration="00:00:00.0371724" startTime="2012-06-03T10:03:30.0360000+08:00" endTime="2012-06-03T10:03:30.0870000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2b64ad62-df22-4fcb-8195-85f68691aa7e">
+    </UnitTestResult>
+    <UnitTestResult executionId="130f3071-752c-49a6-a6a4-0651dd62df47" testId="d14d6d4a-1363-e36e-8cf9-c1c992b9e243" testName="Nh_Can_save_transaction" computerName="MICHAEL-PC" duration="00:00:00.0287779" startTime="2012-06-03T10:03:30.1010000+08:00" endTime="2012-06-03T10:03:30.1360000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="130f3071-752c-49a6-a6a4-0651dd62df47">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Nh_Can_save_transaction threw exception: 
+FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Visitors.ValidationException: The entity 'Answer' doesn't have an Id mapped. Use the Id method to map your identity property. For example: Id(x =&gt; x.Id).</Message>
+          <StackTrace>    at FluentNHibernate.Visitors.ValidationVisitor.ProcessClass(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\ValidationVisitor.cs:line 20
+   at FluentNHibernate.MappingModel.ClassBased.ClassMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\ClassBased\ClassMapping.cs:line 78
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 89
+   at FluentNHibernate.MappingModel.HibernateMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\HibernateMapping.cs:line 37
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.&lt;Visit&gt;b__0(HibernateMapping x) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.Utils.CollectionExtensions.Each[T](IEnumerable`1 enumerable, Action`1 each) in d:\Builds\FluentNH\src\FluentNHibernate\Utils\CollectionExtensions.cs:line 15
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.PersistenceModel.ApplyVisitors(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 214
+   at FluentNHibernate.PersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 169
+   at FluentNHibernate.Automapping.AutoPersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 134
+   at FluentNHibernate.PersistenceModel.EnsureMappingsBuilt() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 221
+   at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 277
+   at FluentNHibernate.Automapping.AutoPersistenceModel.Configure(Configuration configuration) in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 201
+   at FluentNHibernate.Cfg.AutoMappingsContainer.Apply(Configuration cfg, PersistenceModel model) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\AutoMappingsContainer.cs:line 86
+   at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 80
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+   at TestProject.NhModelsMapper.GetSessionFactory(String connectionString) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\NhDbMapper.cs:line 63
+   at TestProject.TestTheIRepository.Nh_Can_save_transaction() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 1196
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="24785d77-1fc8-4084-8fe0-9225c179048d" testId="d409929f-129a-9686-590d-6472fdfa28e4" testName="Memory_CanDetectDeleteConflictingDelete" computerName="MICHAEL-PC" duration="00:00:00.0007001" startTime="2012-06-03T10:03:30.1430000+08:00" endTime="2012-06-03T10:03:30.1500000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="24785d77-1fc8-4084-8fe0-9225c179048d">
+    </UnitTestResult>
+    <UnitTestResult executionId="e7e40328-67da-4c88-a62f-f413ce5a1386" testId="dad118fb-1088-58a3-350a-fc5e47173fa9" testName="Nh_SessionTransaction_cannot_detect_transaction_commitness" computerName="MICHAEL-PC" duration="00:00:00.0206899" startTime="2012-06-03T10:03:30.1530000+08:00" endTime="2012-06-03T10:03:30.1790000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e7e40328-67da-4c88-a62f-f413ce5a1386">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Nh_SessionTransaction_cannot_detect_transaction_commitness threw exception: 
+FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Visitors.ValidationException: The entity 'Answer' doesn't have an Id mapped. Use the Id method to map your identity property. For example: Id(x =&gt; x.Id).</Message>
+          <StackTrace>    at FluentNHibernate.Visitors.ValidationVisitor.ProcessClass(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\ValidationVisitor.cs:line 20
+   at FluentNHibernate.MappingModel.ClassBased.ClassMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\ClassBased\ClassMapping.cs:line 78
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 89
+   at FluentNHibernate.MappingModel.HibernateMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\HibernateMapping.cs:line 37
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.&lt;Visit&gt;b__0(HibernateMapping x) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.Utils.CollectionExtensions.Each[T](IEnumerable`1 enumerable, Action`1 each) in d:\Builds\FluentNH\src\FluentNHibernate\Utils\CollectionExtensions.cs:line 15
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.PersistenceModel.ApplyVisitors(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 214
+   at FluentNHibernate.PersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 169
+   at FluentNHibernate.Automapping.AutoPersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 134
+   at FluentNHibernate.PersistenceModel.EnsureMappingsBuilt() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 221
+   at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 277
+   at FluentNHibernate.Automapping.AutoPersistenceModel.Configure(Configuration configuration) in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 201
+   at FluentNHibernate.Cfg.AutoMappingsContainer.Apply(Configuration cfg, PersistenceModel model) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\AutoMappingsContainer.cs:line 86
+   at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 80
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+   at TestProject.NhModelsMapper.GetSessionFactory(String connectionString) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\NhDbMapper.cs:line 63
+   at TestProject.TestTheIRepository.Nh_SessionTransaction_cannot_detect_transaction_commitness() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 1267
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d24a2299-eefe-4fb3-bbc9-b1b68bf59e56" testId="e392eca5-e91b-ff0f-619e-8a24d0ecbe68" testName="Ef_CanHaveIncrementingKey" computerName="MICHAEL-PC" duration="00:00:00.0097701" startTime="2012-06-03T10:03:30.1810000+08:00" endTime="2012-06-03T10:03:30.1950000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d24a2299-eefe-4fb3-bbc9-b1b68bf59e56">
+    </UnitTestResult>
+    <UnitTestResult executionId="ff55b265-5918-499d-bf88-154c8f2252dd" testId="e4d36185-e99e-9b3f-8afc-2b7c501afd9a" testName="TestArray" computerName="MICHAEL-PC" duration="00:00:00.0002020" startTime="2012-06-03T10:03:30.1990000+08:00" endTime="2012-06-03T10:03:30.2040000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ff55b265-5918-499d-bf88-154c8f2252dd">
+    </UnitTestResult>
+    <UnitTestResult executionId="1d3730d7-b1e8-4671-be20-fdc9706a1eb8" testId="ecf5b477-cdd8-3508-c195-40a64bc26f00" testName="Ef_CanSaveHeaderDetail" computerName="MICHAEL-PC" duration="00:00:00.0727221" startTime="2012-06-03T10:03:30.2070000+08:00" endTime="2012-06-03T10:03:30.2840000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1d3730d7-b1e8-4671-be20-fdc9706a1eb8">
+    </UnitTestResult>
+    <UnitTestResult executionId="1cb61ce7-d6cf-4212-9849-01601b4a1d0d" testId="ef9db0bb-63c6-f8c2-c180-d50d1ce2ca5b" testName="Ef_Can_rollback_transaction" computerName="MICHAEL-PC" duration="00:00:00.0132797" startTime="2012-06-03T10:03:30.2880000+08:00" endTime="2012-06-03T10:03:30.3050000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1cb61ce7-d6cf-4212-9849-01601b4a1d0d">
+    </UnitTestResult>
+    <UnitTestResult executionId="0ed6498a-4ad4-446a-859a-a8f63f29ba09" testId="f3b46671-4362-7dc3-90a0-0fcbe80e34d8" testName="Nh_CanDelete" computerName="MICHAEL-PC" duration="00:00:00.0204906" startTime="2012-06-03T10:03:30.3100000+08:00" endTime="2012-06-03T10:03:30.3350000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0ed6498a-4ad4-446a-859a-a8f63f29ba09">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Nh_CanDelete threw exception: 
+FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Visitors.ValidationException: The entity 'Answer' doesn't have an Id mapped. Use the Id method to map your identity property. For example: Id(x =&gt; x.Id).</Message>
+          <StackTrace>    at FluentNHibernate.Visitors.ValidationVisitor.ProcessClass(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\ValidationVisitor.cs:line 20
+   at FluentNHibernate.MappingModel.ClassBased.ClassMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\ClassBased\ClassMapping.cs:line 78
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 89
+   at FluentNHibernate.MappingModel.HibernateMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\HibernateMapping.cs:line 37
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.&lt;Visit&gt;b__0(HibernateMapping x) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.Utils.CollectionExtensions.Each[T](IEnumerable`1 enumerable, Action`1 each) in d:\Builds\FluentNH\src\FluentNHibernate\Utils\CollectionExtensions.cs:line 15
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.PersistenceModel.ApplyVisitors(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 214
+   at FluentNHibernate.PersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 169
+   at FluentNHibernate.Automapping.AutoPersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 134
+   at FluentNHibernate.PersistenceModel.EnsureMappingsBuilt() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 221
+   at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 277
+   at FluentNHibernate.Automapping.AutoPersistenceModel.Configure(Configuration configuration) in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 201
+   at FluentNHibernate.Cfg.AutoMappingsContainer.Apply(Configuration cfg, PersistenceModel model) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\AutoMappingsContainer.cs:line 86
+   at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 80
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+   at TestProject.NhModelsMapper.GetSessionFactory(String connectionString) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\NhDbMapper.cs:line 63
+   at TestProject.TestTheIRepository.Nh_CanDelete() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 274
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="aa0ddd6e-065e-4cc0-84d9-c3b31e9d31b2" testId="f473cffe-6acb-bc8c-3c44-48f67f9567de" testName="Ef_Can_save_transaction" computerName="MICHAEL-PC" duration="00:00:00.0067704" startTime="2012-06-03T10:03:30.3380000+08:00" endTime="2012-06-03T10:03:30.3550000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aa0ddd6e-065e-4cc0-84d9-c3b31e9d31b2">
+    </UnitTestResult>
+    <UnitTestResult executionId="156ae1cc-548a-4b34-b819-9ab69a877698" testId="f5049a26-85f5-2d61-7d0d-3fe36d498d57" testName="Memory_CanUpdate" computerName="MICHAEL-PC" duration="00:00:00.0003895" startTime="2012-06-03T10:03:30.3590000+08:00" endTime="2012-06-03T10:03:30.3630000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="156ae1cc-548a-4b34-b819-9ab69a877698">
+    </UnitTestResult>
+    <UnitTestResult executionId="f6a6c569-5cfc-4bff-b30e-6c2032d85038" testId="f68ad391-23ca-2766-d2b2-8731589ef39b" testName="Nh_CanSaveHeaderDetail" computerName="MICHAEL-PC" duration="00:00:00.0202822" startTime="2012-06-03T10:03:30.3660000+08:00" endTime="2012-06-03T10:03:30.3910000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f6a6c569-5cfc-4bff-b30e-6c2032d85038">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Nh_CanSaveHeaderDetail threw exception: 
+FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Cfg.FluentConfigurationException: An invalid or incomplete configuration was used while creating a SessionFactory. Check PotentialReasons collection, and InnerException for more detail.
+
+ ---&gt; FluentNHibernate.Visitors.ValidationException: The entity 'Answer' doesn't have an Id mapped. Use the Id method to map your identity property. For example: Id(x =&gt; x.Id).</Message>
+          <StackTrace>    at FluentNHibernate.Visitors.ValidationVisitor.ProcessClass(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\ValidationVisitor.cs:line 20
+   at FluentNHibernate.MappingModel.ClassBased.ClassMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\ClassBased\ClassMapping.cs:line 78
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(ClassMapping classMapping) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 89
+   at FluentNHibernate.MappingModel.HibernateMapping.AcceptVisitor(IMappingModelVisitor visitor) in d:\Builds\FluentNH\src\FluentNHibernate\MappingModel\HibernateMapping.cs:line 37
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.&lt;Visit&gt;b__0(HibernateMapping x) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.Utils.CollectionExtensions.Each[T](IEnumerable`1 enumerable, Action`1 each) in d:\Builds\FluentNH\src\FluentNHibernate\Utils\CollectionExtensions.cs:line 15
+   at FluentNHibernate.Visitors.DefaultMappingModelVisitor.Visit(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\Visitors\DefaultMappingModelVisitor.cs:line 79
+   at FluentNHibernate.PersistenceModel.ApplyVisitors(IEnumerable`1 mappings) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 214
+   at FluentNHibernate.PersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 169
+   at FluentNHibernate.Automapping.AutoPersistenceModel.BuildMappings() in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 134
+   at FluentNHibernate.PersistenceModel.EnsureMappingsBuilt() in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 221
+   at FluentNHibernate.PersistenceModel.Configure(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\PersistenceModel.cs:line 277
+   at FluentNHibernate.Automapping.AutoPersistenceModel.Configure(Configuration configuration) in d:\Builds\FluentNH\src\FluentNHibernate\Automapping\AutoPersistenceModel.cs:line 201
+   at FluentNHibernate.Cfg.AutoMappingsContainer.Apply(Configuration cfg, PersistenceModel model) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\AutoMappingsContainer.cs:line 86
+   at FluentNHibernate.Cfg.MappingConfiguration.Apply(Configuration cfg) in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\MappingConfiguration.cs:line 80
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 249
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildConfiguration() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 264
+   at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 230
+ --- End of inner exception stack trace ---
+    at FluentNHibernate.Cfg.FluentConfiguration.BuildSessionFactory() in d:\Builds\FluentNH\src\FluentNHibernate\Cfg\FluentConfiguration.cs:line 235
+   at TestProject.NhModelsMapper.GetSessionFactory(String connectionString) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\NhDbMapper.cs:line 63
+   at TestProject.TestTheIRepository.Nh_CanSaveHeaderDetail() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 122
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="33db4e6f-2dd0-4158-946d-d5547ebf5680" testId="f7d7cfdb-4468-5c56-7540-afe0d55e093a" testName="Can_do_deep_clone" computerName="MICHAEL-PC" duration="00:00:00.0022151" startTime="2012-06-03T10:03:30.3940000+08:00" endTime="2012-06-03T10:03:30.4050000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="33db4e6f-2dd0-4158-946d-d5547ebf5680">
+    </UnitTestResult>
+    <UnitTestResult executionId="d7fc3501-faae-4024-816b-da36a9645cd9" testId="ffcba511-cdf9-ce52-fd62-900fe7820ecc" testName="Ef_Can_queue_changes" computerName="MICHAEL-PC" duration="00:00:00.0050242" startTime="2012-06-03T10:03:30.4080000+08:00" endTime="2012-06-03T10:03:30.4190000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d7fc3501-faae-4024-816b-da36a9645cd9">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Ef_Can_queue_changes threw exception: 
+System.MissingMethodException: Method 'TestProject.SampleModel.Question.QuestionID' not found.</Message>
+          <StackTrace>    at System.RuntimeType.InvokeMember(String name, BindingFlags bindingFlags, Binder binder, Object target, Object[] providedArgs, ParameterModifier[] modifiers, CultureInfo culture, String[] namedParams)
+   at Ienablemuch.ToTheEfnhX.EntityFramework.EfRepository`1.Merge(TEnt ent, Byte[] version) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\EfRepository.cs:line 155
+   at TestProject.TestTheIRepository.Refactored_Common_Merge_Arrange_Create(IRepository`1 repo) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 847
+   at TestProject.TestTheIRepository.Common_Can_queue_changes(IRepository`1 repo) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 898
+   at TestProject.TestTheIRepository.Ef_Can_queue_changes() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 891
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

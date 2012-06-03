@@ -1,0 +1,16 @@
+C:\Users\Michael\_CODE\ToTheEfnhX\ToTheEfnhX\bin\Release\ToTheEfnhX.dll
+C:\Users\Michael\_CODE\ToTheEfnhX\ToTheEfnhX\bin\Release\ToTheEfnhX.pdb
+C:\Users\Michael\_CODE\ToTheEfnhX\ToTheEfnhX\bin\Release\Castle.Core.dll
+C:\Users\Michael\_CODE\ToTheEfnhX\ToTheEfnhX\bin\Release\EntityFramework.dll
+C:\Users\Michael\_CODE\ToTheEfnhX\ToTheEfnhX\bin\Release\FluentNHibernate.dll
+C:\Users\Michael\_CODE\ToTheEfnhX\ToTheEfnhX\bin\Release\Iesi.Collections.dll
+C:\Users\Michael\_CODE\ToTheEfnhX\ToTheEfnhX\bin\Release\NHibernate.ByteCode.Castle.dll
+C:\Users\Michael\_CODE\ToTheEfnhX\ToTheEfnhX\bin\Release\NHibernate.dll
+C:\Users\Michael\_CODE\ToTheEfnhX\ToTheEfnhX\bin\Release\Castle.Core.xml
+C:\Users\Michael\_CODE\ToTheEfnhX\ToTheEfnhX\bin\Release\EntityFramework.xml
+C:\Users\Michael\_CODE\ToTheEfnhX\ToTheEfnhX\bin\Release\FluentNHibernate.pdb
+C:\Users\Michael\_CODE\ToTheEfnhX\ToTheEfnhX\bin\Release\Iesi.Collections.pdb
+C:\Users\Michael\_CODE\ToTheEfnhX\ToTheEfnhX\bin\Release\NHibernate.ByteCode.Castle.xml
+C:\Users\Michael\_CODE\ToTheEfnhX\ToTheEfnhX\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Michael\_CODE\ToTheEfnhX\ToTheEfnhX\obj\Release\ToTheEfnhX.dll
+C:\Users\Michael\_CODE\ToTheEfnhX\ToTheEfnhX\obj\Release\ToTheEfnhX.pdb

@@ -1,0 +1,98 @@
+﻿use TestEfnhX;
+
+/*
+drop table ProductPrice;
+drop table Product;
+
+drop table AnswerComment;
+drop table Answer;
+drop table QuestionComment;
+drop table Question;
+
+delete from AnswerComment;
+delete from Answer;
+delete from QuestionComment;
+delete from Question;
+*/
+
+
+-- Primary key and foreign key fields naming convention is patterned after Entity Framework's DB creation style,
+-- except for the constraint name of primary key and foreign key
+
+-- make the link to parent obvious, field(s) that comes before primary key are foreign key(which typically is immutable too)
+-- other foreign key that comes after primary key are mutable
+
+create table Question
+(
+QuestionId int identity(1,1) not null,
+Text nvarchar(max),
+Poster nvarchar(max),
+RowVersion rowversion,
+
+constraint pk_Question primary key(QuestionId)
+);
+
+create table QuestionComment
+(
+Question_QuestionId int not null, 
+
+QuestionCommentId int identity(1,1) not null,
+Text nvarchar(max),
+Poster nvarchar(max),
+
+constraint pk_QuestionComment primary key(QuestionCommentId),
+constraint fk_QuestionComment__Question foreign key(Question_QuestionId) references Question(QuestionId)
+);
+
+
+create table Answer
+(
+Question_QuestionId int not null,
+
+AnswerId int identity(1,1) not null,
+Text nvarchar(max),
+Poster nvarchar(max),
+
+constraint pk_Answer primary key(AnswerId),
+constraint fk_Answer__Question foreign key(Question_QuestionId) references Question(QuestionId)
+);
+
+
+create table AnswerComment
+(
+Answer_AnswerId int not null,
+
+AnswerCommentId int identity(1,1) not null,
+Text nvarchar(max),
+Poster nvarchar(max),
+
+constraint pk_AnswerComment primary key(AnswerCommentId),
+constraint fk_AnswerComment__Answer foreign key(Answer_AnswerId) references Answer(AnswerId)
+);
+
+----------------
+
+create table Product
+(
+ProductId int identity(1,1) not null,
+ProductName nvarchar(max) not null,
+Category nvarchar(max) not null,
+MinimumPrice decimal(18,6) not null,
+RowVersion rowversion,
+
+constraint pk_Product primary key(ProductId)
+);
+
+
+create table ProductPrice
+(
+Product_ProductId int not null,
+
+ProductPriceId int identity(1,1) not null,
+EffectiveDate date not null,
+Price decimal(18,6) not null,
+
+constraint pk_ProductPrice primary key(ProductPriceId),
+constraint fk_ProductPrice__Product foreign key(Product_ProductId) references Product(ProductId)
+);
+

@@ -1,0 +1,5 @@
+C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\SystemLinqDynamic\bin\Release\SystemLinqDynamic.dll
+C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\SystemLinqDynamic\bin\Release\SystemLinqDynamic.pdb
+C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\SystemLinqDynamic\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\SystemLinqDynamic\obj\Release\SystemLinqDynamic.dll
+C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\SystemLinqDynamic\obj\Release\SystemLinqDynamic.pdb
