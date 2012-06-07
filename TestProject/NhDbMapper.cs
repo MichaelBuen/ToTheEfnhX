@@ -51,8 +51,7 @@ namespace TestProject
                                // .Override<Question>(x => x.Not.LazyLoad())
                                .Override<Question>(x => x.HasMany(z => z.Answers).KeyColumn("Question_QuestionId") /*.Not.LazyLoad() */)
                                .Override<Question>(x => x.HasMany(z => z.Comments).KeyColumn("Question_QuestionId") /*.Not.LazyLoad()*/)
-                               .Override<Answer>(x => x.HasMany(z => z.Comments).KeyColumn("Answer_AnswerId")/*.Not.LazyLoad()*/)
-                               
+                               .Override<Answer>(x => x.HasMany(z => z.Comments).KeyColumn("Answer_AnswerId")/*.Not.LazyLoad()*/)                                                              
                             )
 
 

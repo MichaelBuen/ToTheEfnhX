@@ -138,18 +138,51 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
 
 
+
+        
+        
+
+
+        // http://stackoverflow.com/questions/1158422/entity-framework-detach-and-keep-related-object-graph
+        static object YetAnotherCloner(object x)
+        {
+            using (var stream = new System.IO.MemoryStream())
+            {
+                var formatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                formatter.Serialize(stream, x);
+                stream.Position = 0;
+                return formatter.Deserialize(stream);
+            }
+        }
+
         
         public void Merge(TEnt ent, byte[] version)
         {
+            // Rationale for detaching/evicting: 
+            // http://msdn.microsoft.com/en-us/library/bb738697.aspx
+            // http://msdn.microsoft.com/en-us/library/bb896271.aspx
+
             try
             {
-
                 
                 // http://stackoverflow.com/questions/1158422/entity-framework-detach-and-keep-related-object-graph
                 // Entity Framework shreds the original object when detaching
-                TEnt clonedEnt = (TEnt)ent.Clone();
 
-                // TEnt clonedEnt = (TEnt)ent;
+                // Be smart on cloning, use a built-in one if the object is serializable
+
+                TEnt clonedEnt;
+
+                
+                if (ent.GetType().GetCustomAttributes(typeof(SerializableAttribute), false).Length == 1)
+                {
+                    clonedEnt = (TEnt)YetAnotherCloner(ent);
+                }
+                else
+                {
+                    clonedEnt = (TEnt)ent.Clone();
+                }
+                
+                
 
 
                 Type entType = typeof(TEnt);
@@ -282,11 +315,19 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
 
 
-                // Detaching objects via Entity Framework shreds collection, that's why we just deep clone the object at the initial phase of this code,
+                // Detaching objects via Entity Framework shreds collection, hence we just deep clone the object at the initial phase of this code,
                 // so Entity Framework cannot meddle with the original object's states
                 // see this problem: http://stackoverflow.com/questions/1158422/entity-framework-detach-and-keep-related-object-graph
-                // Why Entity Framework have to empty the collection when detaching objects? it could just mark in its own object states repository that some objects are not attached anymore
-                // Evict(pkValue);
+                // Why Entity Framework have to empty the collection when detaching objects? it could just mark in its own object states repository that some objects are not attached anymore.                                                
+
+
+                // Rationale for detaching/evicting: 
+                // http://msdn.microsoft.com/en-us/library/bb738697.aspx
+                // http://msdn.microsoft.com/en-us/library/bb896271.aspx
+                Evict(pkValue);
+                
+
+
 
                     
             }

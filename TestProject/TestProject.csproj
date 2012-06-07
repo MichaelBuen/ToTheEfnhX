@@ -69,11 +69,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EfDbMapper.cs" />
-    <Compile Include="SampleModel\Stackexchange Entities.cs" />
+    <Compile Include="SampleModel\AllEntities.cs" />
     <Compile Include="TestTheIRepository.cs" />
     <Compile Include="NhDbMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SampleModel\Product.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ienablemuch.ToTheEfnhx.CommonExtensions\Ienablemuch.ToTheEfnhx.CommonExtensions.csproj">
