@@ -35,7 +35,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
         public IQueryable<TEnt> All
         {
-            get {  return _ctx.Set<TEnt>(); } 
+            get {  return _ctx.Set<TEnt>().AsNoTracking(); } 
         }
 
 
@@ -198,16 +198,14 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
 
 
-                bool isNew;
+                
                 if (object.Equals(pkValue, pkDefaultValue))
-                {
-                    isNew = true;
+                {                    
                     _ctx.Set<TEnt>().Add(clonedEnt);
                 }
                 else
                 {
-                    isNew = false;
-
+                 
 
 
 
@@ -592,7 +590,19 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
         public TEnt Get(object id)
         {
-            return this.All.AsNoTracking().Where(string.Format("{0} = @0", PrimaryKeyName), id).SingleOrDefault();
+           
+            bool oldValue = _ctx.Configuration.ProxyCreationEnabled;
+
+            // we need this to be true. if this is false, stub objects remain stubs
+            _ctx.Configuration.ProxyCreationEnabled = true;
+
+            // there's no Dynamic Linq for SingleOrDefault. Hence doing both Where and SingleOrDefault            
+            TEnt x = this.All.Where(string.Format("{0} = @0", PrimaryKeyName), id).SingleOrDefault();
+            
+
+            _ctx.Configuration.ProxyCreationEnabled = oldValue;
+
+            return x;
         }
 
 
@@ -642,24 +652,6 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
             }
         }
 
-        /*
-        private static void Evik(DbContext ctx, Type t, string primaryKeyName, object id)
-        {            
-            var cachedEnt =
-                ctx.ChangeTracker.Entries().Where(x => ObjectContext.GetObjectType(x.Entity.GetType()) == t)
-                .SingleOrDefault(x =>
-                {
-                    Type entType = x.Entity.GetType();
-                    object value = entType.InvokeMember(primaryKeyName, 
-                                        System.Reflection.BindingFlags.GetProperty, null, 
-                                        x.Entity, new object[] { });
-
-                    return value.Equals(id);
-                });
-
-            if (cachedEnt != null)
-                ctx.Entry(cachedEnt.Entity).State = EntityState.Detached;
-        }*/
 
 
         void EvictAll()
@@ -821,29 +813,32 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
         
         public TEnt GetCascade(object pkValue)
         {
-            // don't want proxy objects here :-)
+            
             
             bool oldValue = _ctx.Configuration.ProxyCreationEnabled;
-            _ctx.Configuration.ProxyCreationEnabled = false;
+
+            // we need this to be true. if this is false, stub objects remain stubs
+            _ctx.Configuration.ProxyCreationEnabled = true;
              
 
             Type entType = typeof(TEnt);
             var query = _ctx.Set<TEnt>().AsNoTracking().Where(string.Format("{0} = @0", PrimaryKeyName), pkValue);
+            
+            
             if (!_ctx.Configuration.ProxyCreationEnabled)
             {
-                /* e.g.
-                var query = new EfRepository<Question>().All.Where(x => x.QuestionId == id);
-                query = query.Include("Answers");
-                query = query.Include("Answers.Comments");
-                query = query.Include("Comments");*/
+                //  e.g.
+                //var query = new EfRepository<Question>().All.Where(x => x.QuestionId == id);
+                //query = query.Include("Answers");
+                //query = query.Include("Answers.Comments");
+                //query = query.Include("Comments");
 
                 foreach (string path in GetCollectionPaths(entType))
-                    query = query.Include(path);
+                    query = query.Include(path);                
 
             }
 
-
-            var r = query.Single();
+            var r = query.SingleOrDefault();
 
 
             _ctx.Configuration.ProxyCreationEnabled = oldValue;
