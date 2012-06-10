@@ -16,6 +16,7 @@ namespace TestProject
         public EfDbMapper(string connectionString) :base(connectionString)
         {
             // this.Configuration.ProxyCreationEnabled = false; // putting this here, causes an error on Ef_Can_Update in PriceList[0].ProductId
+            this.Configuration.ProxyCreationEnabled = true;
         }
 
         

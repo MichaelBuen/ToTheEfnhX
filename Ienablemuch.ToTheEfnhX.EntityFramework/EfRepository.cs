@@ -12,14 +12,15 @@ using System.Data;
 using System.Linq.Dynamic;
 
 using Ienablemuch.ToTheEfnhX.ForImplementorsOnly;
+using System.Diagnostics;
 
 
 namespace Ienablemuch.ToTheEfnhX.EntityFramework
 {
-    public class EfRepository<TEnt> : IRepository<TEnt> where TEnt : class
+    public class Repository<TEnt> : IRepository<TEnt> where TEnt : class
     {
         DbContext _ctx = null;
-        public EfRepository(DbContext ctx)
+        public Repository(DbContext ctx)
         {
 
             _ctx = ctx;
@@ -242,21 +243,19 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                         foreach (string path in GetCollectionPaths(entType))
                             query = query.Include(path);
 
-
-                            
-
                     }
 
                     TEnt liveParent = query.Single();
 
+                    
                     foreach (PropertyInfo pi in typeof(TEnt).GetProperties())
                     {
-
+                        
                         // throw new Exception("Test " + pi.Name + pi.IsG);
                         // throw new Exception("Test " + pi.Name + " " +  (pi.PropertyType.IsGenericType && typeof(IEnumerable).IsAssignableFrom(pi.PropertyType)));
 
                         bool isCollection = pi.PropertyType.IsGenericType && typeof(IEnumerable).IsAssignableFrom(pi.PropertyType);
-
+                        
                         if (!isCollection && pi.Name != VersionName)
                         {
                             object transientVal = entType.InvokeMember(pi.Name, BindingFlags.GetProperty, null, clonedEnt, new object[] { });
@@ -374,15 +373,17 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
             // http://stackoverflow.com/questions/1043755/c-generic-list-t-how-to-get-the-type-of-t
             // e.g. IList<listElemType> p; ICollection<listElemType> p;  IList derived from ICollection, just use the base interface
+
+            if (colTransient == null) return;
             Type listElemType = colTransient.GetType().GetInterfaces().Where(x => x.IsGenericType && x.GetGenericTypeDefinition() == typeof(ICollection<>)).Single().GetGenericArguments()[0];
 
 
 
-            string childPk = listElemType.Name + RepositoryConstants.IdSuffix; ;
+            string childPk = listElemType.Name + RepositoryConstants.IdSuffix;
 
             // throw new Exception("Hello " + childPk);
 
-            var parentPropertyMatches = listElemType.GetProperties().Where(x => x.PropertyType.IsAssignableFrom(liveParent.GetType()));
+            IEnumerable<PropertyInfo> parentPropertyMatches = listElemType.GetProperties().Where(x => x.PropertyType.IsAssignableFrom(liveParent.GetType()));
 
 
 
@@ -390,7 +391,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
             {
                 IList liveList = new ArrayList();
 
-
+                
                 foreach (object elemLive in colLive)
                 {
                     bool isExisting = false;
@@ -426,7 +427,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
             }//process live
 
 
-
+            
             Action<object> assignChildToLiveParent = (e) =>
             {
 
@@ -495,6 +496,9 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
                         // recursively, assign all collections, these are grandchildren and so on
 
+                        // http://stackoverflow.com/questions/6033638/an-object-with-the-same-key-already-exists-in-the-objectstatemanager-the-object
+
+                        
 
                         foreach (PropertyInfo pi in listElemType.GetProperties().Where(x => x.PropertyType.IsGenericType && typeof(IEnumerable).IsAssignableFrom(x.PropertyType)))
                         {
@@ -507,20 +511,45 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
                         // UPDATE
 
-                        _ctx.Entry(liveMatchFound).State = EntityState.Detached;
+                        
+                        transientEditList.Add(transientItem);
+                        
+                        
+
+                        Type tx = liveMatchFound.GetType();
+
+                        
+                        if (tx.BaseType != null && tx.Namespace == ObjectCloner.EFProxyNamespace)
+                        {
+                             tx = tx.BaseType;
+                        }
+
+                        foreach (PropertyInfo px in tx.GetProperties())
+                        {
+                            PropertyInfo txPi = transientItem.GetType().GetProperty(px.Name);
+                            object txVal = txPi.GetValue(transientItem, null);
 
 
+                            // don't overwrite live entity's referenced object
+                            bool isValueInIdentityMap = 
+                                _ctx.ChangeTracker.Entries()
+                                    .Where(x => ObjectContext.GetObjectType(x.Entity.GetType()) == px.PropertyType)
+                                    .Any(x => object.ReferenceEquals(px.GetValue(liveMatchFound, null), x.Entity));
 
-                        // transientEditList.Add(transientItem);
+                            
+                            if (!isValueInIdentityMap)
+                            {
+                                px.SetValue(liveMatchFound, txVal, null);
+                            }
 
-                        // int n = (int) listElemType.InvokeMember(childPk, BindingFlags.GetProperty, null, transientItem, new object[] { });
-                        // throw new Exception("The number : " + n);
-                        // Evict(n);
+                        }
+                                                
+                        assignChildToLiveParent(liveMatchFound); 
+                        
+                        
 
 
-
-                        assignChildToLiveParent(transientItem);
-                        _ctx.Entry(transientItem).State = EntityState.Modified;
+                        
 
 
 
@@ -530,18 +559,11 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                 }//loop transient
 
 
-                /*
-                foreach(object e in transientEditList)
-                {
-                    assignChildToLiveParent(e);
-                    _ctx.Entry(e).State = EntityState.Modified;
-                }*/
-
 
                 // INSERT
                 foreach (object e in transientAddList)
                 {
-                    assignChildToLiveParent(e);
+                    assignChildToLiveParent(e); 
 
 
                     colLive.GetType().InvokeMember("Add", BindingFlags.InvokeMethod, null, colLive, new object[] { e });
@@ -603,6 +625,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
             _ctx.Configuration.ProxyCreationEnabled = oldValue;
 
             return x;
+            // return (TEnt) x.Clone() ;
         }
 
 
@@ -842,9 +865,9 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
 
             _ctx.Configuration.ProxyCreationEnabled = oldValue;
-            
 
             return r;
+            // return (TEnt) r.Clone();
         }
     }//EfRepository
 }

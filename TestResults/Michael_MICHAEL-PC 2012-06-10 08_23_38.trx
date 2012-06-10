@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="e503f5b3-a593-41cd-bb55-e6f3f492e2f1" name="Michael@MICHAEL-PC 2012-06-10 08:23:38" runUser="Michael-PC\Michael" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="7d9e14f4-f525-48ee-bea8-a34d9f4cc18d">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="Michael_MICHAEL-PC 2012-06-10 08_23_38">
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.Memory\bin\Release\Ienablemuch.ToTheEfnhX.Memory.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\packages\FluentNHibernate.1.3.0.717\lib\FluentNHibernate.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhx.CommonExtensions\bin\Release\Ienablemuch.ToTheEfnhx.CommonExtensions.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\packages\NHibernate.3.3.0.4000\lib\Net35\NHibernate.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\packages\EntityFramework.4.3.1\lib\net40\EntityFramework.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.NHibernate\bin\Release\Ienablemuch.ToTheEfnhX.NHibernate.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\bin\Release\Ienablemuch.ToTheEfnhX.EntityFramework.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\ToTheEfnhX\bin\Release\Ienablemuch.ToTheEfnhX.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-06-10T08:23:38.3260000+08:00" queuing="2012-06-10T08:23:38.3740000+08:00" start="2012-06-10T08:23:38.3930000+08:00" finish="2012-06-10T08:23:40.1370000+08:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="2" executed="2" passed="2" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Ef_CanSaveHeaderDetail" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="ecf5b477-cdd8-3508-c195-40a64bc26f00">
+      <Execution id="da8c0a78-c208-4672-b4ad-2ab396c09ccd" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_CanSaveHeaderDetail" />
+    </UnitTest>
+    <UnitTest name="Ef_Can_Orm_Merge_Can_Update" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="3a1e9fe6-a4ce-9adb-c086-11052cee98b6">
+      <Execution id="bdbd3842-4e76-4180-be75-83a0e74e72c8" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_Can_Orm_Merge_Can_Update" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="3a1e9fe6-a4ce-9adb-c086-11052cee98b6" executionId="bdbd3842-4e76-4180-be75-83a0e74e72c8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ecf5b477-cdd8-3508-c195-40a64bc26f00" executionId="da8c0a78-c208-4672-b4ad-2ab396c09ccd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="bdbd3842-4e76-4180-be75-83a0e74e72c8" testId="3a1e9fe6-a4ce-9adb-c086-11052cee98b6" testName="Ef_Can_Orm_Merge_Can_Update" computerName="MICHAEL-PC" duration="00:00:01.2992963" startTime="2012-06-10T08:23:38.4200000+08:00" endTime="2012-06-10T08:23:39.9800000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bdbd3842-4e76-4180-be75-83a0e74e72c8">
+      <Output>
+        <DebugTrace>TestProject.SampleModel.Question:
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="da8c0a78-c208-4672-b4ad-2ab396c09ccd" testId="ecf5b477-cdd8-3508-c195-40a64bc26f00" testName="Ef_CanSaveHeaderDetail" computerName="MICHAEL-PC" duration="00:00:00.1221510" startTime="2012-06-10T08:23:39.9840000+08:00" endTime="2012-06-10T08:23:40.1140000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="da8c0a78-c208-4672-b4ad-2ab396c09ccd">
+      <Output>
+        <DebugTrace>TestProject.SampleModel.Product:
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

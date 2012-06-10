@@ -14,14 +14,14 @@ using System.Reflection;
 namespace Ienablemuch.ToTheEfnhX.NHibernate
 {
 
-    public class NhRepository<TEnt> : IRepository<TEnt> where TEnt : class
+    public class Repository<TEnt> : IRepository<TEnt> where TEnt : class
     {
 
         ISession _session = null;
 
 
 
-        public NhRepository(ISession sess)
+        public Repository(ISession sess)
         {
             _session = sess;
             // Convention-over-configuration :-)

@@ -9,6 +9,7 @@ namespace Ienablemuch.ToTheEfnhX.ForImplementorsOnly
 {
     public static class ObjectCloner
     {
+        public const string EFProxyNamespace = "System.Data.Entity.DynamicProxies";
 
         public static object Clone(this object root)
         {
@@ -16,20 +17,35 @@ namespace Ienablemuch.ToTheEfnhX.ForImplementorsOnly
             lock (root)
             {
 
-                Type rootType = root.GetType();
-                object clone = Activator.CreateInstance(rootType);
+                // Type rootType = root.GetType();
 
-                foreach (PropertyInfo pi in rootType.GetProperties())
+                Type realType = root.GetType();
+
+                if (realType.BaseType != null && realType.Namespace == ObjectCloner.EFProxyNamespace)
                 {
+                    realType = realType.BaseType;
+                }
+
+                object clone = Activator.CreateInstance(realType);
+
+                foreach (PropertyInfo pi in realType.GetProperties())
+                {
+                    
+
+
                     bool isCollection = pi.PropertyType.IsGenericType && typeof(IEnumerable).IsAssignableFrom(pi.PropertyType);
                     if (!isCollection)
                     {
-                        object transientVal = rootType.InvokeMember(pi.Name, BindingFlags.GetProperty, null, root, new object[] { });
-                        rootType.InvokeMember(pi.Name, BindingFlags.SetProperty, null, clone, new object[] { transientVal });
+
+
+                        object transientVal = realType.InvokeMember(pi.Name, BindingFlags.GetProperty, null, root, new object[] { });
+
+
+                        realType.InvokeMember(pi.Name, BindingFlags.SetProperty, null, clone, new object[] { transientVal });
                     }
                     else
                     {
-                        var colOrig = rootType.InvokeMember(pi.Name, BindingFlags.GetProperty, null, root, new object[] { });
+                        var colOrig = realType.InvokeMember(pi.Name, BindingFlags.GetProperty, null, root, new object[] { });
 
                         if (colOrig == null) continue;
 
@@ -47,7 +63,7 @@ namespace Ienablemuch.ToTheEfnhX.ForImplementorsOnly
                             clonedList = Create("System.Collections.Generic.List", elemType);                            
                         }
                         
-                        rootType.InvokeMember(pi.Name, BindingFlags.SetProperty, null, clone, new object[] { clonedList });
+                        realType.InvokeMember(pi.Name, BindingFlags.SetProperty, null, clone, new object[] { clonedList });
                         CloneCollection(root, (IList)colOrig, clone, (IList)clonedList);
 
                     }

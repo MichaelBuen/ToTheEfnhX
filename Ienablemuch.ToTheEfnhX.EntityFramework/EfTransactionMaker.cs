@@ -6,10 +6,10 @@ using System.Transactions;
 
 namespace Ienablemuch.ToTheEfnhX.EntityFramework
 {
-    public class EfTransactionBound : ITransactionBound
+    public class TransactionBound : ITransactionBound
     {
         TransactionScope txScope = null;
-        public EfTransactionBound()
+        public TransactionBound()
         {
             txScope = new TransactionScope();
         }
@@ -26,11 +26,11 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
     }
 
 
-    public class EfTransactionBoundFactory : ITransactionBoundFactory
+    public class TransactionBoundFactory : ITransactionBoundFactory
     {
         public ITransactionBound BeginTransaction()
         {
-            return new EfTransactionBound();
+            return new TransactionBound();
         }
     }
 }

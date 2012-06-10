@@ -9,8 +9,10 @@ using System.Data.SqlClient;
 
 
 using Ienablemuch.ToTheEfnhX;
-using Ienablemuch.ToTheEfnhX.EntityFramework;
-using Ienablemuch.ToTheEfnhX.NHibernate;
+
+using EF = Ienablemuch.ToTheEfnhX.EntityFramework;
+using NH = Ienablemuch.ToTheEfnhX.NHibernate;
+
 using Ienablemuch.ToTheEfnhX.Memory;
 
 
@@ -85,14 +87,14 @@ delete from Question;
         public void Ef_CanSave()
         {
             EmptyDatabase();
-            IRepository<Product> db = new EfRepository<Product>(new EfDbMapper(connectionString));
+            IRepository<Product> db = new EF.Repository<Product>(new EfDbMapper(connectionString));
             Common_CanSave(db);
         }
         [TestMethod]
         public void Nh_CanSave()
         {
             EmptyDatabase();
-            IRepository<Product> db = new NhRepository<Product>(NhModelsMapper.GetSession(connectionString));
+            IRepository<Product> db = new NH.Repository<Product>(NhModelsMapper.GetSession(connectionString));
             Common_CanSave(db);
         }
         void Common_CanSave(IRepository<Product> db)
@@ -119,7 +121,7 @@ delete from Question;
         public void Nh_CanSaveHeaderDetail()
         {
             EmptyDatabase();
-            IRepository<Product> db = new NhRepository<Product>(NhModelsMapper.GetSession(connectionString));
+            IRepository<Product> db = new NH.Repository<Product>(NhModelsMapper.GetSession(connectionString));
             // throw new Exception("Provider : " + db.All.Provider.GetType().ToString()); // NHibernate.Linq.NhQueryProvider
             Common_CanSaveHeaderDetail(db);
         }
@@ -128,7 +130,7 @@ delete from Question;
         public void Ef_CanSaveHeaderDetail()
         {
             EmptyDatabase();
-            IRepository<Product> db = new EfRepository<Product>(new EfDbMapper(connectionString));
+            IRepository<Product> db = new EF.Repository<Product>(new EfDbMapper(connectionString));
             // throw new Exception("Provider : " + db.All.Provider.GetType().ToString()); // System.Data.Entity.Internal.Linq.DbQueryProvider
             Common_CanSaveHeaderDetail(db);
 
@@ -264,14 +266,14 @@ delete from Question;
         public void Ef_CanDelete()
         {
             EmptyDatabase();
-            IRepository<Product> db = new EfRepository<Product>(new EfDbMapper(connectionString));
+            IRepository<Product> db = new EF.Repository<Product>(new EfDbMapper(connectionString));
             Common_CanDelete(db);
         }
         [TestMethod]
         public void Nh_CanDelete()
         {
             EmptyDatabase();
-            IRepository<Product> db = new NhRepository<Product>(NhModelsMapper.GetSession(connectionString));
+            IRepository<Product> db = new NH.Repository<Product>(NhModelsMapper.GetSession(connectionString));
             Common_CanDelete(db);
         }
         public void Common_CanDelete(IRepository<Product> db)
@@ -302,14 +304,14 @@ delete from Question;
         public void Ef_CanUpdate()
         {
             EmptyDatabase();
-            IRepository<Product> db = new EfRepository<Product>(new EfDbMapper(connectionString));
+            IRepository<Product> db = new EF.Repository<Product>(new EfDbMapper(connectionString));
             Common_CanUpdate(db);
         }
         [TestMethod]
         public void Nh_CanUpdate()
         {
             EmptyDatabase();
-            IRepository<Product> db = new NhRepository<Product>(NhModelsMapper.GetSession(connectionString));
+            IRepository<Product> db = new NH.Repository<Product>(NhModelsMapper.GetSession(connectionString));
             Common_CanUpdate(db);
         }
 
@@ -409,14 +411,14 @@ delete from Question;
         public void Ef_HasRowVersion()
         {
             EmptyDatabase();
-            IRepository<Product> db = new EfRepository<Product>(new EfDbMapper(connectionString));
+            IRepository<Product> db = new EF.Repository<Product>(new EfDbMapper(connectionString));
             Common_HasRowVersion(db);
         }
         [TestMethod]
         public void Nh_HasRowVersion()
         {
             EmptyDatabase();
-            IRepository<Product> db = new NhRepository<Product>(NhModelsMapper.GetSession(connectionString));
+            IRepository<Product> db = new NH.Repository<Product>(NhModelsMapper.GetSession(connectionString));
             Common_HasRowVersion(db);
         }
         public void Common_HasRowVersion(IRepository<Product> db)
@@ -453,7 +455,7 @@ delete from Question;
         public void Ef_CanDetectUpdateConflictingUpdate()
         {
             EmptyDatabase();
-            IRepository<Product> db = new EfRepository<Product>(new EfDbMapper(connectionString));
+            IRepository<Product> db = new EF.Repository<Product>(new EfDbMapper(connectionString));
             Common_CanDetectUpdateConflictingUpdate(db);
         }
         [TestMethod]
@@ -461,7 +463,7 @@ delete from Question;
         public void Nh_CanDetectUpdateConflictingUpdate()
         {
             EmptyDatabase();
-            IRepository<Product> db = new NhRepository<Product>(NhModelsMapper.GetSession(connectionString));
+            IRepository<Product> db = new NH.Repository<Product>(NhModelsMapper.GetSession(connectionString));
             Common_CanDetectUpdateConflictingUpdate(db);
         }
         public void Common_CanDetectUpdateConflictingUpdate(IRepository<Product> db)
@@ -499,7 +501,7 @@ delete from Question;
         public void Ef_CanDetectUpdateConflictingDelete()
         {
             EmptyDatabase();
-            IRepository<Product> db = new EfRepository<Product>(new EfDbMapper(connectionString));
+            IRepository<Product> db = new EF.Repository<Product>(new EfDbMapper(connectionString));
             Common_CanDetectUpdateConflictingDelete(db);
         }
         [TestMethod]
@@ -507,7 +509,7 @@ delete from Question;
         public void Nh_CanDetectUpdateConflictingDelete()
         {
             EmptyDatabase();
-            IRepository<Product> db = new NhRepository<Product>(NhModelsMapper.GetSession(connectionString));
+            IRepository<Product> db = new NH.Repository<Product>(NhModelsMapper.GetSession(connectionString));
             Common_CanDetectUpdateConflictingDelete(db);
         }
         public void Common_CanDetectUpdateConflictingDelete(IRepository<Product> db)
@@ -550,7 +552,7 @@ delete from Question;
         public void Ef_CanDetectDeleteConflictingUpdate()
         {
             EmptyDatabase();
-            IRepository<Product> db = new EfRepository<Product>(new EfDbMapper(connectionString));
+            IRepository<Product> db = new EF.Repository<Product>(new EfDbMapper(connectionString));
             Common_CanDetectDeleteConflictingUpdate(db);
         }
         [TestMethod]
@@ -558,7 +560,7 @@ delete from Question;
         public void Nh_CanDetectDeleteConflictingUpdate()
         {
             EmptyDatabase();
-            IRepository<Product> db = new NhRepository<Product>(NhModelsMapper.GetSession(connectionString));
+            IRepository<Product> db = new NH.Repository<Product>(NhModelsMapper.GetSession(connectionString));
             Common_CanDetectDeleteConflictingUpdate(db);
         }
         public void Common_CanDetectDeleteConflictingUpdate(IRepository<Product> db)
@@ -598,7 +600,7 @@ delete from Question;
         public void Ef_CanDetectDeleteConflictingDelete()
         {
             EmptyDatabase();
-            IRepository<Product> db = new EfRepository<Product>(new EfDbMapper(connectionString));
+            IRepository<Product> db = new EF.Repository<Product>(new EfDbMapper(connectionString));
             Common_CanDetectDeleteConflictingDelete(db);
         }
         [TestMethod]
@@ -606,7 +608,7 @@ delete from Question;
         public void Nh_CanDetectDeleteConflictingDelete()
         {
             EmptyDatabase();
-            IRepository<Product> db = new NhRepository<Product>(NhModelsMapper.GetSession(connectionString));
+            IRepository<Product> db = new NH.Repository<Product>(NhModelsMapper.GetSession(connectionString));
             Common_CanDetectDeleteConflictingDelete(db);
         }
         public void Common_CanDetectDeleteConflictingDelete(IRepository<Product> db)
@@ -642,14 +644,14 @@ delete from Question;
         public void Ef_CanHaveIncrementingKey()
         {
             EmptyDatabase();
-            IRepository<Product> db = new EfRepository<Product>(new EfDbMapper(connectionString));
+            IRepository<Product> db = new EF.Repository<Product>(new EfDbMapper(connectionString));
             Common_CanHaveIncrementingKey(db);
         }
         [TestMethod]
         public void Nh_CanHaveIncrementingKey()
         {
             EmptyDatabase();
-            IRepository<Product> db = new NhRepository<Product>(NhModelsMapper.GetSession(connectionString));
+            IRepository<Product> db = new NH.Repository<Product>(NhModelsMapper.GetSession(connectionString));
             Common_CanHaveIncrementingKey(db);
         }
         public void Common_CanHaveIncrementingKey(IRepository<Product> db)
@@ -704,7 +706,7 @@ delete from Question;
         public void Ef_Can_Orm_Merge_Can_Create()
         {
             EmptyDatabase();
-            IRepository<Question> db = new EfRepository<Question>(new EfDbMapper(connectionString));
+            IRepository<Question> db = new EF.Repository<Question>(new EfDbMapper(connectionString));
             Common_Can_Orm_Merge_Can_Create(db);
 
 
@@ -716,7 +718,7 @@ delete from Question;
         public void Nh_Can_Orm_Merge_Can_Create()
         {
             EmptyDatabase();
-            IRepository<Question> db = new NhRepository<Question>(NhModelsMapper.GetSession(connectionString));            
+            IRepository<Question> db = new NH.Repository<Question>(NhModelsMapper.GetSession(connectionString));            
             Common_Can_Orm_Merge_Can_Create(db);
         }
 
@@ -776,7 +778,7 @@ delete from Question;
         public void Ef_Can_Orm_Merge_Can_Update()
         {
             EmptyDatabase();
-            IRepository<Question> db = new EfRepository<Question>(new EfDbMapper(connectionString));
+            IRepository<Question> db = new EF.Repository<Question>(new EfDbMapper(connectionString));
             Common_Orm_Merge_Can_Update(db);
         }
 
@@ -785,7 +787,7 @@ delete from Question;
         public void Nh_Can_Orm_Merge_Can_Update()
         {
             EmptyDatabase();
-            IRepository<Question> db = new NhRepository<Question>(NhModelsMapper.GetSession(connectionString));
+            IRepository<Question> db = new NH.Repository<Question>(NhModelsMapper.GetSession(connectionString));
             Common_Orm_Merge_Can_Update(db);
         }
 
@@ -797,6 +799,7 @@ delete from Question;
 
             // Arrange
             Question importantQuestion = Refactored_Common_Merge_Arrange_Create(repo);
+            string expectedText = "number 9, number 9, number 9...";
 
 
             // Act            
@@ -809,9 +812,15 @@ delete from Question;
 
             Question retrievedQuestion = repo.GetCascade(questionId);
 
+            // throw new Exception(retrievedQuestion.GetType().ToString());
+
 
             retrievedQuestion.Text = "Hello";
-            retrievedQuestion.Answers.Single(x => x.Poster == "John").Text = "number 9, number 9, number 9...";
+            retrievedQuestion.Answers.Single(x => x.Poster == "John").Text = expectedText;
+
+            var z = retrievedQuestion.Answers.Single(x => x.Poster == "John");
+            z.Text = expectedText;
+
             var a = retrievedQuestion.Answers.Single(x => x.Poster == "Paul");
             retrievedQuestion.Answers.Remove(a);
 
@@ -830,8 +839,10 @@ delete from Question;
             // Assert            
             Assert.AreNotSame(importantQuestion, retrievedQuestion);
             Assert.AreNotSame(retrievedQuestion, retrievedMergedQuestion);
+            
+            Assert.AreEqual(expectedText, retrievedMergedQuestion.Answers.Single(x => x.Poster == "John").Text);
             Assert.AreEqual("Hello", retrievedMergedQuestion.Text);
-            Assert.AreEqual("number 9, number 9, number 9...", retrievedMergedQuestion.Answers.Single(x => x.Poster == "John").Text);
+
             Assert.AreEqual(2, retrievedMergedQuestion.Answers.Count);
 
 
@@ -878,7 +889,7 @@ delete from Question;
         public void Nh_Can_queue_changes()
         {
             EmptyDatabase();
-            IRepository<Question> db = new NhRepository<Question>(NhModelsMapper.GetSession(connectionString));
+            IRepository<Question> db = new NH.Repository<Question>(NhModelsMapper.GetSession(connectionString));
             Common_Can_queue_changes(db);
         }
 
@@ -887,7 +898,7 @@ delete from Question;
         public void Ef_Can_queue_changes()
         {
             EmptyDatabase();
-            IRepository<Question> db = new EfRepository<Question>(new EfDbMapper(connectionString));
+            IRepository<Question> db = new EF.Repository<Question>(new EfDbMapper(connectionString));
             Common_Can_queue_changes(db);
         }
 
@@ -995,7 +1006,7 @@ delete from Question;
         public void Nh_Can_Orm_do_cascaded_deletions()
         {
             EmptyDatabase();
-            IRepository<Question> db = new NhRepository<Question>(NhModelsMapper.GetSession(connectionString));
+            IRepository<Question> db = new NH.Repository<Question>(NhModelsMapper.GetSession(connectionString));
             Common_Can_Orm_do_cascaded_deletions(db);
         }
 
@@ -1003,7 +1014,7 @@ delete from Question;
         public void Ef_Can_Orm_do_cascaded_deletions()
         {
             EmptyDatabase();
-            IRepository<Question> db = new EfRepository<Question>(new EfDbMapper(connectionString));
+            IRepository<Question> db = new EF.Repository<Question>(new EfDbMapper(connectionString));
             Common_Can_Orm_do_cascaded_deletions(db);
         }
 
@@ -1037,7 +1048,7 @@ delete from Question;
             t.ToList();*/
 
             // IRepository<Question> q = new NhRepository<Question>(NhModelsMapper.GetSession(connectionString));
-            IRepository<Question> q = new EfRepository<Question>(new EfDbMapper(connectionString));
+            IRepository<Question> q = new EF.Repository<Question>(new EfDbMapper(connectionString));
 
 
             /*
@@ -1116,10 +1127,10 @@ delete from Question;
             EmptyDatabase();
 
             var x = new EfDbMapper(connectionString);
-            ITransactionBoundFactory xf = new EfTransactionBoundFactory();
+            ITransactionBoundFactory xf = new EF.TransactionBoundFactory();
             
-            IRepository<Product> prod = new EfRepository<Product>(x);
-            IRepository<Question> ques = new EfRepository<Question>(x);
+            IRepository<Product> prod = new EF.Repository<Product>(x);
+            IRepository<Question> ques = new EF.Repository<Question>(x);
             Common_Can_rollback_transaction(xf, prod, ques);
         }
 
@@ -1129,11 +1140,11 @@ delete from Question;
             EmptyDatabase();
 
             NHibernate.ISession x =  NhModelsMapper.GetSession(connectionString);
-            ITransactionBoundFactory xf = new NhTransactionBoundFactory(x);
+            ITransactionBoundFactory xf = new NH.TransactionBoundFactory(x);
 
 
-            IRepository<Product> prod = new NhRepository<Product>(x);
-            IRepository<Question> ques = new NhRepository<Question>(x);
+            IRepository<Product> prod = new NH.Repository<Product>(x);
+            IRepository<Question> ques = new NH.Repository<Question>(x);
             Common_Can_rollback_transaction(xf, prod, ques);
         }
 
@@ -1181,10 +1192,10 @@ delete from Question;
             EmptyDatabase();
 
             var x = new EfDbMapper(connectionString);
-            ITransactionBoundFactory xf = new EfTransactionBoundFactory();
+            ITransactionBoundFactory xf = new EF.TransactionBoundFactory();
 
-            IRepository<Product> prod = new EfRepository<Product>(x);
-            IRepository<Question> ques = new EfRepository<Question>(x);
+            IRepository<Product> prod = new EF.Repository<Product>(x);
+            IRepository<Question> ques = new EF.Repository<Question>(x);
             Common_Can_save_transaction(xf, prod, ques);
         }
 
@@ -1194,11 +1205,11 @@ delete from Question;
             EmptyDatabase();
 
             NHibernate.ISession x = NhModelsMapper.GetSession(connectionString);
-            ITransactionBoundFactory xf = new NhTransactionBoundFactory(x);
+            ITransactionBoundFactory xf = new NH.TransactionBoundFactory(x);
 
 
-            IRepository<Product> prod = new NhRepository<Product>(x);
-            IRepository<Question> ques = new NhRepository<Question>(x);
+            IRepository<Product> prod = new NH.Repository<Product>(x);
+            IRepository<Question> ques = new NH.Repository<Question>(x);
             Common_Can_save_transaction(xf, prod, ques);
         }
 
