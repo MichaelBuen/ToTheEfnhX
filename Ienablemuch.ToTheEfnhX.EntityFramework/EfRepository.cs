@@ -41,7 +41,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
 
 
-        public void Save(TEnt ent, byte[] version)
+        public void Save(TEnt ent)
         {
             try
             {
@@ -104,7 +104,12 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                     }
 
 
-                    _ctx.Entry(liveObj).Property(VersionName).OriginalValue = version;
+                    PropertyInfo rowVersionPI = entType.GetProperty(VersionName);
+                    if (rowVersionPI != null)
+                    {
+                        byte[] version = (byte[])rowVersionPI.GetValue(ent, null);
+                        _ctx.Entry(liveObj).Property(VersionName).OriginalValue = version;
+                    }
                     
 
                 }
@@ -117,8 +122,15 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                     pkValue = entType.InvokeMember(PrimaryKeyName, System.Reflection.BindingFlags.GetProperty, null, liveObj, new object[] { });
                     typeof(TEnt).InvokeMember(PrimaryKeyName, System.Reflection.BindingFlags.SetProperty, null, ent, new object[] { pkValue });
 
-                    object retRowVersion = typeof(TEnt).InvokeMember(VersionName, System.Reflection.BindingFlags.GetProperty, null, liveObj, new object[] { });
-                    typeof(TEnt).InvokeMember(VersionName, System.Reflection.BindingFlags.SetProperty, null, ent, new object[] { retRowVersion });
+
+
+                    PropertyInfo rowVersionPI = entType.GetProperty(VersionName);
+
+                    if (rowVersionPI != null)
+                    {
+                        object retRowVersion = rowVersionPI.GetValue(liveObj, null);
+                        rowVersionPI.SetValue(ent, retRowVersion, null);                        
+                    }
                 }
 
                 
@@ -157,7 +169,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
         }
 
         
-        public void Merge(TEnt ent, byte[] version)
+        public void Merge(TEnt ent)
         {
             // Rationale for detaching/evicting: 
             // http://msdn.microsoft.com/en-us/library/bb738697.aspx
@@ -185,8 +197,11 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                 
                 
 
-
                 Type entType = typeof(TEnt);
+
+
+                
+
 
                 object pkValue = entType.InvokeMember(PrimaryKeyName, System.Reflection.BindingFlags.GetProperty, null, clonedEnt, new object[] { });
 
@@ -276,10 +291,13 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                     }
 
 
-                    PropertyInfo rowVersionProp = entType.GetProperty(VersionName, BindingFlags.Public | BindingFlags.Instance);
+                    PropertyInfo rowVersionProp = entType.GetProperty(VersionName);
                     // rowversion property existing
-                    if (rowVersionProp != null)                        
+                    if (rowVersionProp != null)
+                    {
+                        byte[] version = (byte[])rowVersionProp.GetValue(clonedEnt, null);
                         _ctx.Entry(liveParent).Property(VersionName).OriginalValue = version;
+                    }
 
                 }
 
@@ -294,7 +312,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                 typeof(TEnt).InvokeMember(PrimaryKeyName, System.Reflection.BindingFlags.SetProperty, null, ent, new object[] { pkValue });
 
 
-                PropertyInfo retRowVersionProp = entType.GetProperty(VersionName, BindingFlags.Public | BindingFlags.Instance);
+                PropertyInfo retRowVersionProp = entType.GetProperty(VersionName);
                 // rowversion property existing
                 if (retRowVersionProp != null)
                 {
@@ -646,6 +664,30 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
             }
         }
 
+
+        public void Delete(object id)
+        {
+            try
+            {
+                typeof(TEnt).DetectIdType(PrimaryKeyName, id);
+                Evict(id);
+                _ctx.Entry(LoadDeleteStub(id, null)).State = EntityState.Deleted;
+
+                _ctx.SaveChanges();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                throw new DbChangesConcurrencyException();
+            }
+        }
+
+
+        public void DeleteCascade(object id)
+        {
+            DeleteCascade(id, null);
+        }
+
+
         public void DeleteCascade(object id, byte[] version)
         {
 
@@ -813,11 +855,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                 entType.InvokeMember(PrimaryKeyName, System.Reflection.BindingFlags.SetProperty, null, stub, new object[] { id });
                 
                 
-                // change this:
-                // entType.InvokeMember(VersionName, System.Reflection.BindingFlags.SetProperty, null, stub, new object[] { version });
-
-                // to this:
-                PropertyInfo rowVersionProp = entType.GetProperty(VersionName, BindingFlags.Public | BindingFlags.Instance);
+                PropertyInfo rowVersionProp = entType.GetProperty(VersionName);
                 if (rowVersionProp != null)
                     rowVersionProp.SetValue(stub, version, null);
                     

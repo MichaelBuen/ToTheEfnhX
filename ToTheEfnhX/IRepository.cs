@@ -9,10 +9,15 @@ namespace Ienablemuch.ToTheEfnhX
     {
         IQueryable<TEnt> All { get; }
         
-        void Save(TEnt ent, byte[] version);
-        void Merge(TEnt ent, byte[] version);
+        void Save(TEnt ent);
+        void Merge(TEnt ent);
         TEnt Get(object id);
         TEnt GetCascade(object id);
+
+
+        void Delete(object id);
+        void DeleteCascade(object id);
+
         void Delete(object id, byte[] version);
         void DeleteCascade(object id, byte[] version);
         void Evict(object id);

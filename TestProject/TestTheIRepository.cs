@@ -105,9 +105,9 @@ delete from Question;
             lock (heed)
             {
 
-                db.Save(new Product { ProductName = "Optimus", Category = "Autobots", MinimumPrice = 7 }, null);
-                db.Save(new Product { ProductName = "Bumble Bee", Category = "Autobots", MinimumPrice = 8 }, null);
-                db.Save(new Product { ProductName = "Megatron", Category = "Decepticon", MinimumPrice = 9 }, null);
+                db.Save(new Product { ProductName = "Optimus", Category = "Autobots", MinimumPrice = 7 });
+                db.Save(new Product { ProductName = "Bumble Bee", Category = "Autobots", MinimumPrice = 8 });
+                db.Save(new Product { ProductName = "Megatron", Category = "Decepticon", MinimumPrice = 9 });
 
 
 
@@ -170,7 +170,7 @@ delete from Question;
 
 
             // Act
-            db.Merge(px, null);
+            db.Merge(px);
 
 
 
@@ -187,7 +187,7 @@ delete from Question;
             Assert.AreEqual(4, px.PriceList.Count);
 
 
-            db.Merge(px, px.RowVersion);
+            db.Merge(px);
 
 
 
@@ -230,7 +230,7 @@ delete from Question;
 
 		    };
             // Act
-            db.Save(px, null);
+            db.Save(px);
 
             /*var query = (from x in db.All
                             where x.ProductId == px.ProductId
@@ -279,12 +279,12 @@ delete from Question;
         public void Common_CanDelete(IRepository<Product> db)
         {
 
-            db.Save(new Product { ProductName = "Optimus", Category = "Autobots", MinimumPrice = 7 }, null);
+            db.Save(new Product { ProductName = "Optimus", Category = "Autobots", MinimumPrice = 7 });
 
             var px = new Product { ProductName = "Bumble Bee", Category = "Autobots", MinimumPrice = 8 };
-            db.Save(px, null);
+            db.Save(px);
 
-            db.Save(new Product { ProductName = "Megatron", Category = "Decepticon", MinimumPrice = 9 }, null);
+            db.Save(new Product { ProductName = "Megatron", Category = "Decepticon", MinimumPrice = 9 });
 
             db.Delete(px.ProductId, px.RowVersion);
 
@@ -341,7 +341,7 @@ delete from Question;
                     new ProductPrice { Product = px, Price = 234, EffectiveDate = DateTime.Today },
                     new ProductPrice { Product = px, Price = 300, EffectiveDate = DateTime.Today.AddDays(100) }
                 };
-            db.Merge(px, null);
+            db.Merge(px);
 
 
 
@@ -391,7 +391,7 @@ delete from Question;
             // Act
             string expecting = "Bumble Bee Battle Mode hickhickhick";
             fromWeb.ProductName = expecting;
-            db.Merge(fromWeb, fromWeb.RowVersion);
+            db.Merge(fromWeb);
 
 
             // Assert            
@@ -430,10 +430,10 @@ delete from Question;
 
 
             // Act
-            db.Save(px, null);
+            db.Save(px);
             byte[] originalVersion = px.RowVersion;
 
-            db.Save(px, px.RowVersion);
+            db.Save(px);
             byte[] newVersion = px.RowVersion;
 
 
@@ -473,18 +473,18 @@ delete from Question;
 
             // Arrange            
             var px = new Product { ProductName = "Bumble Bee", Category = "Autobots", MinimumPrice = 8 };
-            db.Save(px, null);
+            db.Save(px);
 
 
             // Act
             // simulate web(i.e. stateless)
             Product firstOpener = new Product { ProductId = px.ProductId, ProductName = px.ProductName, Category = px.Category, RowVersion = px.RowVersion };
             Product secondOpener = new Product { ProductId = px.ProductId, ProductName = px.ProductName, Category = px.Category, RowVersion = px.RowVersion };
-            db.Save(firstOpener, firstOpener.RowVersion);
+            db.Save(firstOpener);
 
 
             // Expected to fail
-            db.Save(secondOpener, secondOpener.RowVersion);
+            db.Save(secondOpener);
         }
 
 
@@ -521,14 +521,14 @@ delete from Question;
 
             // Arrange            
             var px = new Product { ProductName = "Bumble Bee", Category = "Autobots", MinimumPrice = 8 };
-            db.Save(px, null);
+            db.Save(px);
 
 
             // Act
             // simulate web(i.e. stateless)
             Product firstOpener = new Product { ProductId = px.ProductId, ProductName = px.ProductName, Category = px.Category, RowVersion = px.RowVersion };
             Product secondOpener = new Product { ProductId = px.ProductId, ProductName = px.ProductName, Category = px.Category, RowVersion = px.RowVersion };
-            db.Save(firstOpener, firstOpener.RowVersion);
+            db.Save(firstOpener);
 
 
             // Expected to fail
@@ -571,7 +571,7 @@ delete from Question;
 
             // Arrange
             var px = new Product { ProductName = "Bumble Bee", Category = "Autobots", MinimumPrice = 8 };
-            db.Save(px, null);
+            db.Save(px);
 
 
             // Act
@@ -581,7 +581,7 @@ delete from Question;
 
             // Assert
             // Expected to fail
-            db.Save(secondOpener, secondOpener.RowVersion);
+            db.Save(secondOpener);
 
         }
 
@@ -619,7 +619,7 @@ delete from Question;
 
             // Arrange
             var px = new Product { ProductName = "Bumble Bee", Category = "Autobots", MinimumPrice = 8 };
-            db.Save(px, null);
+            db.Save(px);
 
 
             // Act
@@ -629,7 +629,7 @@ delete from Question;
 
             // Assert
             // Expected to fail
-            db.Save(secondOpener, secondOpener.RowVersion);
+            db.Save(secondOpener);
         }
 
 
@@ -673,9 +673,9 @@ delete from Question;
 
 
             // Act
-            db.Save(optimusPrime, null);
-            db.Save(bumbleBee, null);
-            db.Save(megatron, null);
+            db.Save(optimusPrime);
+            db.Save(bumbleBee);
+            db.Save(megatron);
 
             int n = optimusPrime.ProductId;
 
@@ -827,7 +827,7 @@ delete from Question;
 
 
 
-            repo.Merge(retrievedQuestion, retrievedQuestion.RowVersion); // save the whole object graph
+            repo.Merge(retrievedQuestion); // save the whole object graph
 
 
 
@@ -855,7 +855,7 @@ delete from Question;
             var importantQuestion = PopulateQuestion();
 
 
-            repo.Merge(importantQuestion, importantQuestion.RowVersion);
+            repo.Merge(importantQuestion);
 
 
 
@@ -945,7 +945,7 @@ delete from Question;
 
 
             // Act            
-            repo.Save(new Question { Text = "Hi", Poster = "Optimus" }, null);
+            repo.Save(new Question { Text = "Hi", Poster = "Optimus" });
 
             /*
             Question testConflicter;  // let's check if the two aggregate root didn't affect each other
@@ -1158,13 +1158,13 @@ delete from Question;
                 // Arrange
                 using (var tx = xf.BeginTransaction())
                 {
-                    p.Save(new Product { ProductName = "Hello", Category = "What", MinimumPrice = 2 }, null);
+                    p.Save(new Product { ProductName = "Hello", Category = "What", MinimumPrice = 2 });
 
                     int n = 0;
 
                     // Act
                     int px = 7 / n;
-                    q.Save(new Question { Text = "Answer to life", Poster = "42" }, null);
+                    q.Save(new Question { Text = "Answer to life", Poster = "42" });
 
 
 
@@ -1233,7 +1233,7 @@ delete from Question;
 
             using (var tx = xf.BeginTransaction())
             {
-                p.Save(new Product { ProductName = "Hello", Category = "What", MinimumPrice = 2 }, null);                
+                p.Save(new Product { ProductName = "Hello", Category = "What", MinimumPrice = 2 });
                 tx.Complete();              
             }
 

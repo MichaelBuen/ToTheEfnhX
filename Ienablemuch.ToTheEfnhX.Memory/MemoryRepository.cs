@@ -7,27 +7,28 @@ using System.Linq.Expressions;
 
 
 using Ienablemuch.ToTheEfnhX.ForImplementorsOnly;
+using System.Reflection;
 
 
 namespace Ienablemuch.ToTheEfnhX.Memory
 {
-    public class MemoryRepository<Ent> : IRepository<Ent> where Ent : class
+    public class MemoryRepository<TEnt> : IRepository<TEnt> where TEnt : class
     {
 
 
-        IList<Ent> _list = null;
-        IQueryable<Ent> _queryable = null;
+        IList<TEnt> _list = null;
+        IQueryable<TEnt> _queryable = null;
 
         public MemoryRepository()
         {
-            _list = new List<Ent>();
+            _list = new List<TEnt>();
             _queryable = _list.AsQueryable();
 
-            PrimaryKeyName = typeof(Ent).Name + RepositoryConstants.IdSuffix;
+            PrimaryKeyName = typeof(TEnt).Name + RepositoryConstants.IdSuffix;
             VersionName = RepositoryConstants.RowversionName;
         }
 
-        public IQueryable<Ent> All
+        public IQueryable<TEnt> All
         {
             get { return _queryable; }
         }
@@ -36,9 +37,9 @@ namespace Ienablemuch.ToTheEfnhX.Memory
         int lastIntPk = 0;
         long lastLongPk = 0;
 
-        public void Save(Ent ent, byte[] version)
+        public void Save(TEnt ent)
         {
-            Type entType = typeof(Ent);
+            Type entType = typeof(TEnt);
 
             object pk = entType.InvokeMember(PrimaryKeyName, System.Reflection.BindingFlags.GetProperty, null, ent, new object[] { });
             Type propertyType = entType.GetProperty(PrimaryKeyName).PropertyType;
@@ -62,41 +63,60 @@ namespace Ienablemuch.ToTheEfnhX.Memory
                     entType.InvokeMember(PrimaryKeyName, System.Reflection.BindingFlags.SetProperty, null, ent, new object[] { Guid.NewGuid() });                    
                 }
 
-                entType.InvokeMember(VersionName, System.Reflection.BindingFlags.SetProperty, null, ent, new object[] { Guid.NewGuid().ToByteArray() });
+
+                PropertyInfo rowVersionPI = entType.GetProperty(VersionName);
+
+                if (rowVersionPI != null)
+                    rowVersionPI.SetValue(ent, Guid.NewGuid().ToByteArray(), null);
+                
 
 
                 _list.Add(ent);                
             }
             else
             {
+                PropertyInfo rowVersionPI = entType.GetProperty(VersionName);
+
+                byte[] version = null;
+                if (rowVersionPI != null)
+                    version = (byte[])rowVersionPI.GetValue(ent, null);
 
                 Delete(pk, version);
 
-                typeof(Ent).InvokeMember(VersionName, System.Reflection.BindingFlags.SetProperty, null, ent, new object[] { Guid.NewGuid().ToByteArray() });
+                
+
+                if (rowVersionPI != null)
+                {
+                    rowVersionPI.SetValue(ent, Guid.NewGuid().ToByteArray(), null);
+                }
 
                 _list.Add(ent);
             }
         }
 
 
-        public Ent Get(object id)
+        public TEnt Get(object id)
         {
-            typeof(Ent).DetectIdType(PrimaryKeyName, id);
+            typeof(TEnt).DetectIdType(PrimaryKeyName, id);
             return Load(id);
         }
 
 
+        public void Delete(object id)
+        {
+            Delete(id, null);
+        }
 
         public void Delete(object id, byte[] version)
         {
-            typeof(Ent).DetectIdType(PrimaryKeyName, id);
+            typeof(TEnt).DetectIdType(PrimaryKeyName, id);
 
 
 
             bool isExisting =
                 _list.Any(x =>
                 {
-                    object existingPkValue = typeof(Ent).InvokeMember(PrimaryKeyName, System.Reflection.BindingFlags.GetProperty, null, x, new object[] { });
+                    object existingPkValue = typeof(TEnt).InvokeMember(PrimaryKeyName, System.Reflection.BindingFlags.GetProperty, null, x, new object[] { });
 
                     return object.Equals(existingPkValue, id);
                 });
@@ -104,11 +124,17 @@ namespace Ienablemuch.ToTheEfnhX.Memory
             int count =
                 _list.Count(x =>
                 {
-                    object existingPkValue = typeof(Ent).InvokeMember(PrimaryKeyName, System.Reflection.BindingFlags.GetProperty, null, x, new object[] { });
-                    object existingVersion = typeof(Ent).InvokeMember(VersionName, System.Reflection.BindingFlags.GetProperty, null, x, new object[] { });
+                    object existingPkValue = typeof(TEnt).InvokeMember(PrimaryKeyName, System.Reflection.BindingFlags.GetProperty, null, x, new object[] { });
 
-                    // return object.Equals(existingPkValue, id) && object.Equals(existingVersion, version);
-                    return object.Equals(existingPkValue, id) && ((byte[])existingVersion).SequenceEqual(version);
+                    PropertyInfo rowVersionPI = typeof(TEnt).GetProperty(VersionName);
+                    byte[] existingVersion = null;
+                    if (rowVersionPI != null)
+                        existingVersion = (byte[])rowVersionPI.GetValue(x, null);
+                    
+                    if (rowVersionPI != null)
+                        return object.Equals(existingPkValue, id) && existingVersion.SequenceEqual(version);
+                    else
+                        return object.Equals(existingPkValue, id);
                 });
 
             
@@ -121,15 +147,22 @@ namespace Ienablemuch.ToTheEfnhX.Memory
             _list.Remove(Load(id));
         }
 
+
+        public void DeleteCascade(object id)
+        {
+            typeof(TEnt).DetectIdType(PrimaryKeyName, id);
+            Delete(id, null);
+        }
+
         public void DeleteCascade(object id, byte[] version)
         {
-            typeof(Ent).DetectIdType(PrimaryKeyName, id);
+            typeof(TEnt).DetectIdType(PrimaryKeyName, id);
             Delete(id, version);
         }
 
-        public Ent LoadStub(object id)
+        public TEnt LoadStub(object id)
         {
-            typeof(Ent).DetectIdType(PrimaryKeyName, id);
+            typeof(TEnt).DetectIdType(PrimaryKeyName, id);
             return LoadStubX(id);
         }
 
@@ -140,7 +173,7 @@ namespace Ienablemuch.ToTheEfnhX.Memory
 
         private bool IsEntityExisting(object id)
         {
-            typeof(Ent).DetectIdType(PrimaryKeyName, id);
+            typeof(TEnt).DetectIdType(PrimaryKeyName, id);
 
             return
                 _list.Any(x =>
@@ -151,30 +184,30 @@ namespace Ienablemuch.ToTheEfnhX.Memory
                 });
         }
 
-        private Ent Load(object id)
+        private TEnt Load(object id)
         {
-            typeof(Ent).DetectIdType(PrimaryKeyName, id);
+            typeof(TEnt).DetectIdType(PrimaryKeyName, id);
             return                
                 _list.SingleOrDefault(x =>
                 {
-                    object value = typeof(Ent).InvokeMember(PrimaryKeyName, System.Reflection.BindingFlags.GetProperty, null, x, new object[] {  });
+                    object value = typeof(TEnt).InvokeMember(PrimaryKeyName, System.Reflection.BindingFlags.GetProperty, null, x, new object[] {  });
 
                     return value.Equals(id);
                 });
         }
 
-        private Ent LoadStubX(object id) 
+        private TEnt LoadStubX(object id) 
         {
-            string primaryKeyName = typeof(Ent).Name + RepositoryConstants.IdSuffix;
+            string primaryKeyName = typeof(TEnt).Name + RepositoryConstants.IdSuffix;
             return LoadStubX(primaryKeyName, id);
         }
 
-        private Ent LoadStubX(string primaryKeyName, object id) 
+        private TEnt LoadStubX(string primaryKeyName, object id) 
         {
-            typeof(Ent).DetectIdType(PrimaryKeyName, id);
-            Ent stub = (Ent)Activator.CreateInstance(typeof(Ent));
+            typeof(TEnt).DetectIdType(PrimaryKeyName, id);
+            TEnt stub = (TEnt)Activator.CreateInstance(typeof(TEnt));
 
-            typeof(Ent).InvokeMember(primaryKeyName, System.Reflection.BindingFlags.SetProperty, null, stub, new object[] { id });
+            typeof(TEnt).InvokeMember(primaryKeyName, System.Reflection.BindingFlags.SetProperty, null, stub, new object[] { id });
 
             return stub;
         }
@@ -192,13 +225,13 @@ namespace Ienablemuch.ToTheEfnhX.Memory
         }
 
 
-        public void Merge(Ent ent, byte[] version)
+        public void Merge(TEnt ent)
         {
-            Save(ent, version);
+            Save(ent);
         }
 
 
-        public Ent GetCascade(object id)
+        public TEnt GetCascade(object id)
         {
             return Get(id);
         }

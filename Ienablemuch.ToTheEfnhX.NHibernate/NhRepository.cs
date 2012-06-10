@@ -49,7 +49,7 @@ namespace Ienablemuch.ToTheEfnhX.NHibernate
 
 
 
-        public void Merge(TEnt ent, byte[] version)
+        public void Merge(TEnt ent)
         {
             ITransaction tx = null;
 
@@ -78,13 +78,13 @@ namespace Ienablemuch.ToTheEfnhX.NHibernate
                 Type entType = typeof(TEnt);
 
                 {
-                    PropertyInfo rowVersionProp = entType.GetProperty(VersionName, BindingFlags.Public | BindingFlags.Instance);
+                    PropertyInfo rowVersionProp = entType.GetProperty(VersionName);
 
                     if (rowVersionProp != null)
-                        // change this:
-                        // entType.InvokeMember(VersionName, System.Reflection.BindingFlags.SetProperty, null, ent, new object[] { version });
-                        // to this:
+                    {
+                        byte[] version = (byte[])rowVersionProp.GetValue(ent, null);
                         rowVersionProp.SetValue(ent, version, null);
+                    }
                 }
 
 
@@ -108,7 +108,7 @@ namespace Ienablemuch.ToTheEfnhX.NHibernate
 
 
                 {
-                    PropertyInfo rowVersionProp = entType.GetProperty(VersionName, BindingFlags.Public | BindingFlags.Instance);
+                    PropertyInfo rowVersionProp = entType.GetProperty(VersionName);
                     if (rowVersionProp != null)
                     {
                         // changed these:
@@ -134,7 +134,7 @@ namespace Ienablemuch.ToTheEfnhX.NHibernate
             }
         }
 
-        public void Save(TEnt ent, byte[] version)
+        public void Save(TEnt ent)
         {
             ITransaction tx = null;
 
@@ -161,7 +161,14 @@ namespace Ienablemuch.ToTheEfnhX.NHibernate
 
 
                 Type entType = typeof(TEnt);
-                entType.InvokeMember(VersionName, System.Reflection.BindingFlags.SetProperty, null, ent, new object[] { version });
+
+
+                PropertyInfo rowVersionPI = entType.GetProperty(VersionName);
+                if (rowVersionPI != null)
+                {
+                    byte[] version = (byte[])rowVersionPI.GetValue(ent, null);
+                    entType.InvokeMember(VersionName, System.Reflection.BindingFlags.SetProperty, null, ent, new object[] { version });
+                }
 
                 _session.SaveOrUpdate(ent);
 
@@ -192,6 +199,11 @@ namespace Ienablemuch.ToTheEfnhX.NHibernate
         public TEnt Get(object id)
         {
             return _session.Get<TEnt>(id);
+        }
+
+        public void Delete(object id)
+        {
+            Delete(id, null);
         }
 
         public void Delete(object id, byte[] version)
@@ -231,6 +243,11 @@ namespace Ienablemuch.ToTheEfnhX.NHibernate
             }
         }
 
+
+        public void DeleteCascade(object id)
+        {
+            DeleteCascade(id, null);
+        }
 
         public void DeleteCascade(object id, byte[] version)
         {
@@ -331,7 +348,10 @@ namespace Ienablemuch.ToTheEfnhX.NHibernate
 
             Type entType = typeof(TEnt);
             entType.InvokeMember(PrimaryKeyName, System.Reflection.BindingFlags.SetProperty, null, stub, new object[] { id });
-            entType.InvokeMember(VersionName, System.Reflection.BindingFlags.SetProperty, null, stub, new object[] { version });
+
+            PropertyInfo rowVersionPI = entType.GetProperty(VersionName);
+            if (rowVersionPI != null)
+                rowVersionPI.SetValue(stub, version, null);
 
 
             return stub;
