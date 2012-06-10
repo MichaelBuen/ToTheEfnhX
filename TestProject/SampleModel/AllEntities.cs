@@ -1,4 +1,4 @@
-﻿#define UseBuiltInCloningX
+﻿#define UseBuiltInCloning
 
 // Entity Framework is funny, we have to clone the object
 // http://stackoverflow.com/questions/1158422/entity-framework-detach-and-keep-related-object-graph

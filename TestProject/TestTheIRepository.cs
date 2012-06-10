@@ -99,21 +99,15 @@ delete from Question;
         }
         void Common_CanSave(IRepository<Product> db)
         {
-            /// real culprit? really?
-            /// 
 
-            lock (heed)
-            {
-
-                db.Save(new Product { ProductName = "Optimus", Category = "Autobots", MinimumPrice = 7 });
-                db.Save(new Product { ProductName = "Bumble Bee", Category = "Autobots", MinimumPrice = 8 });
-                db.Save(new Product { ProductName = "Megatron", Category = "Decepticon", MinimumPrice = 9 });
+            db.Save(new Product { ProductName = "Optimus", Category = "Autobots", MinimumPrice = 7 });
+            db.Save(new Product { ProductName = "Bumble Bee", Category = "Autobots", MinimumPrice = 8 });
+            db.Save(new Product { ProductName = "Megatron", Category = "Decepticon", MinimumPrice = 9 });
 
 
 
-                Assert.AreEqual(7 + 8 + 9, db.All.Sum(x => x.MinimumPrice));
-                Assert.AreEqual(3, db.All.Count());
-            }
+            Assert.AreEqual(7 + 8 + 9, db.All.Sum(x => x.MinimumPrice));
+            Assert.AreEqual(3, db.All.Count());
         }
 
 
@@ -1333,11 +1327,80 @@ delete from Question;
         }
 
 
+        [TestMethod]
+        public void Nh_Can_Save_Then_Update()
+        {
+            EmptyDatabase();
+            IRepository<Product> dbProd = new NH.Repository<Product>(NhModelsMapper.GetSession(connectionString));
+            IRepository<ProductPrice> dbPrice = new NH.Repository<ProductPrice>(NhModelsMapper.GetSession(connectionString));
+            Common_Can_Save_Then_Update(dbProd, dbPrice);
+        }
 
         [TestMethod]
-        public void TestArray()
+        public void Ef_Can_Save_Then_Update()
         {
-            var x = new Test { Names = new string[] { } };
+            EmptyDatabase();
+            IRepository<Product> dbProd = new EF.Repository<Product>(new EfDbMapper(connectionString));
+            IRepository<ProductPrice> dbPrice = new EF.Repository<ProductPrice>(new EfDbMapper(connectionString));
+            Common_Can_Save_Then_Update(dbProd, dbPrice);
+        }
+
+
+        public void Common_Can_Save_Then_Update(IRepository<Product> dbProd, IRepository<ProductPrice> dbPrice)
+        {
+            // Arrange
+            string expected = "Bumble bee";
+            var bee = new Product { ProductName = expected, Category = "Autobots", MinimumPrice = 8 };
+            dbProd.Save(new Product { ProductName = "Optimus", Category = "Autobots", MinimumPrice = 7 });
+            dbProd.Save(bee);
+            dbProd.Save(new Product { ProductName = "Megatron", Category = "Decepticon", MinimumPrice = 9 });
+
+
+            Assert.AreEqual(7 + 8 + 9, dbProd.All.Sum(x => x.MinimumPrice));
+            Assert.AreEqual(3, dbProd.All.Count());
+            Assert.AreNotEqual(0, bee.ProductId);
+
+
+            // Act 
+            var beex = dbProd.Get(bee.ProductId);
+            beex.ProductName = beex.ProductName + "yo";
+            dbProd.Save(beex);
+
+            var beey = dbProd.Get(beex.ProductId);
+
+            // Assert
+            Assert.AreEqual(beex.ProductId, beey.ProductId);
+            Assert.AreEqual(expected + "yo", beey.ProductName);
+            
+
+            
+            
+            ///////////////////////
+            
+
+            // Arrange
+
+            // this has error, to fix later:
+            // var pp = new ProductPrice { Product = dbProd.LoadStub(beex.ProductId), Price = 7, EffectiveDate = DateTime.Today };
+
+            var pp = new ProductPrice { Product = bee, Price = 7, EffectiveDate = DateTime.Today };
+            
+            
+
+            // Act            
+
+            dbPrice.Save(pp);
+
+            var ppx = dbPrice.Get(pp.ProductPriceId);            
+            ppx.Price = ppx.Price + 1;
+            dbPrice.Save(ppx);
+
+            var ppy = dbPrice.Get(ppx.ProductPriceId);
+
+            // Assert
+            Assert.AreEqual(ppx.ProductPriceId, ppy.ProductPriceId);
+            Assert.AreEqual(8, ppy.Price);
+            
         }
 
 

@@ -83,7 +83,7 @@ namespace Ienablemuch.ToTheEfnhX.ForImplementorsOnly
         private static void CloneCollection(object origParent, IList origList, object cloneParent, IList cloneList)
         {            
             
-            lock(origParent) lock(origList) lock(cloneParent) lock(cloneList)            
+            
             foreach (object item in origList)
             {
                 object cloneItem = item.Clone();

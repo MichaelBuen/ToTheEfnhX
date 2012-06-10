@@ -85,6 +85,8 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
                         if (!isCollection && pi.Name != VersionName)
                         {
+
+                            
                             if (!pi.PropertyType.IsClass || pi.PropertyType == typeof(string))
                             {
                                 object val = entType.InvokeMember(pi.Name, BindingFlags.GetProperty, null, ent, new object[] { });
@@ -92,10 +94,18 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                             }
                             else
                             {
+                                
                                 object refObj = entType.InvokeMember(pi.Name, BindingFlags.GetProperty, null, ent, new object[] { });
                                 string pkName = pi.Name + RepositoryConstants.IdSuffix; // temporarily
                                 object refPk = refObj.GetType().InvokeMember(pkName, BindingFlags.GetProperty, null, refObj, new object[] { });
-                                object val = _ctx.Set(pi.PropertyType).Find(refPk);
+                                
+                                // instead of database roundtrip...
+                                // object val = _ctx.Set(pi.PropertyType).Find(refPk);
+
+                                // ...use stub:                                
+                                object val = LoadStubX(pi.PropertyType, pkName, refPk, _ctx);
+                                
+
                                 /*dynamic x = val;
                                 throw new Exception("Yo " + refPk + " " + x.CountryName);*/
                                 entType.InvokeMember(pi.Name, BindingFlags.SetProperty, null, liveObj, new object[] { val });
@@ -149,6 +159,40 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
 
 
+        static object LoadStubX(Type t, string primaryKeyName, object id, DbContext db)
+        {
+            
+
+
+            var cachedEnt =
+                    db.ChangeTracker.Entries().Where(x => ObjectContext.GetObjectType(x.Entity.GetType()) == t).SingleOrDefault(x =>
+                    {
+                        Type entType = x.Entity.GetType();
+                        object value = entType.InvokeMember(primaryKeyName, System.Reflection.BindingFlags.GetProperty, null, x.Entity, new object[] { });
+
+                        return value.Equals(id);
+                    });
+
+
+
+            if (cachedEnt != null)
+            {
+                return cachedEnt.Entity;
+            }
+            else
+            {
+                object stub = Activator.CreateInstance(t);
+
+
+                t.InvokeMember(primaryKeyName, System.Reflection.BindingFlags.SetProperty, null, stub, new object[] { id });
+
+                db.Entry(stub).State = EntityState.Unchanged;
+
+                return stub;
+            }
+
+
+        }//LoadStub
 
 
 
@@ -642,8 +686,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
             _ctx.Configuration.ProxyCreationEnabled = oldValue;
 
-            return x;
-            // return (TEnt) x.Clone() ;
+            return x;            
         }
 
 
