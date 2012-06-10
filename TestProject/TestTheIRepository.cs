@@ -26,6 +26,8 @@ using NHibernate.Linq;
 
 using Ienablemuch.ToTheEfnhX.ForImplementorsOnly;
 using System.Transactions;
+using System.Data;
+using System.Reflection;
 
 
 
@@ -1401,6 +1403,81 @@ delete from Question;
             Assert.AreEqual(ppx.ProductPriceId, ppy.ProductPriceId);
             Assert.AreEqual(8, ppy.Price);
             
+        }
+
+
+        [TestMethod]
+        public void Test_Ef_Get_PK()
+        {
+            // Arrange
+            DbContext db = new EfDbMapper(connectionString);
+            var objectContext = ((System.Data.Entity.Infrastructure.IObjectContextAdapter)db).ObjectContext;
+            System.Data.Objects.ObjectSet<Product> set =
+                               objectContext.CreateObjectSet<Product>();
+
+            //Act
+            IEnumerable<string> keyNames = set.EntitySet.ElementType
+                                                        .KeyMembers
+                                                        .Select(k => k.Name);
+
+            // Assert
+            Assert.AreEqual("ProductId", string.Join(",", keyNames.ToArray()));
+
+        }
+
+
+        [TestMethod]
+        public void Test_Ef_Get_Pk_via_pure_reflection()
+        {
+            // logic sourced here: http://stackoverflow.com/questions/7253943/entity-framework-code-first-find-primary-key
+
+            // Arrange
+            DbContext db = new EfDbMapper(connectionString);
+
+            var objectContext = ((System.Data.Entity.Infrastructure.IObjectContextAdapter)db).ObjectContext;
+            Type t = typeof(Product);
+
+            // http://stackoverflow.com/a/232621
+            MethodInfo m = objectContext.GetType().GetMethod("CreateObjectSet", new Type[] { });
+            MethodInfo generic = m.MakeGenericMethod(t);            
+            object set = generic.Invoke(objectContext, null);
+
+            PropertyInfo entitySetPI = set.GetType().GetProperty("EntitySet");
+            System.Data.Metadata.Edm.EntitySet entitySet = (System.Data.Metadata.Edm.EntitySet) entitySetPI.GetValue(set, null);
+
+
+            // Act 
+            IEnumerable<string> keyNames = entitySet.ElementType.KeyMembers.Select(k => k.Name);
+
+
+            // Assert
+            Assert.AreEqual("ProductId", string.Join(",", keyNames.ToArray()));
+
+        }
+
+        [TestMethod]
+        public void Test_Ef_Get_PK_via_dynamic()
+        {
+            // Arrange
+            DbContext db = new EfDbMapper(connectionString);
+
+            var objectContext = ((System.Data.Entity.Infrastructure.IObjectContextAdapter)db).ObjectContext;
+            Type t = typeof(Product);
+                       
+            
+            // http://stackoverflow.com/a/232621
+            MethodInfo m = objectContext.GetType().GetMethod("CreateObjectSet",new Type[] {});
+            MethodInfo generic = m.MakeGenericMethod(t);
+            dynamic set = generic.Invoke(objectContext, null);
+            
+
+            // Act
+            var ks = (System.Data.Metadata.Edm.ReadOnlyMetadataCollection<System.Data.Metadata.Edm.EdmMember>)set.EntitySet.ElementType.KeyMembers;           
+            IEnumerable<string> keyNames = ks.Select(k => k.Name);
+
+
+            // Assert
+            Assert.AreEqual("ProductId", string.Join(",", keyNames.ToArray()));
         }
 
 

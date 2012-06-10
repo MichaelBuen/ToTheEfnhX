@@ -198,7 +198,7 @@ namespace Ienablemuch.ToTheEfnhX.Memory
 
         private TEnt LoadStubX(object id) 
         {
-            string primaryKeyName = typeof(TEnt).Name + RepositoryConstants.IdSuffix;
+            string primaryKeyName = typeof(TEnt).Name + RepositoryConstants.IdSuffix;            
             return LoadStubX(primaryKeyName, id);
         }
 

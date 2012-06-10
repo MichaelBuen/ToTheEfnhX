@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<TestRun id="8f4cb2ac-bc45-49ed-9a9b-5aeeb1e475ed" name="Michael@MICHAEL-PC 2012-06-10 11:19:29" runUser="Michael-PC\Michael" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+<TestRun id="73342378-92bb-410e-8086-4b392dbd31d0" name="Michael@MICHAEL-PC 2012-06-10 17:24:04" runUser="Michael-PC\Michael" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <TestSettings name="Local" id="7d9e14f4-f525-48ee-bea8-a34d9f4cc18d">
     <Description>These are default test settings for a local test run.</Description>
-    <Deployment enabled="false" runDeploymentRoot="Michael_MICHAEL-PC 2012-06-10 11_19_29">
+    <Deployment userDeploymentRoot="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="Michael_MICHAEL-PC 2012-06-10 17_24_04">
       <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.Memory\bin\Release\Ienablemuch.ToTheEfnhX.Memory.dll" />
       <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\packages\FluentNHibernate.1.3.0.717\lib\FluentNHibernate.dll" />
       <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll" />
@@ -19,14 +19,14 @@
       </AgentRule>
     </Execution>
   </TestSettings>
-  <Times creation="2012-06-10T11:19:29.8650000+08:00" queuing="2012-06-10T11:19:29.9540000+08:00" start="2012-06-10T11:19:29.9870000+08:00" finish="2012-06-10T11:19:31.9280000+08:00" />
+  <Times creation="2012-06-10T17:24:04.5650000+08:00" queuing="2012-06-10T17:24:04.6230000+08:00" start="2012-06-10T17:24:04.6620000+08:00" finish="2012-06-10T17:24:05.9760000+08:00" />
   <ResultSummary outcome="Failed">
     <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
   </ResultSummary>
   <TestDefinitions>
-    <UnitTest name="Ef_Can_Save_Then_Update" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="9076dd47-28a7-196a-e653-7fb55dfa55a8">
-      <Execution id="88cf97e7-18b1-4fe8-8dfc-97b37208eb88" />
-      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_Can_Save_Then_Update" />
+    <UnitTest name="Test_Ef_Get_Pk" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="da5ba676-a73b-15a5-80cc-a8459dfbaf77">
+      <Execution id="6541fb01-5aba-4f4f-be30-cd4117a5e115" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Test_Ef_Get_Pk" />
     </UnitTest>
   </TestDefinitions>
   <TestLists>
@@ -34,15 +34,14 @@
     <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
   </TestLists>
   <TestEntries>
-    <TestEntry testId="9076dd47-28a7-196a-e653-7fb55dfa55a8" executionId="88cf97e7-18b1-4fe8-8dfc-97b37208eb88" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="da5ba676-a73b-15a5-80cc-a8459dfbaf77" executionId="6541fb01-5aba-4f4f-be30-cd4117a5e115" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <Results>
-    <UnitTestResult executionId="88cf97e7-18b1-4fe8-8dfc-97b37208eb88" testId="9076dd47-28a7-196a-e653-7fb55dfa55a8" testName="Ef_Can_Save_Then_Update" computerName="MICHAEL-PC" duration="00:00:01.2705365" startTime="2012-06-10T11:19:29.9950000+08:00" endTime="2012-06-10T11:19:31.5200000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="88cf97e7-18b1-4fe8-8dfc-97b37208eb88">
+    <UnitTestResult executionId="6541fb01-5aba-4f4f-be30-cd4117a5e115" testId="da5ba676-a73b-15a5-80cc-a8459dfbaf77" testName="Test_Ef_Get_Pk" computerName="MICHAEL-PC" duration="00:00:00.9457562" startTime="2012-06-10T17:24:04.7570000+08:00" endTime="2012-06-10T17:24:05.9490000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6541fb01-5aba-4f4f-be30-cd4117a5e115">
       <Output>
         <ErrorInfo>
-          <Message>Assert.AreEqual failed. Expected:&lt;8&gt;. Actual:&lt;7.000000&gt;. </Message>
-          <StackTrace>   at TestProject.TestTheIRepository.Common_Can_Save_Then_Update(IRepository`1 dbProd, IRepository`1 dbPrice) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 1398
-   at TestProject.TestTheIRepository.Ef_Can_Save_Then_Update() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 1345
+          <Message>Assert.AreEqual failed. Expected:&lt;x&gt;. Actual:&lt;ProductId&gt;. </Message>
+          <StackTrace>   at TestProject.TestTheIRepository.Test_Ef_Get_Pk() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 1440
 </StackTrace>
         </ErrorInfo>
       </Output>

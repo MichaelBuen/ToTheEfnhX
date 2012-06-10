@@ -25,7 +25,9 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
             _ctx = ctx;
             // Convention-over-configuration :-)
-            PrimaryKeyName = typeof(TEnt).Name + RepositoryConstants.IdSuffix;
+            // PrimaryKeyName = typeof(TEnt).Name + RepositoryConstants.IdSuffix;
+
+            PrimaryKeyName = _ctx.GetPrimaryKeyPropertyNames(typeof(TEnt))[0];
             VersionName = "RowVersion";
         }
 
@@ -96,7 +98,10 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                             {
                                 
                                 object refObj = entType.InvokeMember(pi.Name, BindingFlags.GetProperty, null, ent, new object[] { });
-                                string pkName = pi.Name + RepositoryConstants.IdSuffix; // temporarily
+                                
+                                // string pkName = pi.Name + RepositoryConstants.IdSuffix; // temporarily
+                                string pkName = _ctx.GetPrimaryKeyPropertyNames(pi.PropertyType)[0];
+
                                 object refPk = refObj.GetType().InvokeMember(pkName, BindingFlags.GetProperty, null, refObj, new object[] { });
                                 
                                 // instead of database roundtrip...
@@ -441,7 +446,8 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
 
 
-            string childPk = listElemType.Name + RepositoryConstants.IdSuffix;
+            // string childPk = listElemType.Name + RepositoryConstants.IdSuffix;
+            string childPk = _ctx.GetPrimaryKeyPropertyNames(listElemType)[0];
 
             // throw new Exception("Hello " + childPk);
 
@@ -951,4 +957,30 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
             // return (TEnt) r.Clone();
         }
     }//EfRepository
+
+    public static class Helper
+    {
+        public static string[] GetPrimaryKeyPropertyNames(this DbContext db, Type entType)
+        {
+            // logic sourced here: http://stackoverflow.com/questions/7253943/entity-framework-code-first-find-primary-key
+
+            // Arrange
+            var objectContext = ((System.Data.Entity.Infrastructure.IObjectContextAdapter)db).ObjectContext;
+            
+
+            // http://stackoverflow.com/a/232621
+            MethodInfo m = objectContext.GetType().GetMethod("CreateObjectSet", new Type[] { });
+            MethodInfo generic = m.MakeGenericMethod(entType);
+            object set = generic.Invoke(objectContext, null);
+
+            PropertyInfo entitySetPI = set.GetType().GetProperty("EntitySet");
+            System.Data.Metadata.Edm.EntitySet entitySet = (System.Data.Metadata.Edm.EntitySet)entitySetPI.GetValue(set, null);
+
+
+            // Act 
+            IEnumerable<string> keyNames = entitySet.ElementType.KeyMembers.Select(k => k.Name);
+            return keyNames.ToArray();
+
+        }
+    }
 }
