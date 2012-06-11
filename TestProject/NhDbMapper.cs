@@ -42,10 +42,14 @@ namespace TestProject
                                 // .Conventions.Add(ForeignKey.EndsWith("Id"))                                
                                .Conventions.Add<CustomForeignKeyConvention>()
 
+                               
+
                                .Conventions.Add<HasManyConvention>()
                                .Conventions.Add<RowversionConvention>()
 
                                .Override<Product>(x => x.HasMany(z => z.PriceList).KeyColumn("Product_ProductId"))
+                               .Override<Product>(x => x.Version(z => z.RowVersion))
+                               
                                // .Override<Product>(x => x.Id(z => z.ProductId).GeneratedBy.Identity())
 
                                // .Override<Question>(x => x.Not.LazyLoad())
@@ -102,7 +106,9 @@ namespace TestProject
             public void Apply(IOneToManyCollectionInstance instance)
             {
                 instance.Inverse();
-                instance.Cascade.AllDeleteOrphan();                
+
+                // good for n-tier
+                instance.Cascade.AllDeleteOrphan();
             }
 
 

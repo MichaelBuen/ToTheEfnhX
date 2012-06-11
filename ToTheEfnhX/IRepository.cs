@@ -10,7 +10,7 @@ namespace Ienablemuch.ToTheEfnhX
         IQueryable<TEnt> All { get; }
         
         void Save(TEnt ent);
-        void Merge(TEnt ent);
+        void SaveGraph(TEnt ent);
         TEnt Get(object id);
         TEnt GetCascade(object id);
 

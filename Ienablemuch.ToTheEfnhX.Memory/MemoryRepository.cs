@@ -225,7 +225,7 @@ namespace Ienablemuch.ToTheEfnhX.Memory
         }
 
 
-        public void Merge(TEnt ent)
+        public void SaveGraph(TEnt ent)
         {
             Save(ent);
         }

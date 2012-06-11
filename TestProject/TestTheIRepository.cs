@@ -165,7 +165,7 @@ delete from Question;
 
 
             // Act
-            db.Merge(px);
+            db.SaveGraph(px);
 
 
 
@@ -182,7 +182,7 @@ delete from Question;
             Assert.AreEqual(4, px.PriceList.Count);
 
 
-            db.Merge(px);
+            db.SaveGraph(px);
 
 
 
@@ -336,7 +336,7 @@ delete from Question;
                     new ProductPrice { Product = px, Price = 234, EffectiveDate = DateTime.Today },
                     new ProductPrice { Product = px, Price = 300, EffectiveDate = DateTime.Today.AddDays(100) }
                 };
-            db.Merge(px);
+            db.SaveGraph(px);
 
 
 
@@ -386,7 +386,7 @@ delete from Question;
             // Act
             string expecting = "Bumble Bee Battle Mode hickhickhick";
             fromWeb.ProductName = expecting;
-            db.Merge(fromWeb);
+            db.SaveGraph(fromWeb);
 
 
             // Assert            
@@ -441,7 +441,7 @@ delete from Question;
             // Assert
             Assert.AreEqual(expected, px.ProductName);
             Assert.AreNotEqual(null, px.RowVersion);            
-            Assert.AreNotEqual(originalVersion, newVersion);            
+            CollectionAssert.AreNotEqual(originalVersion, newVersion);            
         }
 
 
@@ -814,6 +814,7 @@ delete from Question;
 
             Question retrievedQuestion = repo.GetCascade(questionId);
 
+            int originalAnswersCount = retrievedQuestion.Answers.Count;
             // throw new Exception(retrievedQuestion.GetType().ToString());
 
 
@@ -829,7 +830,7 @@ delete from Question;
 
 
 
-            repo.Merge(retrievedQuestion); // save the whole object graph
+            repo.SaveGraph(retrievedQuestion); // save the whole object graph
 
 
 
@@ -845,6 +846,7 @@ delete from Question;
             Assert.AreEqual(expectedText, retrievedMergedQuestion.Answers.Single(x => x.Poster == "John").Text);
             Assert.AreEqual("Hello", retrievedMergedQuestion.Text);
 
+            Assert.AreEqual(3, originalAnswersCount);
             Assert.AreEqual(2, retrievedMergedQuestion.Answers.Count);
 
 
@@ -857,7 +859,7 @@ delete from Question;
             var importantQuestion = PopulateQuestion();
 
 
-            repo.Merge(importantQuestion);
+            repo.SaveGraph(importantQuestion);
 
 
 
@@ -1485,6 +1487,135 @@ delete from Question;
             // Assert
             Assert.AreEqual("ProductId", string.Join(",", keyNames.ToArray()));
         }
+
+
+        [TestMethod]
+        public void Nh_CanSaveHeaderDetail_ThenHeaderOnly()
+        {
+            EmptyDatabase();
+            IRepository<Product> db = new NH.Repository<Product>(NhModelsMapper.GetSession(connectionString));
+            // throw new Exception("Provider : " + db.All.Provider.GetType().ToString()); // NHibernate.Linq.NhQueryProvider
+            Common_CanSaveHeaderDetail_ThenHeaderOnly(db);
+        }
+
+        [TestMethod]
+        public void Ef_CanSaveHeaderDetail_ThenHeaderOnly()
+        {
+            EmptyDatabase();
+            IRepository<Product> db = new EF.Repository<Product>(new EfDbMapper(connectionString));
+            // throw new Exception("Provider : " + db.All.Provider.GetType().ToString()); // NHibernate.Linq.NhQueryProvider
+            Common_CanSaveHeaderDetail_ThenHeaderOnly(db);
+        }
+
+        void Common_CanSaveHeaderDetail_ThenHeaderOnly(IRepository<Product> db)
+        {
+            // NHibernate.ISession xxx = NhModelsMapper.GetSession(connectionString);
+            
+
+            // Arrange
+            var px = new Product
+            {
+                ProductName = "Optimus",
+                Category = "Autobots",
+                MinimumPrice = 7
+            };
+            px.PriceList =
+                new List<ProductPrice>()
+                {
+                    new ProductPrice { Product = px, Price = 777, EffectiveDate = DateTime.Today },
+                    new ProductPrice { Product = px, Price = 888, EffectiveDate = DateTime.Today },
+                    new ProductPrice { Product = px, Price = 999, EffectiveDate = DateTime.Today },
+                    new ProductPrice { Product = px, Price = 222, EffectiveDate = DateTime.Today },
+
+                };
+
+
+            // Act
+            db.SaveGraph(px);
+            // xxx.Merge(px);
+
+            byte[] rv = px.RowVersion;
+
+            Assert.AreEqual(4, px.PriceList.Count());
+
+
+            px = db.GetCascade(px.ProductId);
+
+
+
+            Assert.AreEqual("Optimus", px.ProductName);
+            px.ProductName = px.ProductName + "?";
+            px.PriceList[2].Price = 333;
+            Assert.AreEqual(4, px.PriceList.Count);
+
+            
+            db.SaveGraph(px);
+
+            Assert.AreNotEqual(0, px.ProductId);
+            CollectionAssert.AreNotEqual(px.RowVersion, rv);
+
+
+
+
+            // Assert
+
+            Assert.AreEqual(px.ProductName, px.ProductName);
+            Assert.AreNotEqual(0, px.ProductId);
+            Assert.AreEqual(4, px.PriceList.Count);
+
+
+            
+
+
+            // Arrange
+
+            Assert.AreNotEqual(0, px.ProductId);
+            
+            
+            /* triggers concurrency exception
+            byte[] x = px.RowVersion;
+            x[0] += 1;
+            px.RowVersion = x;
+            */
+
+            var py = new Product
+            {
+                ProductId = px.ProductId,
+                ProductName = "Optimus",
+                Category = "Autobotszx",
+                MinimumPrice = 7,
+                
+                RowVersion = px.RowVersion
+
+                // empty list is incompatible with cascade=all-delete-orphan
+            };
+
+            
+            int pxid = px.ProductId;            
+            db.Save(py);
+            
+            
+
+            
+
+
+
+            
+            Product pz = db.Get(px.ProductId);
+            // throw new Exception(py.ProductId + " " + px.ProductId + " " + pxid);
+            Assert.AreEqual(px.ProductId, py.ProductId);
+            
+            Assert.IsNotNull(pz.PriceList);
+            Assert.AreEqual(4, pz.PriceList.Count);
+            
+            
+            
+
+        }
+
+
+
+
 
 
 

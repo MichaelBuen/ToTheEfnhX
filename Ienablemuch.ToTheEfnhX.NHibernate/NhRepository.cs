@@ -49,7 +49,7 @@ namespace Ienablemuch.ToTheEfnhX.NHibernate
 
 
 
-        public void Merge(TEnt ent)
+        public void SaveGraph(TEnt ent)
         {
             ITransaction tx = null;
 
@@ -77,12 +77,22 @@ namespace Ienablemuch.ToTheEfnhX.NHibernate
 
                 Type entType = typeof(TEnt);
 
+                
                 {
                     PropertyInfo rowVersionProp = entType.GetProperty(VersionName);
 
                     if (rowVersionProp != null)
                     {
                         byte[] version = (byte[])rowVersionProp.GetValue(ent, null);
+
+                        // NHibernate inserts duplicate rows when an object with same Id is Merge two times 
+                        // when on the second time the RowVersion is null. A silent error.
+                        // Gotta fix that anomaly.
+                        // This will force trigger ConcurrencyException. 
+                        // http://c2.com/cgi/wiki?FailFast
+                        if (version == null)
+                            version = Guid.NewGuid().ToByteArray();
+                        
                         rowVersionProp.SetValue(ent, version, null);
                     }
                 }
@@ -104,7 +114,10 @@ namespace Ienablemuch.ToTheEfnhX.NHibernate
                 {
                     object pkGenerated = typeof(TEnt).InvokeMember(PrimaryKeyName, System.Reflection.BindingFlags.GetProperty, null, retObject, new object[] { });
                     typeof(TEnt).InvokeMember(PrimaryKeyName, System.Reflection.BindingFlags.SetProperty, null, ent, new object[] { pkGenerated });
+                    Evict(pkGenerated);
                 }
+                else
+                    Evict(pkValue);
 
 
                 {
@@ -117,9 +130,11 @@ namespace Ienablemuch.ToTheEfnhX.NHibernate
 
                         // to these:
                         object retRowVersion = rowVersionProp.GetValue(retObject, null);
-                        rowVersionProp.SetValue(ent, retRowVersion, null);
+                        rowVersionProp.SetValue(ent, retRowVersion, null);                        
                     }
                 }
+
+                
 
             }
             catch (StaleObjectStateException)
@@ -172,6 +187,8 @@ namespace Ienablemuch.ToTheEfnhX.NHibernate
 
                 _session.SaveOrUpdate(ent);
 
+                
+
                 if (tx != null)
                 {
                     tx.Commit();
@@ -198,6 +215,7 @@ namespace Ienablemuch.ToTheEfnhX.NHibernate
 
         public TEnt Get(object id)
         {
+            Evict(id);
             return _session.Get<TEnt>(id);
         }
 

@@ -32,8 +32,8 @@ namespace TestProject
 
             
             modelBuilder.Entity<Product>().HasMany(x => x.PriceList).WithRequired(x => x.Product).Map(x => x.MapKey("Product_ProductId"));
+            modelBuilder.Entity<Product>().Property(x => x.RowVersion).IsRowVersion();
 
-            
 
             modelBuilder.Entity<Question>().Property(x => x.RowVersion).IsRowVersion();
 

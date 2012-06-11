@@ -74,17 +74,17 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                 {
                     isNew = false;
 
-                    
-                    
-                 
 
-                    
-                    
-                    
+
+
                     
                     var query = _ctx.Set<TEnt>().Where(string.Format("{0} = @0", PrimaryKeyName), pkValue);
 
                     liveObj = query.SingleOrDefault();
+
+                    // _ctx.Entry(liveObj).Reload();
+
+                    
 
                     if (liveObj == null) throw new DbChangesConcurrencyException();
 
@@ -182,7 +182,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
             }
             catch (DbUpdateConcurrencyException)
-            {
+            {                
                 throw new DbChangesConcurrencyException();
             }
 
@@ -298,7 +298,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
         }
 
         
-        public void Merge(TEnt ent)
+        public void SaveGraph(TEnt ent)
         {
             // Rationale for detaching/evicting: 
             // http://msdn.microsoft.com/en-us/library/bb738697.aspx
@@ -343,15 +343,17 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
 
 
+                bool isNew;
+                TEnt liveParent = null;
 
-                
                 if (object.Equals(pkValue, pkDefaultValue))
-                {                    
+                {
+                    isNew = true;
                     _ctx.Set<TEnt>().Add(clonedEnt);
                 }
                 else
                 {
-                 
+                    isNew = false;
 
 
 
@@ -390,7 +392,9 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
                     }
 
-                    TEnt liveParent = query.Single();
+                    liveParent = query.Single();
+
+
 
                     
                     foreach (PropertyInfo pi in typeof(TEnt).GetProperties())
@@ -410,7 +414,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                         {
 
 
-                            MergeCollection(
+                            SaveGraphCollection(
                                 liveParent,
                                 (IList)entType.InvokeMember(pi.Name, BindingFlags.GetProperty, null, liveParent, new object[] { }),
                                 clonedEnt,
@@ -420,6 +424,8 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
                     }
 
+
+                    
 
                     PropertyInfo rowVersionProp = entType.GetProperty(VersionName);
                     // rowversion property existing
@@ -438,12 +444,15 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
 
 
+                
                 pkValue = entType.InvokeMember(PrimaryKeyName, System.Reflection.BindingFlags.GetProperty, null, clonedEnt, new object[] { });
                 typeof(TEnt).InvokeMember(PrimaryKeyName, System.Reflection.BindingFlags.SetProperty, null, ent, new object[] { pkValue });
 
 
                 PropertyInfo retRowVersionProp = entType.GetProperty(VersionName);
                 // rowversion property existing
+
+                
                 if (retRowVersionProp != null)
                 {
                     // Change these:
@@ -451,8 +460,13 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                     // typeof(TEnt).InvokeMember(VersionName, System.Reflection.BindingFlags.SetProperty, null, ent, new object[] { retRowVersion });
 
                     // To these:
-                    object retRowVersion = retRowVersionProp.GetValue(clonedEnt, null);
+                
+                    object retRowVersion = retRowVersionProp.GetValue(!isNew ? liveParent : clonedEnt, null);
+
+                    // Trace.WriteLine("hurray " + BitConverter.ToString((byte[])retRowVersion));                    
                     retRowVersionProp.SetValue(ent, retRowVersion, null);
+
+                    // System.Windows.Forms.MessageBox.Show("EF " + BitConverter.ToString((byte[])retRowVersion));
                 }
 
 
@@ -478,6 +492,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
             }
             catch (DbUpdateConcurrencyException)
             {
+                // throw;
                 throw new DbChangesConcurrencyException();
             }
         }
@@ -506,7 +521,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
 
 
-        void MergeCollection(object liveParent, IList colLive, object transientParent, IList colTransient)
+        void SaveGraphCollection(object liveParent, IList colLive, object transientParent, IList colTransient)
         {
             if (object.ReferenceEquals(liveParent, transientParent))
                 throw new Exception("An anomaly occured, contact the developer");
@@ -651,7 +666,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
                         foreach (PropertyInfo pi in listElemType.GetProperties().Where(x => x.PropertyType.IsGenericType && typeof(IEnumerable).IsAssignableFrom(x.PropertyType)))
                         {
-                            MergeCollection(
+                            SaveGraphCollection(
                                 liveMatchFound,
                                 (IList)listElemType.InvokeMember(pi.Name, BindingFlags.GetProperty, null, liveMatchFound, new object[] { }),
                                 transientItem,
