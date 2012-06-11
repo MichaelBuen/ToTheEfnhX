@@ -1,5 +1,4 @@
-﻿
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using TestProject.SampleModel;
 
@@ -420,6 +419,7 @@ delete from Question;
         public void Common_HasRowVersion(IRepository<Product> db)
         {
 
+            string expected = "Jollibee";
 
             // Arrange
             var px = new Product { ProductName = "Bumble Bee", Category = "Autobots", MinimumPrice = 8 };
@@ -429,13 +429,19 @@ delete from Question;
             db.Save(px);
             byte[] originalVersion = px.RowVersion;
 
+
+            // Noted corner case, when there's no changes in any of the properties, NHibernate still persist the class,
+            // while EF don't; hence when the following line is commented, the rowversion doesn't change on EF.
+            px.ProductName = expected;
+
             db.Save(px);
             byte[] newVersion = px.RowVersion;
 
 
             // Assert
-            Assert.AreNotEqual(null, px.RowVersion);
-            Assert.AreNotEqual(originalVersion, newVersion);
+            Assert.AreEqual(expected, px.ProductName);
+            Assert.AreNotEqual(null, px.RowVersion);            
+            Assert.AreNotEqual(originalVersion, newVersion);            
         }
 
 

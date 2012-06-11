@@ -12,6 +12,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TestProject.SampleModel
 {
+
 #if UseBuiltInCloning
     [Serializable]
 #endif
@@ -29,9 +30,7 @@ namespace TestProject.SampleModel
         public virtual byte[] RowVersion { get; set; }
 
 
-
-
-
+        
     }
 
 #if UseBuiltInCloning
@@ -44,6 +43,8 @@ namespace TestProject.SampleModel
         public virtual int ProductPriceId { get; set; }
         public virtual DateTime EffectiveDate { get; set; }
         public virtual decimal Price { get; set; }
+        
+        
     }
 }
 

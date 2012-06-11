@@ -56,10 +56,18 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
                 TEnt liveObj = null;
 
+                AssignStub(null, ent, VersionName, _ctx);
+
+                //object entx = ent;
+                // ent = (TEnt) ent.Clone();
+
                 bool isNew;
                 if (object.Equals(pkValue, pkDefaultValue))
                 {
                     isNew = true;
+
+                    
+                    
                     _ctx.Set<TEnt>().Add(ent);
                 }
                 else
@@ -67,12 +75,11 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                     isNew = false;
 
                     
-                    Evict(pkValue);                    
                     
-                    /*
-                    _ctx.Entry(ent).State = System.Data.EntityState.Modified;
-                    _ctx.Entry(ent).Property(VersionName).OriginalValue = version;
-                    */
+                 
+
+                    
+                    
                     
                     
                     var query = _ctx.Set<TEnt>().Where(string.Format("{0} = @0", PrimaryKeyName), pkValue);
@@ -81,12 +88,25 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
                     if (liveObj == null) throw new DbChangesConcurrencyException();
 
-                    foreach (PropertyInfo pi in typeof(TEnt).GetProperties())
+                    foreach (PropertyInfo pi in entType.GetProperties())
                     {
                         bool isCollection = pi.PropertyType.IsGenericType && typeof(IEnumerable).IsAssignableFrom(pi.PropertyType);
 
                         if (!isCollection && pi.Name != VersionName)
                         {
+
+                            
+                            
+                            /*
+                             * use this to check for reference-type-ness. to-do
+                             * 
+                             * if (!pi.PropertyType.IsValueType && pi.PropertyType != typeof(string))
+                            {
+                                var objectContext = ((System.Data.Entity.Infrastructure.IObjectContextAdapter)_ctx).ObjectContext;
+                                MethodInfo m = objectContext.GetType().GetMethod("CreateObjectSet", new Type[] { });
+                                MethodInfo generic = m.MakeGenericMethod(pi.PropertyType);
+                                object set = generic.Invoke(objectContext, null);
+                            }*/
 
                             
                             if (!pi.PropertyType.IsClass || pi.PropertyType == typeof(string))
@@ -98,6 +118,11 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                             {
                                 
                                 object refObj = entType.InvokeMember(pi.Name, BindingFlags.GetProperty, null, ent, new object[] { });
+                                if (refObj == null)
+                                {
+                                    // throw new Exception(pi.Name);
+                                    continue;
+                                }
                                 
                                 // string pkName = pi.Name + RepositoryConstants.IdSuffix; // temporarily
                                 string pkName = _ctx.GetPrimaryKeyPropertyNames(pi.PropertyType)[0];
@@ -134,8 +159,9 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
                 if (!isNew)
                 {
-                    pkValue = entType.InvokeMember(PrimaryKeyName, System.Reflection.BindingFlags.GetProperty, null, liveObj, new object[] { });
-                    typeof(TEnt).InvokeMember(PrimaryKeyName, System.Reflection.BindingFlags.SetProperty, null, ent, new object[] { pkValue });
+                    string primaryKeyName = _ctx.GetPrimaryKeyPropertyNames(entType)[0];
+                    pkValue = entType.InvokeMember(primaryKeyName, System.Reflection.BindingFlags.GetProperty, null, liveObj, new object[] { });
+                    typeof(TEnt).InvokeMember(primaryKeyName, System.Reflection.BindingFlags.SetProperty, null, ent, new object[] { pkValue });
 
 
 
@@ -158,6 +184,60 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
             catch (DbUpdateConcurrencyException)
             {
                 throw new DbChangesConcurrencyException();
+            }
+
+        }
+
+        static void AssignStub(object parent, object ent, string versionName, DbContext ctx)
+        {
+            return;
+
+            // future plan.
+            // for the meantime, use DitTO's AssignStub to re-hydrate stub objects
+
+            foreach (PropertyInfo item in ent.GetType().GetProperties())
+            {
+                if (item.PropertyType.IsValueType || item.PropertyType == typeof(string) || item.Name == versionName) continue;
+
+                // if (item.PropertyType == typeof(System.Data.Objects.DataClasses.RelationshipManager)) continue;
+
+                bool isCollection = item.PropertyType.IsGenericType && typeof(IEnumerable).IsAssignableFrom(item.PropertyType);
+
+                object val = item.GetValue(ent, null);
+
+                if (val == null) continue;
+
+                if (!isCollection && object.ReferenceEquals(val, parent)) continue;
+
+                if (isCollection)
+                {
+                    IList elems = (IList)val;
+
+                    foreach (object elem in elems)
+                    {
+                        AssignStub(ent, elem, versionName, ctx);
+                    }
+
+
+
+                    continue;
+                }
+
+
+                // e.g. Category of Product
+
+
+                Debug.WriteLine("Tunay " + item.PropertyType.ToString() + " " + item.Name);
+                string pkName = ctx.GetPrimaryKeyPropertyNames(item.PropertyType)[0];
+                PropertyInfo pkPI = item.PropertyType.GetProperty(pkName);
+                // e.g. CategoryId of Category
+                object pkVal = pkPI.GetValue(val, null);
+                
+
+                object identityMappedObject = LoadStubX(item.PropertyType, pkName, pkVal, ctx);
+
+                item.SetValue(ent, identityMappedObject, null);
+
             }
 
         }
@@ -249,6 +329,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                 Type entType = typeof(TEnt);
 
 
+                AssignStub(null, clonedEnt, VersionName, _ctx);
                 
 
 
@@ -975,6 +1056,8 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
             PropertyInfo entitySetPI = set.GetType().GetProperty("EntitySet");
             System.Data.Metadata.Edm.EntitySet entitySet = (System.Data.Metadata.Edm.EntitySet)entitySetPI.GetValue(set, null);
+
+            
 
 
             // Act 
