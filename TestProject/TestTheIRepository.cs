@@ -705,11 +705,11 @@ delete from Question;
 
 
         [TestMethod]
-        public void Ef_Can_Orm_Merge_Can_Create()
+        public void Ef_Can_Orm_SaveGraph_Can_Create()
         {
             EmptyDatabase();
             IRepository<Question> db = new EF.Repository<Question>(new EfDbMapper(connectionString));
-            Common_Can_Orm_Merge_Can_Create(db);
+            Common_Can_Orm_SaveGraph_Can_Create(db);
 
 
 
@@ -717,19 +717,19 @@ delete from Question;
 
 
         [TestMethod]
-        public void Nh_Can_Orm_Merge_Can_Create()
+        public void Nh_Can_Orm_SaveGraph_Can_Create()
         {
             EmptyDatabase();
             IRepository<Question> db = new NH.Repository<Question>(NhModelsMapper.GetSession(connectionString));            
-            Common_Can_Orm_Merge_Can_Create(db);
+            Common_Can_Orm_SaveGraph_Can_Create(db);
         }
 
 
-        void Common_Can_Orm_Merge_Can_Create(IRepository<Question> repo)
+        void Common_Can_Orm_SaveGraph_Can_Create(IRepository<Question> repo)
         {
 
             // Arrange
-            Question importantQuestion = Refactored_Common_Merge_Arrange_Create(repo);
+            Question importantQuestion = Refactored_Common_SaveGraph_Arrange_Create(repo);
 
             // Act            
             int questionId = importantQuestion.QuestionId;
@@ -777,30 +777,30 @@ delete from Question;
 
         // real culprit
         [TestMethod]
-        public void Ef_Can_Orm_Merge_Can_Update()
+        public void Ef_Can_Orm_SaveGraph_Can_Update()
         {
             EmptyDatabase();
             IRepository<Question> db = new EF.Repository<Question>(new EfDbMapper(connectionString));
-            Common_Orm_Merge_Can_Update(db);
+            Common_Orm_SaveGraph_Can_Update(db);
         }
 
 
         [TestMethod]
-        public void Nh_Can_Orm_Merge_Can_Update()
+        public void Nh_Can_Orm_SaveGraph_Can_Update()
         {
             EmptyDatabase();
             IRepository<Question> db = new NH.Repository<Question>(NhModelsMapper.GetSession(connectionString));
-            Common_Orm_Merge_Can_Update(db);
+            Common_Orm_SaveGraph_Can_Update(db);
         }
 
 
-        void Common_Orm_Merge_Can_Update(IRepository<Question> repo)
+        void Common_Orm_SaveGraph_Can_Update(IRepository<Question> repo)
         {
 
 
 
             // Arrange
-            Question importantQuestion = Refactored_Common_Merge_Arrange_Create(repo);
+            Question importantQuestion = Refactored_Common_SaveGraph_Arrange_Create(repo);
             string expectedText = "number 9, number 9, number 9...";
 
 
@@ -853,7 +853,7 @@ delete from Question;
 
         }
 
-        Question Refactored_Common_Merge_Arrange_Create(IRepository<Question> repo)
+        Question Refactored_Common_SaveGraph_Arrange_Create(IRepository<Question> repo)
         {
 
             var importantQuestion = PopulateQuestion();
@@ -910,7 +910,7 @@ delete from Question;
         {
 
             // Arrange
-            Question importantQuestion = Refactored_Common_Merge_Arrange_Create(repo);
+            Question importantQuestion = Refactored_Common_SaveGraph_Arrange_Create(repo);
 
 
             int questionId = importantQuestion.QuestionId;
@@ -1024,7 +1024,7 @@ delete from Question;
 
         void Common_Can_Orm_do_cascaded_deletions(IRepository<Question> db)
         {
-            Question q = Refactored_Common_Merge_Arrange_Create(db);
+            Question q = Refactored_Common_SaveGraph_Arrange_Create(db);
 
             db.DeleteCascade(q.QuestionId, q.RowVersion);
 

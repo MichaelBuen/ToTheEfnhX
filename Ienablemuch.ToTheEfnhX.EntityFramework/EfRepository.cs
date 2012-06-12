@@ -785,7 +785,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
             _ctx.Configuration.ProxyCreationEnabled = true;
 
             // there's no Dynamic Linq for SingleOrDefault. Hence doing both Where and SingleOrDefault            
-            TEnt x = this.All.Where(string.Format("{0} = @0", PrimaryKeyName), id).SingleOrDefault();
+            TEnt x = this.All.AsNoTracking().Where(string.Format("{0} = @0", PrimaryKeyName), id).SingleOrDefault();
             
 
             _ctx.Configuration.ProxyCreationEnabled = oldValue;
@@ -1019,7 +1019,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
 
         
-        public TEnt GetCascade(object pkValue)
+        public TEnt GetCascade(object id)
         {
             
             
@@ -1030,7 +1030,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
              
 
             Type entType = typeof(TEnt);
-            var query = _ctx.Set<TEnt>().AsNoTracking().Where(string.Format("{0} = @0", PrimaryKeyName), pkValue);
+            var query = _ctx.Set<TEnt>().AsNoTracking().Where(string.Format("{0} = @0", PrimaryKeyName), id);
             
             
             if (!_ctx.Configuration.ProxyCreationEnabled)

@@ -391,6 +391,7 @@ namespace Ienablemuch.ToTheEfnhX.NHibernate
 
         public TEnt GetCascade(object id)
         {
+            Evict(id);
             typeof(TEnt).DetectIdType(PrimaryKeyName, id);
             return Get(id);
         }
