@@ -27,10 +27,10 @@ namespace Ienablemuch.ToTheEfnhX.NHibernate
             // Convention-over-configuration :-)
             PrimaryKeyName = typeof(TEnt).Name + RepositoryConstants.IdSuffix;
             VersionName = RepositoryConstants.RowversionName;
-
-
-
         }
+
+
+        public ISession ISession { get { return _session; } }
 
         public string PrimaryKeyName { get; set; }
         public string VersionName { get; set; }

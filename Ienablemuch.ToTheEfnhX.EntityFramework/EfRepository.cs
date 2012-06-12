@@ -31,6 +31,8 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
             VersionName = "RowVersion";
         }
 
+        public DbContext DbContext { get { return _ctx; } }
+
         public string PrimaryKeyName { get; set; }
         public string VersionName { get; set; }
 
