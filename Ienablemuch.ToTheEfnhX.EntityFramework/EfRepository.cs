@@ -525,10 +525,11 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
         void SaveGraphCollection(object liveParent, IList colLive, object transientParent, IList colTransient)
         {
+            string alertDev = "An anomaly occured, contact the developer";
             if (object.ReferenceEquals(liveParent, transientParent))
-                throw new Exception("An anomaly occured, contact the developer");
+                throw new Exception(alertDev);
             if (object.ReferenceEquals(colLive, colTransient))
-                throw new Exception("An anomaly occured, contact the developer");
+                throw new Exception(alertDev);
 
 
             // The Merge sequence we do for Entity Framework is DELETE, UPDATE, INSERT. This prevent the NHibernate merge problem:
@@ -617,8 +618,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
                 IList transientAddList = new ArrayList();
 
-                IList transientEditList = new ArrayList();
-
+             
                 // throw new Exception("Test ok " + (colLive == null) + " " + (colTransient == null));
 
 
@@ -676,47 +676,46 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                         }
 
                         // UPDATE
+                                                
+
+                        Type elementType = liveMatchFound.GetType();
 
                         
-                        transientEditList.Add(transientItem);
-                        
-                        
-
-                        Type tx = liveMatchFound.GetType();
-
-                        
-                        if (tx.BaseType != null && tx.Namespace == ObjectCloner.EFProxyNamespace)
+                        if (elementType.BaseType != null && elementType.Namespace == ObjectCloner.EFProxyNamespace)
                         {
-                             tx = tx.BaseType;
+                             elementType = elementType.BaseType;
                         }
 
-                        foreach (PropertyInfo px in tx.GetProperties())
+                        foreach (PropertyInfo px in elementType.GetProperties())
                         {
-                            PropertyInfo txPi = transientItem.GetType().GetProperty(px.Name);
-                            object txVal = txPi.GetValue(transientItem, null);
+                            // forgot to check if it is collection. Collection is processed above, only scalar values here.
+                            // here's the sample error when we don't detect if it is collection:
+                            // "Test method TestDitTO.Tests.Test_nested_Live_Ef_SaveGraph_Two_Times threw exception:" 
+                            // "System.InvalidOperationException: Multiplicity constraint violated. The role 'OrderLine_Comments_Source' of the relationship 'TestDitTO.OrderLine_Comments' has multiplicity 1 or 0..1."
+                            if (px.PropertyType.IsGenericType && typeof(IEnumerable).IsAssignableFrom(px.PropertyType)) continue;
+
+
+
+                            PropertyInfo transientPI = transientItem.GetType().GetProperty(px.Name);
+                            object transientVal = transientPI.GetValue(transientItem, null);
 
 
                             // don't overwrite live entity's referenced object
-                            bool isValueInIdentityMap = 
+                            bool isValueInIdentityMap =
                                 _ctx.ChangeTracker.Entries()
-                                    .Where(x => ObjectContext.GetObjectType(x.Entity.GetType()) == px.PropertyType)
-                                    .Any(x => object.ReferenceEquals(px.GetValue(liveMatchFound, null), x.Entity));
-
+                                    .Any(x => ObjectContext.GetObjectType(x.Entity.GetType()) == px.PropertyType
+                                        && object.ReferenceEquals(px.GetValue(liveMatchFound, null), x.Entity)
+                                    );
+                                    
                             
                             if (!isValueInIdentityMap)
                             {
-                                px.SetValue(liveMatchFound, txVal, null);
+                                px.SetValue(liveMatchFound, transientVal, null);
                             }
 
                         }
                                                 
                         assignChildToLiveParent(liveMatchFound); 
-                        
-                        
-
-
-                        
-
 
 
                     }
@@ -730,14 +729,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                 foreach (object e in transientAddList)
                 {
                     assignChildToLiveParent(e); 
-
-
-                    colLive.GetType().InvokeMember("Add", BindingFlags.InvokeMethod, null, colLive, new object[] { e });
-
-                    // I think we should do this, instead of the above line :-) 
-                    // We became so fond of reflection :D
-                    // colLive.Add(e);
-
+                    colLive.Add(e);
                 }
 
             }//process transient
@@ -785,7 +777,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
             _ctx.Configuration.ProxyCreationEnabled = true;
 
             // there's no Dynamic Linq for SingleOrDefault. Hence doing both Where and SingleOrDefault            
-            TEnt x = this.All.AsNoTracking().Where(string.Format("{0} = @0", PrimaryKeyName), id).SingleOrDefault();
+            TEnt x = this.All.Where(string.Format("{0} = @0", PrimaryKeyName), id).SingleOrDefault();
             
 
             _ctx.Configuration.ProxyCreationEnabled = oldValue;
@@ -1019,7 +1011,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
 
         
-        public TEnt GetCascade(object id)
+        public TEnt GetCascade(object pkValue)
         {
             
             
@@ -1030,7 +1022,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
              
 
             Type entType = typeof(TEnt);
-            var query = _ctx.Set<TEnt>().AsNoTracking().Where(string.Format("{0} = @0", PrimaryKeyName), id);
+            var query = _ctx.Set<TEnt>().AsNoTracking().Where(string.Format("{0} = @0", PrimaryKeyName), pkValue);
             
             
             if (!_ctx.Configuration.ProxyCreationEnabled)

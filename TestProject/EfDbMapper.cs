@@ -37,15 +37,15 @@ namespace TestProject
 
             modelBuilder.Entity<Question>().Property(x => x.RowVersion).IsRowVersion();
 
+            /* Following is explicit form. But since we are using the convention, we don't need this:
             modelBuilder.Entity<Question>().HasMany(x => x.Answers).WithRequired(x => x.Question).Map(x => x.MapKey("Question_QuestionId"));
             modelBuilder.Entity<Question>().HasMany(x => x.Comments).WithRequired(x => x.Question).Map(x => x.MapKey("Question_QuestionId"));
 
             modelBuilder.Entity<Answer>().HasMany(x => x.Comments).WithRequired(x => x.Answer).Map(x => x.MapKey("Answer_AnswerId"));
+            */
 
             
 
-            
-            
 
             base.OnModelCreating(modelBuilder);
 
