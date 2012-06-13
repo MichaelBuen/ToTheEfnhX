@@ -829,7 +829,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
             // Assert.IsNull(o.Customer);
             if (x != null)
                 foreach (PropertyInfo pi in x.GetType().GetProperties())
-                    if (pi.PropertyType.IsClass)
+                    if (pi.PropertyType.IsClass && pi.PropertyType != typeof(string))
                         pi.GetValue(x, null);
                 
 
@@ -1100,7 +1100,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
             // Assert.IsNull(o.Customer);
             if (r != null)
                 foreach (PropertyInfo pi in r.GetType().GetProperties())
-                    if (pi.PropertyType.IsClass)
+                    if (pi.PropertyType.IsClass && pi.PropertyType != typeof(string))
                         pi.GetValue(r, null);
 
 
