@@ -408,8 +408,27 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                         bool isCollection = pi.PropertyType.IsGenericType && typeof(IEnumerable).IsAssignableFrom(pi.PropertyType);
                         
                         if (!isCollection && pi.Name != VersionName)
-                        {
+                        {                            
                             object transientVal = entType.InvokeMember(pi.Name, BindingFlags.GetProperty, null, clonedEnt, new object[] { });
+
+
+
+                            if (transientVal == null)
+                            {
+                                // work-around for null Independent Association. Line #5
+                                // http://www.codetuning.net/blog/post/Understanding-Entity-Framework-Associations.aspx
+                                /*
+                                // Example:   
+                                using (var context = new OrderEntities())
+                                {
+                                    Order order = context.Orders.First(x => x.Id == 1);
+                                    // dummy = order.Customer; // solves the issue   
+                                    order.Customer = null;
+                                    context.SaveChanges();
+                                }*/
+                                var dummy = entType.InvokeMember(pi.Name, BindingFlags.GetProperty, null, liveParent, new object[] { });
+                            }
+
                             entType.InvokeMember(pi.Name, BindingFlags.SetProperty, null, liveParent, new object[] { transientVal });
                         }
                         else if (isCollection)
@@ -436,6 +455,8 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                         byte[] version = (byte[])rowVersionProp.GetValue(clonedEnt, null);
                         _ctx.Entry(liveParent).Property(VersionName).OriginalValue = version;
                     }
+
+                    
 
                 }
 
@@ -708,8 +729,15 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                                     );
                                     
                             
-                            if (!isValueInIdentityMap)
+                            if (!isValueInIdentityMap || transientVal == null)
                             {
+                                //// work-around for null Independent Association. Line #5
+                                //// http://www.codetuning.net/blog/post/Understanding-Entity-Framework-Associations.aspx
+                                // Uncomment this if we encounter the null didn't take effect
+                                //if (transientVal == null)
+                                //{
+                                //    var dummy = px.GetValue(liveMatchFound, null);
+                                //}
                                 px.SetValue(liveMatchFound, transientVal, null);
                             }
 

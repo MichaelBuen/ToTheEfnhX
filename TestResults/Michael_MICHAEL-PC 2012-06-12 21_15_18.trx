@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="288ffbbd-811a-4e36-bd59-9e76119cbfa5" name="Michael@MICHAEL-PC 2012-06-12 21:15:18" runUser="Michael-PC\Michael" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="7d9e14f4-f525-48ee-bea8-a34d9f4cc18d">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Michael_MICHAEL-PC 2012-06-12 21_15_18">
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.Memory\bin\Release\Ienablemuch.ToTheEfnhX.Memory.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\packages\FluentNHibernate.1.3.0.717\lib\FluentNHibernate.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhx.CommonExtensions\bin\Release\Ienablemuch.ToTheEfnhx.CommonExtensions.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\packages\NHibernate.3.3.0.4000\lib\Net35\NHibernate.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\packages\EntityFramework.4.3.1\lib\net40\EntityFramework.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.NHibernate\bin\Release\Ienablemuch.ToTheEfnhX.NHibernate.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\bin\Release\Ienablemuch.ToTheEfnhX.EntityFramework.dll" />
+      <DeploymentItem filename="C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\ToTheEfnhX\bin\Release\Ienablemuch.ToTheEfnhX.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-06-12T21:15:18.3610000+08:00" queuing="2012-06-12T21:15:18.4640000+08:00" start="2012-06-12T21:15:18.5250000+08:00" finish="2012-06-12T21:15:27.5700000+08:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="58" executed="58" passed="55" error="0" failed="3" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Nh_CanHaveIncrementingKey" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="c8ff8ef9-a95a-0779-90f7-6e8188ebefd1">
+      <Execution id="fcfbb53e-4bd5-43f0-ad38-639138ee8db7" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_CanHaveIncrementingKey" />
+    </UnitTest>
+    <UnitTest name="Nh_SessionTransaction_can_detect_its_own_transaction_commitness_only" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="83330a72-51da-0d0d-d2b2-826b2f6cfd00">
+      <Execution id="37123324-5a92-41dd-941e-0c04b084b3f9" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_SessionTransaction_can_detect_its_own_transaction_commitness_only" />
+    </UnitTest>
+    <UnitTest name="Nh_CanDetectUpdateConflictingDelete" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="5d13769c-6ed9-df33-8e6d-b0cc79c073f2">
+      <Execution id="6f3bf00d-60ab-4b77-add9-e5dd71f7a81f" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_CanDetectUpdateConflictingDelete" />
+    </UnitTest>
+    <UnitTest name="Nh_Can_Orm_do_cascaded_deletions" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="170c0ff1-28bc-09a2-839b-5ab24853aea8">
+      <Execution id="62ef9767-4f21-4af6-85e9-7f0cc1cadf4c" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_Can_Orm_do_cascaded_deletions" />
+    </UnitTest>
+    <UnitTest name="Saving_is_ok" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="5b9ac5c8-7814-fd36-cd57-f0de0de0fae7">
+      <Execution id="b13227e1-33df-4dce-aa20-f7d9d2d40d93" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Saving_is_ok" />
+    </UnitTest>
+    <UnitTest name="Fetching_strategies_of_NHibernate_helper_has_no_problem_on_mocked_IQueryable" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="24f780e7-822d-62ed-f13e-e2daddc611e1">
+      <Execution id="8327e8f1-8d0b-4143-b822-1a7afd1ed638" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Fetching_strategies_of_NHibernate_helper_has_no_problem_on_mocked_IQueryable" />
+    </UnitTest>
+    <UnitTest name="Test_Ef_Get_PK_via_dynamic" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="a5e54779-0e2e-17fd-60ad-0caf532866a2">
+      <Execution id="a04a9181-12d4-484c-a497-6a7f67bf5f90" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Test_Ef_Get_PK_via_dynamic" />
+    </UnitTest>
+    <UnitTest name="Nh_CanUpdate" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="63d9977f-78b2-ba78-f19b-1e84d68eabe8">
+      <Execution id="48610863-35fc-46f7-9db2-e612e2237dea" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_CanUpdate" />
+    </UnitTest>
+    <UnitTest name="Nh_Can_Orm_SaveGraph_Can_Update" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="2c5bd9dd-112e-27f2-907e-74a104a18d8d">
+      <Execution id="8e36f0d1-69b6-461e-bedc-0ee59f6752da" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_Can_Orm_SaveGraph_Can_Update" />
+    </UnitTest>
+    <UnitTest name="Memory_CanUpdate" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="f5049a26-85f5-2d61-7d0d-3fe36d498d57">
+      <Execution id="60d26a3e-d5b1-408a-9d37-6b0e7ac716e2" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Memory_CanUpdate" />
+    </UnitTest>
+    <UnitTest name="Ef_CanDetectDeleteConflictingDelete" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="4bb22a57-9102-06ea-257b-caae673d46d7">
+      <Execution id="dd9678d4-f41e-491d-aec7-1bb6ff6c38a0" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_CanDetectDeleteConflictingDelete" />
+    </UnitTest>
+    <UnitTest name="Ef_Can_save_transaction" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="f473cffe-6acb-bc8c-3c44-48f67f9567de">
+      <Execution id="a52b17d7-767e-4173-a115-ff0b1e2129cf" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_Can_save_transaction" />
+    </UnitTest>
+    <UnitTest name="Memory_CanDetectDeleteConflictingDelete" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="d409929f-129a-9686-590d-6472fdfa28e4">
+      <Execution id="468e0587-f0ec-4a2e-a217-6f31ad4f8958" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Memory_CanDetectDeleteConflictingDelete" />
+    </UnitTest>
+    <UnitTest name="Ef_CanSaveHeaderDetail" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="ecf5b477-cdd8-3508-c195-40a64bc26f00">
+      <Execution id="81ce6a2c-6e6f-4242-8b50-5f65314d0e31" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_CanSaveHeaderDetail" />
+    </UnitTest>
+    <UnitTest name="Nh_Can_Orm_SaveGraph_Can_Create" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="13f7d7c6-d8db-1750-7cfe-dc506ff46655">
+      <Execution id="537a6e4f-b89a-4968-8f22-86d9108e8843" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_Can_Orm_SaveGraph_Can_Create" />
+    </UnitTest>
+    <UnitTest name="Ef_Can_Orm_SaveGraph_Can_Create" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="bc6bd775-f005-e7a2-7238-5a88173c9263">
+      <Execution id="39a031e4-a33d-4877-a458-04dbac9bbca3" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_Can_Orm_SaveGraph_Can_Create" />
+    </UnitTest>
+    <UnitTest name="Ef_CanDetectUpdateConflictingUpdate" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="ca3ec696-2df9-55bd-c53c-f732b5c80a68">
+      <Execution id="4fcc1694-f404-4884-b953-1f880f746ed6" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_CanDetectUpdateConflictingUpdate" />
+    </UnitTest>
+    <UnitTest name="Ef_Can_Save_Then_Update" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="9076dd47-28a7-196a-e653-7fb55dfa55a8">
+      <Execution id="fcd15598-1338-4c94-a94e-a507c45395f4" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_Can_Save_Then_Update" />
+    </UnitTest>
+    <UnitTest name="Nh_SessionTransaction_cannot_detect_transaction_commitness" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="dad118fb-1088-58a3-350a-fc5e47173fa9">
+      <Execution id="b88dd555-f5e7-419b-9c08-5a730fe1ce63" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_SessionTransaction_cannot_detect_transaction_commitness" />
+    </UnitTest>
+    <UnitTest name="Ef_CanSaveHeaderDetail_ThenHeaderOnly" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="0ea817b0-89e9-afde-2a90-f0a2148b5b86">
+      <Execution id="43b38edc-f8e8-48ea-9252-eebd8bf12a5a" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_CanSaveHeaderDetail_ThenHeaderOnly" />
+    </UnitTest>
+    <UnitTest name="Memory_CanSaveHeaderDetail" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="c2e9f01d-6387-7f00-c2a6-71385a796942">
+      <Execution id="273cd9e9-b591-4bcc-9a45-a40cd88c4af3" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Memory_CanSaveHeaderDetail" />
+    </UnitTest>
+    <UnitTest name="Ef_CanSave" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="6a52032d-db59-8802-47db-20699e8ef053">
+      <Execution id="7349a7da-a9b8-4cfa-85ed-7eddb6c27880" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_CanSave" />
+    </UnitTest>
+    <UnitTest name="Ef_HasRowVersion" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="86150143-fb0b-c807-6c85-448e509331e0">
+      <Execution id="fe06103d-cbbb-44ce-9b60-63f6291551a8" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_HasRowVersion" />
+    </UnitTest>
+    <UnitTest name="Test_Ef_Get_Pk_via_pure_reflection" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="d6948249-9c33-5900-b906-67a9c3f3e0f6">
+      <Execution id="d49a3a36-5f8a-4392-b58b-f63ab1d272d7" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Test_Ef_Get_Pk_via_pure_reflection" />
+    </UnitTest>
+    <UnitTest name="Nh_CanSaveHeaderDetail_ThenHeaderOnly" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="80519bd9-73a3-a605-5d67-813603142393">
+      <Execution id="d1b6fad5-605d-41f5-88dd-e2108c930933" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_CanSaveHeaderDetail_ThenHeaderOnly" />
+    </UnitTest>
+    <UnitTest name="Nh_CanDetectDeleteConflictingUpdate" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="467d17f0-5ec4-24a5-9089-e15ef18964f7">
+      <Execution id="b87b764c-3b3e-4ad7-b379-9266d5f62d75" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_CanDetectDeleteConflictingUpdate" />
+    </UnitTest>
+    <UnitTest name="Nh_HasRowVersion" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="919c9ab6-d8de-ff18-95fc-25bc030735bd">
+      <Execution id="d84f6dbe-e34d-4764-8a23-0b1e2694f378" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_HasRowVersion" />
+    </UnitTest>
+    <UnitTest name="Ef_Can_Orm_do_cascaded_deletions" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="a2256363-4989-1fab-e208-96edc389fe3c">
+      <Execution id="39e9a4be-4d81-4797-8ec8-d5ff3974740c" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_Can_Orm_do_cascaded_deletions" />
+    </UnitTest>
+    <UnitTest name="Memory_CanSaveTransaction" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="6b805790-9c4f-2071-6e55-fbbb337c0021">
+      <Execution id="c6943508-d4af-49b2-ad09-828bd4b903d9" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Memory_CanSaveTransaction" />
+    </UnitTest>
+    <UnitTest name="Ef_CanDetectUpdateConflictingDelete" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="cdd1ec05-a33a-edaf-1560-6637f27329d2">
+      <Execution id="8125d26c-74d8-49f5-bc27-c59f59155daa" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_CanDetectUpdateConflictingDelete" />
+    </UnitTest>
+    <UnitTest name="Ef_CanDelete" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="c3da4334-35ea-a9c1-5cbf-c1daa7323978">
+      <Execution id="17bf197d-134f-4655-90a5-57c286d7c17f" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_CanDelete" />
+    </UnitTest>
+    <UnitTest name="Ef_Can_queue_changes" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="ffcba511-cdf9-ce52-fd62-900fe7820ecc">
+      <Execution id="37f48d0e-45a3-451d-be55-5d1fe3f94059" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_Can_queue_changes" />
+    </UnitTest>
+    <UnitTest name="Fetching_strategies_of_EntityFramework_helper_has_no_problem_on_mocked_IQueryable" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="c8cf96fa-83e0-e026-64af-f003abc95103">
+      <Execution id="71e8910c-2a60-4d37-b570-4458c7a9027a" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Fetching_strategies_of_EntityFramework_helper_has_no_problem_on_mocked_IQueryable" />
+    </UnitTest>
+    <UnitTest name="Memory_CanDetectUpdateConflictingDelete" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="314cd11d-882d-0d0a-f196-b0f474ca8700">
+      <Execution id="139880d8-f806-4ebe-94e9-4fa743dd7bd0" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Memory_CanDetectUpdateConflictingDelete" />
+    </UnitTest>
+    <UnitTest name="Nh_Can_queue_changes" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="8ae0b4b0-ccc4-fc93-736a-72af24764f70">
+      <Execution id="069573fc-c73a-4e78-bd82-7432fcace49c" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_Can_queue_changes" />
+    </UnitTest>
+    <UnitTest name="Nh_Can_Detect_Transaction_From_Session_Begin_Transaction" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="55b9acb6-c8fa-83e2-62ec-c3bb6a6ae6ad">
+      <Execution id="0e6a2ff1-9bad-4ca9-8f50-df922eda942f" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_Can_Detect_Transaction_From_Session_Begin_Transaction" />
+    </UnitTest>
+    <UnitTest name="Ef_Can_Orm_SaveGraph_Can_Update" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="adbe83df-9ac4-b2e0-552a-ccb552c2f386">
+      <Execution id="8aa5122f-e4cf-408c-a6dc-e84813616bbf" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_Can_Orm_SaveGraph_Can_Update" />
+    </UnitTest>
+    <UnitTest name="Nh_CanDetectDeleteConflictingDelete" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="8557e6ab-47d2-b8b1-2926-0bb94a2d505d">
+      <Execution id="e99933dc-30b6-42fd-96bc-4dc2261969b4" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_CanDetectDeleteConflictingDelete" />
+    </UnitTest>
+    <UnitTest name="Memory_CanSave" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="8c5d9d25-e5b8-63c8-9c42-cebb67787fde">
+      <Execution id="0493c90a-39c1-4b8e-9759-b3f4a6b178f1" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Memory_CanSave" />
+    </UnitTest>
+    <UnitTest name="Can_do_deep_clone" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="f7d7cfdb-4468-5c56-7540-afe0d55e093a">
+      <Execution id="c222fa8d-7c56-4268-87fa-11b101f83c85" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_do_deep_clone" />
+    </UnitTest>
+    <UnitTest name="Ef_CanDetectDeleteConflictingUpdate" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="8bf5c997-85a0-f72e-564a-9d66e659263c">
+      <Execution id="2a484b3c-1539-48db-adf1-5f32bf200167" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_CanDetectDeleteConflictingUpdate" />
+    </UnitTest>
+    <UnitTest name="Memory_CanDelete" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="4eb22f5f-6a6e-dede-7dcd-8a02b2b7eecd">
+      <Execution id="d241719c-3211-492e-8417-b684a1d4f6c6" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Memory_CanDelete" />
+    </UnitTest>
+    <UnitTest name="Memory_CanHaveIncrementingKey" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="c5220795-75d7-ce76-adb5-6a1d661e1fb0">
+      <Execution id="3fe2afb6-cd0f-4b8f-ad5d-75269de0702b" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Memory_CanHaveIncrementingKey" />
+    </UnitTest>
+    <UnitTest name="Memory_CanDetectUpdateConflictingUpdate" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="385b97ed-767a-46eb-ce77-8402dbdb924a">
+      <Execution id="07288df6-7c70-459c-ae44-d02a972b3bcc" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Memory_CanDetectUpdateConflictingUpdate" />
+    </UnitTest>
+    <UnitTest name="Ef_Can_rollback_transaction" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="ef9db0bb-63c6-f8c2-c180-d50d1ce2ca5b">
+      <Execution id="900c97e0-dd4d-4ffc-9d7c-a945684e4171" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_Can_rollback_transaction" />
+    </UnitTest>
+    <UnitTest name="Nh_Can_save_transaction" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="d14d6d4a-1363-e36e-8cf9-c1c992b9e243">
+      <Execution id="980e5f99-7083-4540-914a-0f3da9446c99" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_Can_save_transaction" />
+    </UnitTest>
+    <UnitTest name="Nh_CanSaveHeaderDetail" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="f68ad391-23ca-2766-d2b2-8731589ef39b">
+      <Execution id="16d30ac5-169c-4c0b-b923-ae213c670582" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_CanSaveHeaderDetail" />
+    </UnitTest>
+    <UnitTest name="Nh_Can_rollback_transaction" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="498581d4-9097-59b7-1a75-c07c04a53675">
+      <Execution id="2edb639e-1cfb-4227-b8b6-d8ce432e9cd0" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_Can_rollback_transaction" />
+    </UnitTest>
+    <UnitTest name="Memory_CanDetectDeleteConflictingUpdate" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="9608206a-383a-828f-299c-2c493d95d886">
+      <Execution id="6e10a8bc-448c-4ebb-a966-ce54b6397cdd" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Memory_CanDetectDeleteConflictingUpdate" />
+    </UnitTest>
+    <UnitTest name="Nh_CanDetectUpdateConflictingUpdate" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="7b0e110e-2e6a-879c-359f-7b225fdba37f">
+      <Execution id="319c15e7-490a-4fe7-9eb4-8804f8caf99f" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_CanDetectUpdateConflictingUpdate" />
+    </UnitTest>
+    <UnitTest name="Nh_Can_Detect_Transaction_From_Session_Transaction_Begin" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="35cdc240-50c9-1325-cb02-2e20cf8d0e6b">
+      <Execution id="da59d6ac-c7fe-4288-9f90-2184564ecf38" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_Can_Detect_Transaction_From_Session_Transaction_Begin" />
+    </UnitTest>
+    <UnitTest name="Ef_CanHaveIncrementingKey" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="e392eca5-e91b-ff0f-619e-8a24d0ecbe68">
+      <Execution id="c8c04dd1-6c57-47c1-be17-514f83a99a5a" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_CanHaveIncrementingKey" />
+    </UnitTest>
+    <UnitTest name="Nh_CanSave" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="c9750689-b2a7-1965-bbd3-0c2f5eda3fb2">
+      <Execution id="ccaf9c95-2793-48fa-aa2c-6f514a07a83b" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_CanSave" />
+    </UnitTest>
+    <UnitTest name="Nh_Can_Save_Then_Update" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="e1cf2de5-588c-ea74-49a2-6fd3423b3d3b">
+      <Execution id="fb97dd1c-4708-4510-b212-6cf99f2ff52e" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_Can_Save_Then_Update" />
+    </UnitTest>
+    <UnitTest name="Nh_CanDelete" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="f3b46671-4362-7dc3-90a0-0fcbe80e34d8">
+      <Execution id="0d47e77d-07db-4337-8380-13aea0c6388b" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Nh_CanDelete" />
+    </UnitTest>
+    <UnitTest name="Test_Ef_Get_PK" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="146839f6-01ac-4b11-4240-124737807090">
+      <Execution id="8493cd0a-e487-4b08-b34d-ae988d2aa380" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Test_Ef_Get_PK" />
+    </UnitTest>
+    <UnitTest name="Ef_CanUpdate" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="9ce2ff54-3bea-2c09-7986-c83994c1d685">
+      <Execution id="18feda8b-120e-497d-be06-0cdcadac54b9" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Ef_CanUpdate" />
+    </UnitTest>
+    <UnitTest name="Memory_HasRowVersion" storage="c:\users\michael\_code\ienablemuch.totheefnhx\testproject\bin\release\testproject.dll" id="0947b967-fff8-9b8d-6688-507250130b49">
+      <Execution id="9a1f0b0f-da1c-40d2-aa65-54ba4f24a9b9" />
+      <TestMethod codeBase="C:/Users/Michael/_CODE/Ienablemuch.ToTheEfnhX/TestProject/bin/Release/TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject.TestTheIRepository, TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Memory_HasRowVersion" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="0947b967-fff8-9b8d-6688-507250130b49" executionId="9a1f0b0f-da1c-40d2-aa65-54ba4f24a9b9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0ea817b0-89e9-afde-2a90-f0a2148b5b86" executionId="43b38edc-f8e8-48ea-9252-eebd8bf12a5a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="13f7d7c6-d8db-1750-7cfe-dc506ff46655" executionId="537a6e4f-b89a-4968-8f22-86d9108e8843" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="146839f6-01ac-4b11-4240-124737807090" executionId="8493cd0a-e487-4b08-b34d-ae988d2aa380" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="170c0ff1-28bc-09a2-839b-5ab24853aea8" executionId="62ef9767-4f21-4af6-85e9-7f0cc1cadf4c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="24f780e7-822d-62ed-f13e-e2daddc611e1" executionId="8327e8f1-8d0b-4143-b822-1a7afd1ed638" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2c5bd9dd-112e-27f2-907e-74a104a18d8d" executionId="8e36f0d1-69b6-461e-bedc-0ee59f6752da" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="314cd11d-882d-0d0a-f196-b0f474ca8700" executionId="139880d8-f806-4ebe-94e9-4fa743dd7bd0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="35cdc240-50c9-1325-cb02-2e20cf8d0e6b" executionId="da59d6ac-c7fe-4288-9f90-2184564ecf38" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="385b97ed-767a-46eb-ce77-8402dbdb924a" executionId="07288df6-7c70-459c-ae44-d02a972b3bcc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="467d17f0-5ec4-24a5-9089-e15ef18964f7" executionId="b87b764c-3b3e-4ad7-b379-9266d5f62d75" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="498581d4-9097-59b7-1a75-c07c04a53675" executionId="2edb639e-1cfb-4227-b8b6-d8ce432e9cd0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4bb22a57-9102-06ea-257b-caae673d46d7" executionId="dd9678d4-f41e-491d-aec7-1bb6ff6c38a0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4eb22f5f-6a6e-dede-7dcd-8a02b2b7eecd" executionId="d241719c-3211-492e-8417-b684a1d4f6c6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="55b9acb6-c8fa-83e2-62ec-c3bb6a6ae6ad" executionId="0e6a2ff1-9bad-4ca9-8f50-df922eda942f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5b9ac5c8-7814-fd36-cd57-f0de0de0fae7" executionId="b13227e1-33df-4dce-aa20-f7d9d2d40d93" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5d13769c-6ed9-df33-8e6d-b0cc79c073f2" executionId="6f3bf00d-60ab-4b77-add9-e5dd71f7a81f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="63d9977f-78b2-ba78-f19b-1e84d68eabe8" executionId="48610863-35fc-46f7-9db2-e612e2237dea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6a52032d-db59-8802-47db-20699e8ef053" executionId="7349a7da-a9b8-4cfa-85ed-7eddb6c27880" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6b805790-9c4f-2071-6e55-fbbb337c0021" executionId="c6943508-d4af-49b2-ad09-828bd4b903d9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7b0e110e-2e6a-879c-359f-7b225fdba37f" executionId="319c15e7-490a-4fe7-9eb4-8804f8caf99f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="80519bd9-73a3-a605-5d67-813603142393" executionId="d1b6fad5-605d-41f5-88dd-e2108c930933" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="83330a72-51da-0d0d-d2b2-826b2f6cfd00" executionId="37123324-5a92-41dd-941e-0c04b084b3f9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8557e6ab-47d2-b8b1-2926-0bb94a2d505d" executionId="e99933dc-30b6-42fd-96bc-4dc2261969b4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="86150143-fb0b-c807-6c85-448e509331e0" executionId="fe06103d-cbbb-44ce-9b60-63f6291551a8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8ae0b4b0-ccc4-fc93-736a-72af24764f70" executionId="069573fc-c73a-4e78-bd82-7432fcace49c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8bf5c997-85a0-f72e-564a-9d66e659263c" executionId="2a484b3c-1539-48db-adf1-5f32bf200167" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8c5d9d25-e5b8-63c8-9c42-cebb67787fde" executionId="0493c90a-39c1-4b8e-9759-b3f4a6b178f1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9076dd47-28a7-196a-e653-7fb55dfa55a8" executionId="fcd15598-1338-4c94-a94e-a507c45395f4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="919c9ab6-d8de-ff18-95fc-25bc030735bd" executionId="d84f6dbe-e34d-4764-8a23-0b1e2694f378" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9608206a-383a-828f-299c-2c493d95d886" executionId="6e10a8bc-448c-4ebb-a966-ce54b6397cdd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9ce2ff54-3bea-2c09-7986-c83994c1d685" executionId="18feda8b-120e-497d-be06-0cdcadac54b9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a2256363-4989-1fab-e208-96edc389fe3c" executionId="39e9a4be-4d81-4797-8ec8-d5ff3974740c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a5e54779-0e2e-17fd-60ad-0caf532866a2" executionId="a04a9181-12d4-484c-a497-6a7f67bf5f90" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="adbe83df-9ac4-b2e0-552a-ccb552c2f386" executionId="8aa5122f-e4cf-408c-a6dc-e84813616bbf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bc6bd775-f005-e7a2-7238-5a88173c9263" executionId="39a031e4-a33d-4877-a458-04dbac9bbca3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c2e9f01d-6387-7f00-c2a6-71385a796942" executionId="273cd9e9-b591-4bcc-9a45-a40cd88c4af3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c3da4334-35ea-a9c1-5cbf-c1daa7323978" executionId="17bf197d-134f-4655-90a5-57c286d7c17f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c5220795-75d7-ce76-adb5-6a1d661e1fb0" executionId="3fe2afb6-cd0f-4b8f-ad5d-75269de0702b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c8cf96fa-83e0-e026-64af-f003abc95103" executionId="71e8910c-2a60-4d37-b570-4458c7a9027a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c8ff8ef9-a95a-0779-90f7-6e8188ebefd1" executionId="fcfbb53e-4bd5-43f0-ad38-639138ee8db7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c9750689-b2a7-1965-bbd3-0c2f5eda3fb2" executionId="ccaf9c95-2793-48fa-aa2c-6f514a07a83b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ca3ec696-2df9-55bd-c53c-f732b5c80a68" executionId="4fcc1694-f404-4884-b953-1f880f746ed6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cdd1ec05-a33a-edaf-1560-6637f27329d2" executionId="8125d26c-74d8-49f5-bc27-c59f59155daa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d14d6d4a-1363-e36e-8cf9-c1c992b9e243" executionId="980e5f99-7083-4540-914a-0f3da9446c99" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d409929f-129a-9686-590d-6472fdfa28e4" executionId="468e0587-f0ec-4a2e-a217-6f31ad4f8958" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d6948249-9c33-5900-b906-67a9c3f3e0f6" executionId="d49a3a36-5f8a-4392-b58b-f63ab1d272d7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dad118fb-1088-58a3-350a-fc5e47173fa9" executionId="b88dd555-f5e7-419b-9c08-5a730fe1ce63" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e1cf2de5-588c-ea74-49a2-6fd3423b3d3b" executionId="fb97dd1c-4708-4510-b212-6cf99f2ff52e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e392eca5-e91b-ff0f-619e-8a24d0ecbe68" executionId="c8c04dd1-6c57-47c1-be17-514f83a99a5a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ecf5b477-cdd8-3508-c195-40a64bc26f00" executionId="81ce6a2c-6e6f-4242-8b50-5f65314d0e31" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ef9db0bb-63c6-f8c2-c180-d50d1ce2ca5b" executionId="900c97e0-dd4d-4ffc-9d7c-a945684e4171" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f3b46671-4362-7dc3-90a0-0fcbe80e34d8" executionId="0d47e77d-07db-4337-8380-13aea0c6388b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f473cffe-6acb-bc8c-3c44-48f67f9567de" executionId="a52b17d7-767e-4173-a115-ff0b1e2129cf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f5049a26-85f5-2d61-7d0d-3fe36d498d57" executionId="60d26a3e-d5b1-408a-9d37-6b0e7ac716e2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f68ad391-23ca-2766-d2b2-8731589ef39b" executionId="16d30ac5-169c-4c0b-b923-ae213c670582" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f7d7cfdb-4468-5c56-7540-afe0d55e093a" executionId="c222fa8d-7c56-4268-87fa-11b101f83c85" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ffcba511-cdf9-ce52-fd62-900fe7820ecc" executionId="37f48d0e-45a3-451d-be55-5d1fe3f94059" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="9a1f0b0f-da1c-40d2-aa65-54ba4f24a9b9" testId="0947b967-fff8-9b8d-6688-507250130b49" testName="Memory_HasRowVersion" computerName="MICHAEL-PC" duration="00:00:00.0364627" startTime="2012-06-12T21:15:18.5560000+08:00" endTime="2012-06-12T21:15:18.8850000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9a1f0b0f-da1c-40d2-aa65-54ba4f24a9b9">
+    </UnitTestResult>
+    <UnitTestResult executionId="43b38edc-f8e8-48ea-9252-eebd8bf12a5a" testId="0ea817b0-89e9-afde-2a90-f0a2148b5b86" testName="Ef_CanSaveHeaderDetail_ThenHeaderOnly" computerName="MICHAEL-PC" duration="00:00:01.4828525" startTime="2012-06-12T21:15:18.9150000+08:00" endTime="2012-06-12T21:15:20.4020000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="43b38edc-f8e8-48ea-9252-eebd8bf12a5a">
+      <Output>
+        <DebugTrace>Tunay System.Data.Objects.DataClasses.RelationshipManager RelationshipManager
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Ef_CanSaveHeaderDetail_ThenHeaderOnly threw exception: 
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---&gt; System.InvalidOperationException: Mapping and metadata information could not be found for EntityType 'System.Data.Objects.DataClasses.RelationshipManager'.</Message>
+          <StackTrace>    at System.Data.Objects.ObjectContext.GetTypeUsage(Type entityCLRType)
+   at System.Data.Objects.ObjectContext.GetEntitySetFromContainer(EntityContainer container, Type entityCLRType, String exceptionParameterName)
+   at System.Data.Objects.ObjectContext.GetEntitySetForType(Type entityCLRType, String exceptionParameterName)
+   at System.Data.Objects.ObjectContext.CreateObjectSet[TEntity]()
+ --- End of inner exception stack trace ---
+    at System.RuntimeMethodHandle._InvokeMethodFast(IRuntimeMethodInfo method, Object target, Object[] arguments, SignatureStruct&amp; sig, MethodAttributes methodAttributes, RuntimeType typeOwner)
+   at System.RuntimeMethodHandle.InvokeMethodFast(IRuntimeMethodInfo method, Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeType typeOwner)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Ienablemuch.ToTheEfnhX.EntityFramework.Helper.GetPrimaryKeyPropertyNames(DbContext db, Type entType) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\EfRepository.cs:line 1063
+   at Ienablemuch.ToTheEfnhX.EntityFramework.Repository`1.AssignStub(Object parent, Object ent, String versionName, DbContext ctx) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\EfRepository.cs:line 233
+   at Ienablemuch.ToTheEfnhX.EntityFramework.Repository`1.AssignStub(Object parent, Object ent, String versionName, DbContext ctx) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\EfRepository.cs:line 220
+   at Ienablemuch.ToTheEfnhX.EntityFramework.Repository`1.SaveGraph(TEnt ent) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\EfRepository.cs:line 331
+   at TestProject.TestTheIRepository.Common_CanSaveHeaderDetail_ThenHeaderOnly(IRepository`1 db) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 1552
+   at TestProject.TestTheIRepository.Ef_CanSaveHeaderDetail_ThenHeaderOnly() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 1507
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="537a6e4f-b89a-4968-8f22-86d9108e8843" testId="13f7d7c6-d8db-1750-7cfe-dc506ff46655" testName="Nh_Can_Orm_SaveGraph_Can_Create" computerName="MICHAEL-PC" duration="00:00:02.7657473" startTime="2012-06-12T21:15:20.4070000+08:00" endTime="2012-06-12T21:15:23.1770000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="537a6e4f-b89a-4968-8f22-86d9108e8843">
+    </UnitTestResult>
+    <UnitTestResult executionId="8493cd0a-e487-4b08-b34d-ae988d2aa380" testId="146839f6-01ac-4b11-4240-124737807090" testName="Test_Ef_Get_PK" computerName="MICHAEL-PC" duration="00:00:00.0028326" startTime="2012-06-12T21:15:23.1930000+08:00" endTime="2012-06-12T21:15:23.2030000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8493cd0a-e487-4b08-b34d-ae988d2aa380">
+    </UnitTestResult>
+    <UnitTestResult executionId="62ef9767-4f21-4af6-85e9-7f0cc1cadf4c" testId="170c0ff1-28bc-09a2-839b-5ab24853aea8" testName="Nh_Can_Orm_do_cascaded_deletions" computerName="MICHAEL-PC" duration="00:00:00.0739126" startTime="2012-06-12T21:15:23.2100000+08:00" endTime="2012-06-12T21:15:23.2910000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="62ef9767-4f21-4af6-85e9-7f0cc1cadf4c">
+    </UnitTestResult>
+    <UnitTestResult executionId="8327e8f1-8d0b-4143-b822-1a7afd1ed638" testId="24f780e7-822d-62ed-f13e-e2daddc611e1" testName="Fetching_strategies_of_NHibernate_helper_has_no_problem_on_mocked_IQueryable" computerName="MICHAEL-PC" duration="00:00:00.0162763" startTime="2012-06-12T21:15:23.2950000+08:00" endTime="2012-06-12T21:15:23.3290000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8327e8f1-8d0b-4143-b822-1a7afd1ed638">
+    </UnitTestResult>
+    <UnitTestResult executionId="8e36f0d1-69b6-461e-bedc-0ee59f6752da" testId="2c5bd9dd-112e-27f2-907e-74a104a18d8d" testName="Nh_Can_Orm_SaveGraph_Can_Update" computerName="MICHAEL-PC" duration="00:00:00.0354516" startTime="2012-06-12T21:15:23.3350000+08:00" endTime="2012-06-12T21:15:23.3780000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8e36f0d1-69b6-461e-bedc-0ee59f6752da">
+    </UnitTestResult>
+    <UnitTestResult executionId="139880d8-f806-4ebe-94e9-4fa743dd7bd0" testId="314cd11d-882d-0d0a-f196-b0f474ca8700" testName="Memory_CanDetectUpdateConflictingDelete" computerName="MICHAEL-PC" duration="00:00:00.0013865" startTime="2012-06-12T21:15:23.3860000+08:00" endTime="2012-06-12T21:15:23.3930000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="139880d8-f806-4ebe-94e9-4fa743dd7bd0">
+    </UnitTestResult>
+    <UnitTestResult executionId="da59d6ac-c7fe-4288-9f90-2184564ecf38" testId="35cdc240-50c9-1325-cb02-2e20cf8d0e6b" testName="Nh_Can_Detect_Transaction_From_Session_Transaction_Begin" computerName="MICHAEL-PC" duration="00:00:00.0023268" startTime="2012-06-12T21:15:23.4010000+08:00" endTime="2012-06-12T21:15:23.4100000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="da59d6ac-c7fe-4288-9f90-2184564ecf38">
+    </UnitTestResult>
+    <UnitTestResult executionId="07288df6-7c70-459c-ae44-d02a972b3bcc" testId="385b97ed-767a-46eb-ce77-8402dbdb924a" testName="Memory_CanDetectUpdateConflictingUpdate" computerName="MICHAEL-PC" duration="00:00:00.0084017" startTime="2012-06-12T21:15:23.4170000+08:00" endTime="2012-06-12T21:15:23.4380000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="07288df6-7c70-459c-ae44-d02a972b3bcc">
+    </UnitTestResult>
+    <UnitTestResult executionId="b87b764c-3b3e-4ad7-b379-9266d5f62d75" testId="467d17f0-5ec4-24a5-9089-e15ef18964f7" testName="Nh_CanDetectDeleteConflictingUpdate" computerName="MICHAEL-PC" duration="00:00:00.0680815" startTime="2012-06-12T21:15:23.4460000+08:00" endTime="2012-06-12T21:15:23.5210000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b87b764c-3b3e-4ad7-b379-9266d5f62d75">
+    </UnitTestResult>
+    <UnitTestResult executionId="2edb639e-1cfb-4227-b8b6-d8ce432e9cd0" testId="498581d4-9097-59b7-1a75-c07c04a53675" testName="Nh_Can_rollback_transaction" computerName="MICHAEL-PC" duration="00:00:00.7375763" startTime="2012-06-12T21:15:23.5460000+08:00" endTime="2012-06-12T21:15:24.3480000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2edb639e-1cfb-4227-b8b6-d8ce432e9cd0">
+    </UnitTestResult>
+    <UnitTestResult executionId="dd9678d4-f41e-491d-aec7-1bb6ff6c38a0" testId="4bb22a57-9102-06ea-257b-caae673d46d7" testName="Ef_CanDetectDeleteConflictingDelete" computerName="MICHAEL-PC" duration="00:00:00.0552140" startTime="2012-06-12T21:15:24.3660000+08:00" endTime="2012-06-12T21:15:24.4400000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dd9678d4-f41e-491d-aec7-1bb6ff6c38a0">
+    </UnitTestResult>
+    <UnitTestResult executionId="d241719c-3211-492e-8417-b684a1d4f6c6" testId="4eb22f5f-6a6e-dede-7dcd-8a02b2b7eecd" testName="Memory_CanDelete" computerName="MICHAEL-PC" duration="00:00:00.0056857" startTime="2012-06-12T21:15:24.4470000+08:00" endTime="2012-06-12T21:15:24.4580000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d241719c-3211-492e-8417-b684a1d4f6c6">
+    </UnitTestResult>
+    <UnitTestResult executionId="0e6a2ff1-9bad-4ca9-8f50-df922eda942f" testId="55b9acb6-c8fa-83e2-62ec-c3bb6a6ae6ad" testName="Nh_Can_Detect_Transaction_From_Session_Begin_Transaction" computerName="MICHAEL-PC" duration="00:00:00.0035541" startTime="2012-06-12T21:15:24.4660000+08:00" endTime="2012-06-12T21:15:24.4750000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0e6a2ff1-9bad-4ca9-8f50-df922eda942f">
+    </UnitTestResult>
+    <UnitTestResult executionId="b13227e1-33df-4dce-aa20-f7d9d2d40d93" testId="5b9ac5c8-7814-fd36-cd57-f0de0de0fae7" testName="Saving_is_ok" computerName="MICHAEL-PC" duration="00:00:00.0027218" startTime="2012-06-12T21:15:24.4830000+08:00" endTime="2012-06-12T21:15:24.4910000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b13227e1-33df-4dce-aa20-f7d9d2d40d93">
+    </UnitTestResult>
+    <UnitTestResult executionId="6f3bf00d-60ab-4b77-add9-e5dd71f7a81f" testId="5d13769c-6ed9-df33-8e6d-b0cc79c073f2" testName="Nh_CanDetectUpdateConflictingDelete" computerName="MICHAEL-PC" duration="00:00:00.0177065" startTime="2012-06-12T21:15:24.4980000+08:00" endTime="2012-06-12T21:15:24.5220000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6f3bf00d-60ab-4b77-add9-e5dd71f7a81f">
+    </UnitTestResult>
+    <UnitTestResult executionId="48610863-35fc-46f7-9db2-e612e2237dea" testId="63d9977f-78b2-ba78-f19b-1e84d68eabe8" testName="Nh_CanUpdate" computerName="MICHAEL-PC" duration="00:00:00.0378734" startTime="2012-06-12T21:15:24.5300000+08:00" endTime="2012-06-12T21:15:24.5740000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="48610863-35fc-46f7-9db2-e612e2237dea">
+    </UnitTestResult>
+    <UnitTestResult executionId="7349a7da-a9b8-4cfa-85ed-7eddb6c27880" testId="6a52032d-db59-8802-47db-20699e8ef053" testName="Ef_CanSave" computerName="MICHAEL-PC" duration="00:00:00.0702432" startTime="2012-06-12T21:15:24.5870000+08:00" endTime="2012-06-12T21:15:24.6750000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7349a7da-a9b8-4cfa-85ed-7eddb6c27880">
+    </UnitTestResult>
+    <UnitTestResult executionId="c6943508-d4af-49b2-ad09-828bd4b903d9" testId="6b805790-9c4f-2071-6e55-fbbb337c0021" testName="Memory_CanSaveTransaction" computerName="MICHAEL-PC" duration="00:00:00.0185301" startTime="2012-06-12T21:15:24.6800000+08:00" endTime="2012-06-12T21:15:24.7100000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c6943508-d4af-49b2-ad09-828bd4b903d9">
+    </UnitTestResult>
+    <UnitTestResult executionId="319c15e7-490a-4fe7-9eb4-8804f8caf99f" testId="7b0e110e-2e6a-879c-359f-7b225fdba37f" testName="Nh_CanDetectUpdateConflictingUpdate" computerName="MICHAEL-PC" duration="00:00:00.0164983" startTime="2012-06-12T21:15:24.7260000+08:00" endTime="2012-06-12T21:15:24.7480000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="319c15e7-490a-4fe7-9eb4-8804f8caf99f">
+    </UnitTestResult>
+    <UnitTestResult executionId="d1b6fad5-605d-41f5-88dd-e2108c930933" testId="80519bd9-73a3-a605-5d67-813603142393" testName="Nh_CanSaveHeaderDetail_ThenHeaderOnly" computerName="MICHAEL-PC" duration="00:00:00.0205968" startTime="2012-06-12T21:15:24.7550000+08:00" endTime="2012-06-12T21:15:24.7810000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d1b6fad5-605d-41f5-88dd-e2108c930933">
+    </UnitTestResult>
+    <UnitTestResult executionId="37123324-5a92-41dd-941e-0c04b084b3f9" testId="83330a72-51da-0d0d-d2b2-826b2f6cfd00" testName="Nh_SessionTransaction_can_detect_its_own_transaction_commitness_only" computerName="MICHAEL-PC" duration="00:00:00.0021765" startTime="2012-06-12T21:15:24.7940000+08:00" endTime="2012-06-12T21:15:24.8010000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="37123324-5a92-41dd-941e-0c04b084b3f9">
+    </UnitTestResult>
+    <UnitTestResult executionId="e99933dc-30b6-42fd-96bc-4dc2261969b4" testId="8557e6ab-47d2-b8b1-2926-0bb94a2d505d" testName="Nh_CanDetectDeleteConflictingDelete" computerName="MICHAEL-PC" duration="00:00:00.0307220" startTime="2012-06-12T21:15:24.8140000+08:00" endTime="2012-06-12T21:15:24.8610000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e99933dc-30b6-42fd-96bc-4dc2261969b4">
+    </UnitTestResult>
+    <UnitTestResult executionId="fe06103d-cbbb-44ce-9b60-63f6291551a8" testId="86150143-fb0b-c807-6c85-448e509331e0" testName="Ef_HasRowVersion" computerName="MICHAEL-PC" duration="00:00:00.0553616" startTime="2012-06-12T21:15:24.9280000+08:00" endTime="2012-06-12T21:15:24.9890000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fe06103d-cbbb-44ce-9b60-63f6291551a8">
+    </UnitTestResult>
+    <UnitTestResult executionId="069573fc-c73a-4e78-bd82-7432fcace49c" testId="8ae0b4b0-ccc4-fc93-736a-72af24764f70" testName="Nh_Can_queue_changes" computerName="MICHAEL-PC" duration="00:00:00.0346544" startTime="2012-06-12T21:15:24.9950000+08:00" endTime="2012-06-12T21:15:25.0370000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="069573fc-c73a-4e78-bd82-7432fcace49c">
+    </UnitTestResult>
+    <UnitTestResult executionId="2a484b3c-1539-48db-adf1-5f32bf200167" testId="8bf5c997-85a0-f72e-564a-9d66e659263c" testName="Ef_CanDetectDeleteConflictingUpdate" computerName="MICHAEL-PC" duration="00:00:00.0218613" startTime="2012-06-12T21:15:25.0450000+08:00" endTime="2012-06-12T21:15:25.0730000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2a484b3c-1539-48db-adf1-5f32bf200167">
+    </UnitTestResult>
+    <UnitTestResult executionId="0493c90a-39c1-4b8e-9759-b3f4a6b178f1" testId="8c5d9d25-e5b8-63c8-9c42-cebb67787fde" testName="Memory_CanSave" computerName="MICHAEL-PC" duration="00:00:00.0068839" startTime="2012-06-12T21:15:25.0910000+08:00" endTime="2012-06-12T21:15:25.1150000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0493c90a-39c1-4b8e-9759-b3f4a6b178f1">
+    </UnitTestResult>
+    <UnitTestResult executionId="fcd15598-1338-4c94-a94e-a507c45395f4" testId="9076dd47-28a7-196a-e653-7fb55dfa55a8" testName="Ef_Can_Save_Then_Update" computerName="MICHAEL-PC" duration="00:00:00.0947437" startTime="2012-06-12T21:15:25.1190000+08:00" endTime="2012-06-12T21:15:25.2310000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fcd15598-1338-4c94-a94e-a507c45395f4">
+      <Output>
+        <DebugTrace>Tunay TestProject.SampleModel.Product Product
+Tunay TestProject.SampleModel.Product Product
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Ef_Can_Save_Then_Update threw exception: 
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---&gt; System.InvalidOperationException: The object in the 'Product_PriceList_Target' role cannot be automatically added to the context because it was retrieved using the NoTracking merge option. Explicitly attach the entity to the ObjectContext before defining the relationship.</Message>
+          <StackTrace>    at System.Data.Objects.DataClasses.RelatedEnd.Add(IEntityWrapper wrappedTarget, Boolean applyConstraints, Boolean addRelationshipAsUnchanged, Boolean relationshipAlreadyExists, Boolean allowModifyingOtherEndOfRelationship, Boolean forceForeignKeyChanges)
+   at System.Data.Objects.DataClasses.RelatedEnd.Add(IEntityWrapper wrappedEntity, Boolean applyConstraints)
+   at System.Data.Objects.DataClasses.EntityReference`1.set_ReferenceValue(IEntityWrapper value)
+   at System.Data.Objects.DataClasses.EntityReference`1.set_Value(TEntity value)
+   at System.Data.Entity.DynamicProxies.ProductPrice_4ED8CCC8D62B5FACAC4BE960D833DD6F9B142F7E1E05758CB139F6EB8F919090.set_Product(Product )
+ --- End of inner exception stack trace ---
+    at System.RuntimeMethodHandle._InvokeMethodFast(IRuntimeMethodInfo method, Object target, Object[] arguments, SignatureStruct&amp; sig, MethodAttributes methodAttributes, RuntimeType typeOwner)
+   at System.RuntimeMethodHandle.InvokeMethodFast(IRuntimeMethodInfo method, Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeType typeOwner)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   at Ienablemuch.ToTheEfnhX.EntityFramework.Repository`1.AssignStub(Object parent, Object ent, String versionName, DbContext ctx) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\EfRepository.cs:line 241
+   at Ienablemuch.ToTheEfnhX.EntityFramework.Repository`1.Save(TEnt ent) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\EfRepository.cs:line 59
+   at TestProject.TestTheIRepository.Common_Can_Save_Then_Update(IRepository`1 dbProd, IRepository`1 dbPrice) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 1406
+   at TestProject.TestTheIRepository.Ef_Can_Save_Then_Update() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 1355
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d84f6dbe-e34d-4764-8a23-0b1e2694f378" testId="919c9ab6-d8de-ff18-95fc-25bc030735bd" testName="Nh_HasRowVersion" computerName="MICHAEL-PC" duration="00:00:00.0252474" startTime="2012-06-12T21:15:25.2480000+08:00" endTime="2012-06-12T21:15:25.2890000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d84f6dbe-e34d-4764-8a23-0b1e2694f378">
+    </UnitTestResult>
+    <UnitTestResult executionId="6e10a8bc-448c-4ebb-a966-ce54b6397cdd" testId="9608206a-383a-828f-299c-2c493d95d886" testName="Memory_CanDetectDeleteConflictingUpdate" computerName="MICHAEL-PC" duration="00:00:00.0009253" startTime="2012-06-12T21:15:25.2980000+08:00" endTime="2012-06-12T21:15:25.3040000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6e10a8bc-448c-4ebb-a966-ce54b6397cdd">
+    </UnitTestResult>
+    <UnitTestResult executionId="18feda8b-120e-497d-be06-0cdcadac54b9" testId="9ce2ff54-3bea-2c09-7986-c83994c1d685" testName="Ef_CanUpdate" computerName="MICHAEL-PC" duration="00:00:00.1467887" startTime="2012-06-12T21:15:25.3080000+08:00" endTime="2012-06-12T21:15:25.4860000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="18feda8b-120e-497d-be06-0cdcadac54b9">
+    </UnitTestResult>
+    <UnitTestResult executionId="39e9a4be-4d81-4797-8ec8-d5ff3974740c" testId="a2256363-4989-1fab-e208-96edc389fe3c" testName="Ef_Can_Orm_do_cascaded_deletions" computerName="MICHAEL-PC" duration="00:00:00.2417009" startTime="2012-06-12T21:15:25.4960000+08:00" endTime="2012-06-12T21:15:25.7440000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="39e9a4be-4d81-4797-8ec8-d5ff3974740c">
+    </UnitTestResult>
+    <UnitTestResult executionId="a04a9181-12d4-484c-a497-6a7f67bf5f90" testId="a5e54779-0e2e-17fd-60ad-0caf532866a2" testName="Test_Ef_Get_PK_via_dynamic" computerName="MICHAEL-PC" duration="00:00:00.0272374" startTime="2012-06-12T21:15:25.7610000+08:00" endTime="2012-06-12T21:15:25.7940000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a04a9181-12d4-484c-a497-6a7f67bf5f90">
+    </UnitTestResult>
+    <UnitTestResult executionId="8aa5122f-e4cf-408c-a6dc-e84813616bbf" testId="adbe83df-9ac4-b2e0-552a-ccb552c2f386" testName="Ef_Can_Orm_SaveGraph_Can_Update" computerName="MICHAEL-PC" duration="00:00:00.1105652" startTime="2012-06-12T21:15:25.8010000+08:00" endTime="2012-06-12T21:15:25.9180000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8aa5122f-e4cf-408c-a6dc-e84813616bbf">
+    </UnitTestResult>
+    <UnitTestResult executionId="39a031e4-a33d-4877-a458-04dbac9bbca3" testId="bc6bd775-f005-e7a2-7238-5a88173c9263" testName="Ef_Can_Orm_SaveGraph_Can_Create" computerName="MICHAEL-PC" duration="00:00:00.0773655" startTime="2012-06-12T21:15:25.9290000+08:00" endTime="2012-06-12T21:15:26.0230000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="39a031e4-a33d-4877-a458-04dbac9bbca3">
+    </UnitTestResult>
+    <UnitTestResult executionId="273cd9e9-b591-4bcc-9a45-a40cd88c4af3" testId="c2e9f01d-6387-7f00-c2a6-71385a796942" testName="Memory_CanSaveHeaderDetail" computerName="MICHAEL-PC" duration="00:00:00.0028422" startTime="2012-06-12T21:15:26.0310000+08:00" endTime="2012-06-12T21:15:26.0460000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="273cd9e9-b591-4bcc-9a45-a40cd88c4af3">
+    </UnitTestResult>
+    <UnitTestResult executionId="17bf197d-134f-4655-90a5-57c286d7c17f" testId="c3da4334-35ea-a9c1-5cbf-c1daa7323978" testName="Ef_CanDelete" computerName="MICHAEL-PC" duration="00:00:00.0476141" startTime="2012-06-12T21:15:26.0530000+08:00" endTime="2012-06-12T21:15:26.1070000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="17bf197d-134f-4655-90a5-57c286d7c17f">
+    </UnitTestResult>
+    <UnitTestResult executionId="3fe2afb6-cd0f-4b8f-ad5d-75269de0702b" testId="c5220795-75d7-ce76-adb5-6a1d661e1fb0" testName="Memory_CanHaveIncrementingKey" computerName="MICHAEL-PC" duration="00:00:00.0065670" startTime="2012-06-12T21:15:26.1220000+08:00" endTime="2012-06-12T21:15:26.1630000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3fe2afb6-cd0f-4b8f-ad5d-75269de0702b">
+    </UnitTestResult>
+    <UnitTestResult executionId="71e8910c-2a60-4d37-b570-4458c7a9027a" testId="c8cf96fa-83e0-e026-64af-f003abc95103" testName="Fetching_strategies_of_EntityFramework_helper_has_no_problem_on_mocked_IQueryable" computerName="MICHAEL-PC" duration="00:00:00.0028267" startTime="2012-06-12T21:15:26.1830000+08:00" endTime="2012-06-12T21:15:26.1910000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="71e8910c-2a60-4d37-b570-4458c7a9027a">
+    </UnitTestResult>
+    <UnitTestResult executionId="fcfbb53e-4bd5-43f0-ad38-639138ee8db7" testId="c8ff8ef9-a95a-0779-90f7-6e8188ebefd1" testName="Nh_CanHaveIncrementingKey" computerName="MICHAEL-PC" duration="00:00:00.0287502" startTime="2012-06-12T21:15:26.1970000+08:00" endTime="2012-06-12T21:15:26.2300000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fcfbb53e-4bd5-43f0-ad38-639138ee8db7">
+    </UnitTestResult>
+    <UnitTestResult executionId="ccaf9c95-2793-48fa-aa2c-6f514a07a83b" testId="c9750689-b2a7-1965-bbd3-0c2f5eda3fb2" testName="Nh_CanSave" computerName="MICHAEL-PC" duration="00:00:00.0493380" startTime="2012-06-12T21:15:26.2360000+08:00" endTime="2012-06-12T21:15:26.2910000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ccaf9c95-2793-48fa-aa2c-6f514a07a83b">
+    </UnitTestResult>
+    <UnitTestResult executionId="4fcc1694-f404-4884-b953-1f880f746ed6" testId="ca3ec696-2df9-55bd-c53c-f732b5c80a68" testName="Ef_CanDetectUpdateConflictingUpdate" computerName="MICHAEL-PC" duration="00:00:00.0809954" startTime="2012-06-12T21:15:26.2970000+08:00" endTime="2012-06-12T21:15:26.4220000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4fcc1694-f404-4884-b953-1f880f746ed6">
+    </UnitTestResult>
+    <UnitTestResult executionId="8125d26c-74d8-49f5-bc27-c59f59155daa" testId="cdd1ec05-a33a-edaf-1560-6637f27329d2" testName="Ef_CanDetectUpdateConflictingDelete" computerName="MICHAEL-PC" duration="00:00:00.0353613" startTime="2012-06-12T21:15:26.4300000+08:00" endTime="2012-06-12T21:15:26.4820000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8125d26c-74d8-49f5-bc27-c59f59155daa">
+    </UnitTestResult>
+    <UnitTestResult executionId="980e5f99-7083-4540-914a-0f3da9446c99" testId="d14d6d4a-1363-e36e-8cf9-c1c992b9e243" testName="Nh_Can_save_transaction" computerName="MICHAEL-PC" duration="00:00:00.0140593" startTime="2012-06-12T21:15:26.4890000+08:00" endTime="2012-06-12T21:15:26.5130000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="980e5f99-7083-4540-914a-0f3da9446c99">
+    </UnitTestResult>
+    <UnitTestResult executionId="468e0587-f0ec-4a2e-a217-6f31ad4f8958" testId="d409929f-129a-9686-590d-6472fdfa28e4" testName="Memory_CanDetectDeleteConflictingDelete" computerName="MICHAEL-PC" duration="00:00:00.0006447" startTime="2012-06-12T21:15:26.5200000+08:00" endTime="2012-06-12T21:15:26.5260000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="468e0587-f0ec-4a2e-a217-6f31ad4f8958">
+    </UnitTestResult>
+    <UnitTestResult executionId="d49a3a36-5f8a-4392-b58b-f63ab1d272d7" testId="d6948249-9c33-5900-b906-67a9c3f3e0f6" testName="Test_Ef_Get_Pk_via_pure_reflection" computerName="MICHAEL-PC" duration="00:00:00.0024308" startTime="2012-06-12T21:15:26.5320000+08:00" endTime="2012-06-12T21:15:26.5390000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d49a3a36-5f8a-4392-b58b-f63ab1d272d7">
+    </UnitTestResult>
+    <UnitTestResult executionId="b88dd555-f5e7-419b-9c08-5a730fe1ce63" testId="dad118fb-1088-58a3-350a-fc5e47173fa9" testName="Nh_SessionTransaction_cannot_detect_transaction_commitness" computerName="MICHAEL-PC" duration="00:00:00.0047731" startTime="2012-06-12T21:15:26.5450000+08:00" endTime="2012-06-12T21:15:26.5610000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b88dd555-f5e7-419b-9c08-5a730fe1ce63">
+    </UnitTestResult>
+    <UnitTestResult executionId="fb97dd1c-4708-4510-b212-6cf99f2ff52e" testId="e1cf2de5-588c-ea74-49a2-6fd3423b3d3b" testName="Nh_Can_Save_Then_Update" computerName="MICHAEL-PC" duration="00:00:00.0568853" startTime="2012-06-12T21:15:26.5860000+08:00" endTime="2012-06-12T21:15:26.6460000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fb97dd1c-4708-4510-b212-6cf99f2ff52e">
+    </UnitTestResult>
+    <UnitTestResult executionId="c8c04dd1-6c57-47c1-be17-514f83a99a5a" testId="e392eca5-e91b-ff0f-619e-8a24d0ecbe68" testName="Ef_CanHaveIncrementingKey" computerName="MICHAEL-PC" duration="00:00:00.0287166" startTime="2012-06-12T21:15:26.6610000+08:00" endTime="2012-06-12T21:15:26.7010000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c8c04dd1-6c57-47c1-be17-514f83a99a5a">
+    </UnitTestResult>
+    <UnitTestResult executionId="81ce6a2c-6e6f-4242-8b50-5f65314d0e31" testId="ecf5b477-cdd8-3508-c195-40a64bc26f00" testName="Ef_CanSaveHeaderDetail" computerName="MICHAEL-PC" duration="00:00:00.0310775" startTime="2012-06-12T21:15:26.7090000+08:00" endTime="2012-06-12T21:15:26.7440000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="81ce6a2c-6e6f-4242-8b50-5f65314d0e31">
+      <Output>
+        <DebugTrace>Tunay System.Data.Objects.DataClasses.RelationshipManager RelationshipManager
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Test method TestProject.TestTheIRepository.Ef_CanSaveHeaderDetail threw exception: 
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---&gt; System.InvalidOperationException: Mapping and metadata information could not be found for EntityType 'System.Data.Objects.DataClasses.RelationshipManager'.</Message>
+          <StackTrace>    at System.Data.Objects.ObjectContext.GetTypeUsage(Type entityCLRType)
+   at System.Data.Objects.ObjectContext.GetEntitySetFromContainer(EntityContainer container, Type entityCLRType, String exceptionParameterName)
+   at System.Data.Objects.ObjectContext.GetEntitySetForType(Type entityCLRType, String exceptionParameterName)
+   at System.Data.Objects.ObjectContext.CreateObjectSet[TEntity]()
+ --- End of inner exception stack trace ---
+    at System.RuntimeMethodHandle._InvokeMethodFast(IRuntimeMethodInfo method, Object target, Object[] arguments, SignatureStruct&amp; sig, MethodAttributes methodAttributes, RuntimeType typeOwner)
+   at System.RuntimeMethodHandle.InvokeMethodFast(IRuntimeMethodInfo method, Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeType typeOwner)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Ienablemuch.ToTheEfnhX.EntityFramework.Helper.GetPrimaryKeyPropertyNames(DbContext db, Type entType) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\EfRepository.cs:line 1063
+   at Ienablemuch.ToTheEfnhX.EntityFramework.Repository`1.AssignStub(Object parent, Object ent, String versionName, DbContext ctx) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\EfRepository.cs:line 233
+   at Ienablemuch.ToTheEfnhX.EntityFramework.Repository`1.AssignStub(Object parent, Object ent, String versionName, DbContext ctx) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\EfRepository.cs:line 220
+   at Ienablemuch.ToTheEfnhX.EntityFramework.Repository`1.SaveGraph(TEnt ent) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\Ienablemuch.ToTheEfnhX.EntityFramework\EfRepository.cs:line 331
+   at TestProject.TestTheIRepository.Common_CanSaveHeaderDetail(IRepository`1 db) in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 185
+   at TestProject.TestTheIRepository.Ef_CanSaveHeaderDetail() in C:\Users\Michael\_CODE\Ienablemuch.ToTheEfnhX\TestProject\TestTheIRepository.cs:line 130
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="900c97e0-dd4d-4ffc-9d7c-a945684e4171" testId="ef9db0bb-63c6-f8c2-c180-d50d1ce2ca5b" testName="Ef_Can_rollback_transaction" computerName="MICHAEL-PC" duration="00:00:00.0132847" startTime="2012-06-12T21:15:26.7570000+08:00" endTime="2012-06-12T21:15:26.7770000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="900c97e0-dd4d-4ffc-9d7c-a945684e4171">
+    </UnitTestResult>
+    <UnitTestResult executionId="0d47e77d-07db-4337-8380-13aea0c6388b" testId="f3b46671-4362-7dc3-90a0-0fcbe80e34d8" testName="Nh_CanDelete" computerName="MICHAEL-PC" duration="00:00:00.0181673" startTime="2012-06-12T21:15:26.7850000+08:00" endTime="2012-06-12T21:15:26.8090000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0d47e77d-07db-4337-8380-13aea0c6388b">
+    </UnitTestResult>
+    <UnitTestResult executionId="a52b17d7-767e-4173-a115-ff0b1e2129cf" testId="f473cffe-6acb-bc8c-3c44-48f67f9567de" testName="Ef_Can_save_transaction" computerName="MICHAEL-PC" duration="00:00:00.0729187" startTime="2012-06-12T21:15:26.8330000+08:00" endTime="2012-06-12T21:15:26.9250000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a52b17d7-767e-4173-a115-ff0b1e2129cf">
+    </UnitTestResult>
+    <UnitTestResult executionId="60d26a3e-d5b1-408a-9d37-6b0e7ac716e2" testId="f5049a26-85f5-2d61-7d0d-3fe36d498d57" testName="Memory_CanUpdate" computerName="MICHAEL-PC" duration="00:00:00.0004158" startTime="2012-06-12T21:15:26.9520000+08:00" endTime="2012-06-12T21:15:26.9650000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="60d26a3e-d5b1-408a-9d37-6b0e7ac716e2">
+    </UnitTestResult>
+    <UnitTestResult executionId="16d30ac5-169c-4c0b-b923-ae213c670582" testId="f68ad391-23ca-2766-d2b2-8731589ef39b" testName="Nh_CanSaveHeaderDetail" computerName="MICHAEL-PC" duration="00:00:00.0287452" startTime="2012-06-12T21:15:26.9730000+08:00" endTime="2012-06-12T21:15:27.0110000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="16d30ac5-169c-4c0b-b923-ae213c670582">
+    </UnitTestResult>
+    <UnitTestResult executionId="c222fa8d-7c56-4268-87fa-11b101f83c85" testId="f7d7cfdb-4468-5c56-7540-afe0d55e093a" testName="Can_do_deep_clone" computerName="MICHAEL-PC" duration="00:00:00.0046501" startTime="2012-06-12T21:15:27.0200000+08:00" endTime="2012-06-12T21:15:27.0330000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c222fa8d-7c56-4268-87fa-11b101f83c85">
+    </UnitTestResult>
+    <UnitTestResult executionId="37f48d0e-45a3-451d-be55-5d1fe3f94059" testId="ffcba511-cdf9-ce52-fd62-900fe7820ecc" testName="Ef_Can_queue_changes" computerName="MICHAEL-PC" duration="00:00:00.0299802" startTime="2012-06-12T21:15:27.0390000+08:00" endTime="2012-06-12T21:15:27.0760000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="37f48d0e-45a3-451d-be55-5d1fe3f94059">
+    </UnitTestResult>
+  </Results>
+</TestRun>
