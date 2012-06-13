@@ -51,6 +51,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
             {
                 Type entType = typeof(TEnt);
 
+
                 object pkValue = entType.InvokeMember(PrimaryKeyName, System.Reflection.BindingFlags.GetProperty, null, ent, new object[] { });
 
 
@@ -118,25 +119,37 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                             }
                             else
                             {
+
                                 
+
+
                                 object refObj = entType.InvokeMember(pi.Name, BindingFlags.GetProperty, null, ent, new object[] { });
+
+                                //if (pi.Name == "Customer")
+                                //    throw new Exception("Customer " + pi.PropertyType.IsClass + " " + (refObj == null));
+
                                 if (refObj == null)
                                 {
-                                    // throw new Exception(pi.Name);
-                                    continue;
+                                    // throw new Exception("Hei");
+                                    var dummy = entType.InvokeMember(pi.Name, BindingFlags.GetProperty, null, liveObj, new object[] { });                                    
                                 }
-                                
-                                // string pkName = pi.Name + RepositoryConstants.IdSuffix; // temporarily
-                                string pkName = _ctx.GetPrimaryKeyPropertyNames(pi.PropertyType)[0];
 
-                                object refPk = refObj.GetType().InvokeMember(pkName, BindingFlags.GetProperty, null, refObj, new object[] { });
-                                
-                                // instead of database roundtrip...
-                                // object val = _ctx.Set(pi.PropertyType).Find(refPk);
+                                object val = null;
+                                if (refObj != null)
+                                {
+                                    // string pkName = pi.Name + RepositoryConstants.IdSuffix; // temporarily
+                                    string pkName = _ctx.GetPrimaryKeyPropertyNames(pi.PropertyType)[0];
 
-                                // ...use stub:                                
-                                object val = LoadStubX(pi.PropertyType, pkName, refPk, _ctx);
-                                
+                                    object refPk = refObj.GetType().InvokeMember(pkName, BindingFlags.GetProperty, null, refObj, new object[] { });
+
+                                    // instead of database roundtrip...
+                                    // object val = _ctx.Set(pi.PropertyType).Find(refPk);
+
+                                    // ...use stub:                                
+                                    val = LoadStubX(pi.PropertyType, pkName, refPk, _ctx);
+                                }
+                                else
+                                    val = null;
 
                                 /*dynamic x = val;
                                 throw new Exception("Yo " + refPk + " " + x.CountryName);*/
@@ -806,7 +819,19 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
             // there's no Dynamic Linq for SingleOrDefault. Hence doing both Where and SingleOrDefault            
             TEnt x = this.All.Where(string.Format("{0} = @0", PrimaryKeyName), id).SingleOrDefault();
-            
+
+
+
+            // dummy-read all Reference type(possible Independent Associations), to prevent null problem
+            // Without dummy reading EF, this fails:
+            // 
+            // o.Customer = null
+            // Assert.IsNull(o.Customer);
+            if (x != null)
+                foreach (PropertyInfo pi in x.GetType().GetProperties())
+                    if (pi.PropertyType.IsClass)
+                        pi.GetValue(x, null);
+                
 
             _ctx.Configuration.ProxyCreationEnabled = oldValue;
 
@@ -1067,6 +1092,17 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
             }
 
             var r = query.SingleOrDefault();
+
+            // dummy-read all Reference type(possible Independent Associations), to prevent null problem
+            // Without dummy reading EF, this fails:
+            // 
+            // o.Customer = null
+            // Assert.IsNull(o.Customer);
+            if (r != null)
+                foreach (PropertyInfo pi in r.GetType().GetProperties())
+                    if (pi.PropertyType.IsClass)
+                        pi.GetValue(r, null);
+
 
 
             _ctx.Configuration.ProxyCreationEnabled = oldValue;
