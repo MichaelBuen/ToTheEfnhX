@@ -172,7 +172,7 @@ delete from Question;
             Assert.AreEqual(4, px.PriceList.Count());
 
 
-            px = db.GetCascade(px.ProductId);
+            px = db.GetEager(px.ProductId);
 
             
 
@@ -234,7 +234,7 @@ delete from Question;
                 var xxx = query.Single();
                 */
 
-            var xxx = db.GetCascade(px.ProductId);
+            var xxx = db.GetEager(px.ProductId);
 
 
 
@@ -734,7 +734,7 @@ delete from Question;
             // Act            
             int questionId = importantQuestion.QuestionId;
             byte[] rowVersion = importantQuestion.RowVersion;
-            Question retrievedQuestion = repo.GetCascade(questionId);
+            Question retrievedQuestion = repo.GetEager(questionId);
 
 
             // Assert            
@@ -812,7 +812,7 @@ delete from Question;
 
 
 
-            Question retrievedQuestion = repo.GetCascade(questionId);
+            Question retrievedQuestion = repo.GetEager(questionId);
 
             int originalAnswersCount = retrievedQuestion.Answers.Count;
             // throw new Exception(retrievedQuestion.GetType().ToString());
@@ -834,7 +834,7 @@ delete from Question;
 
 
 
-            Question retrievedMergedQuestion = repo.GetCascade(questionId);
+            Question retrievedMergedQuestion = repo.GetEager(questionId);
 
 
 
@@ -937,7 +937,7 @@ delete from Question;
                 }
             }*/
 
-            Question retrievedQuestion = repo.GetCascade(questionId);
+            Question retrievedQuestion = repo.GetEager(questionId);
 
             retrievedQuestion.Text = "Hello";
             retrievedQuestion.Answers.Single(x => x.Poster == "John").Text = "number 9, number 9, number 9...";
@@ -973,7 +973,7 @@ delete from Question;
             */
 
 
-            Question testConflicter = repo.GetCascade(questionId);
+            Question testConflicter = repo.GetEager(questionId);
 
 
             // Assert            
@@ -1539,7 +1539,7 @@ delete from Question;
             Assert.AreEqual(4, px.PriceList.Count());
 
 
-            px = db.GetCascade(px.ProductId);
+            px = db.GetEager(px.ProductId);
 
 
 

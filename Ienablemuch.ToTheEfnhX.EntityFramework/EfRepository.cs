@@ -1064,7 +1064,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
 
         
-        public TEnt GetCascade(object pkValue)
+        public TEnt GetEager(object pkValue, params string[] paths)
         {
             
             

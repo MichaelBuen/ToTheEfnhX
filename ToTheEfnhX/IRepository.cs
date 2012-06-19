@@ -12,7 +12,7 @@ namespace Ienablemuch.ToTheEfnhX
         void Save(TEnt ent);
         void SaveGraph(TEnt ent);
         TEnt Get(object id);
-        TEnt GetCascade(object id);
+        TEnt GetEager(object id, params string[] paths);
 
 
         void Delete(object id);

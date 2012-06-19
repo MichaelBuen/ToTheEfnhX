@@ -389,7 +389,7 @@ namespace Ienablemuch.ToTheEfnhX.NHibernate
 
 
 
-        public TEnt GetCascade(object id)
+        public TEnt GetEager(object id, params string[] paths)
         {
             Evict(id);
             typeof(TEnt).DetectIdType(PrimaryKeyName, id);

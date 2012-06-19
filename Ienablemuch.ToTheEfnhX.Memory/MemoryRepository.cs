@@ -231,7 +231,7 @@ namespace Ienablemuch.ToTheEfnhX.Memory
         }
 
 
-        public TEnt GetCascade(object id)
+        public TEnt GetEager(object id, params string[] paths)
         {
             return Get(id);
         }
