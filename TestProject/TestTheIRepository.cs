@@ -15,7 +15,7 @@ using NH = Ienablemuch.ToTheEfnhX.NHibernate;
 using Ienablemuch.ToTheEfnhX.Memory;
 
 
-using Ienablemuch.ToTheEfnhX.CommonExtensions;
+// using Ienablemuch.ToTheEfnhX.CommonExtensions;
 
 using System.Collections.Generic;
 
@@ -29,6 +29,7 @@ using System.Data;
 using System.Reflection;
 
 
+using System.Linq.Expressions;
 
 namespace TestProject
 {
@@ -81,7 +82,7 @@ delete from Question;
         [TestMethod]
         public void Memory_CanSave()
         {
-            IRepository<Product> db = new MemoryRepository<Product>();
+            IRepository<Product> db = new Repository<Product>();
             Common_CanSave(db);
         }
         [TestMethod]
@@ -136,7 +137,7 @@ delete from Question;
         [TestMethod]
         public void Memory_CanSaveHeaderDetail()
         {
-            IRepository<Product> db = new MemoryRepository<Product>();
+            IRepository<Product> db = new Repository<Product>();
             // throw new Exception("Provider: " + db.All.Provider.GetType().ToString()); // System.Linq.EnumerableQuery`1[TestProject.SampleModel.Product]
             Common_CanSaveHeaderDetail(db);
         }
@@ -207,7 +208,7 @@ delete from Question;
             /*EmptyDatabase();
             IRepository<Product> db = new NhRepository<Product>(NhModelsMapper.GetSession(connectionString));*/
 
-            IRepository<Product> db = new MemoryRepository<Product>();
+            IRepository<Product> db = new Repository<Product>();
 
             var px = new Product
             {
@@ -252,7 +253,7 @@ delete from Question;
         [TestMethod]
         public void Memory_CanDelete()
         {
-            IRepository<Product> db = new MemoryRepository<Product>();
+            IRepository<Product> db = new Repository<Product>();
             Common_CanDelete(db);
         }
 
@@ -292,7 +293,7 @@ delete from Question;
         [TestMethod]
         public void Memory_CanUpdate()
         {
-            IRepository<Product> db = new MemoryRepository<Product>();
+            IRepository<Product> db = new Repository<Product>();
             Common_CanUpdate(db);
         }
         [TestMethod]
@@ -399,7 +400,7 @@ delete from Question;
         [TestMethod]
         public void Memory_HasRowVersion()
         {
-            IRepository<Product> db = new MemoryRepository<Product>();
+            IRepository<Product> db = new Repository<Product>();
             Common_HasRowVersion(db);
         }
         [TestMethod]
@@ -449,7 +450,7 @@ delete from Question;
         [ExpectedException(typeof(DbChangesConcurrencyException))]
         public void Memory_CanDetectUpdateConflictingUpdate()
         {
-            IRepository<Product> db = new MemoryRepository<Product>();
+            IRepository<Product> db = new Repository<Product>();
             Common_CanDetectUpdateConflictingUpdate(db);
         }
         [TestMethod]
@@ -495,7 +496,7 @@ delete from Question;
         [ExpectedException(typeof(DbChangesConcurrencyException))]
         public void Memory_CanDetectUpdateConflictingDelete()
         {
-            IRepository<Product> db = new MemoryRepository<Product>();
+            IRepository<Product> db = new Repository<Product>();
             Common_CanDetectUpdateConflictingDelete(db);
         }
         [TestMethod]
@@ -546,7 +547,7 @@ delete from Question;
         [ExpectedException(typeof(DbChangesConcurrencyException))]
         public void Memory_CanDetectDeleteConflictingUpdate()
         {
-            IRepository<Product> db = new MemoryRepository<Product>();
+            IRepository<Product> db = new Repository<Product>();
             Common_CanDetectDeleteConflictingUpdate(db);
         }
         [TestMethod]
@@ -592,7 +593,7 @@ delete from Question;
         [ExpectedException(typeof(DbChangesConcurrencyException))]
         public void Memory_CanDetectDeleteConflictingDelete()
         {
-            IRepository<Product> db = new MemoryRepository<Product>();
+            IRepository<Product> db = new Repository<Product>();
             Common_CanDetectDeleteConflictingDelete(db);
         }
 
@@ -639,7 +640,7 @@ delete from Question;
         [TestMethod]
         public void Memory_CanHaveIncrementingKey()
         {
-            IRepository<Product> db = new MemoryRepository<Product>();
+            IRepository<Product> db = new Repository<Product>();
             Common_CanHaveIncrementingKey(db);
         }
         [TestMethod]
@@ -692,15 +693,17 @@ delete from Question;
         [TestMethod]
         public void Fetching_strategies_of_NHibernate_helper_has_no_problem_on_mocked_IQueryable()
         {
-            IRepository<Product> db = new MemoryRepository<Product>();
-            var z = db.All.Where(x => x.ProductId == 1).EagerLoadMany(x => x.PriceList).ToList();
+            IRepository<Product> db = new Repository<Product>();
+            // var z = db.All.Where(x => x.ProductId == 1).EagerLoadMany(x => x.PriceList).ToList();
+            var z = NH.EagerExtensionHelper.EagerLoad(db.All.Where(x => x.ProductId == 1), "PriceList").ToList();
         }
 
         [TestMethod]
         public void Fetching_strategies_of_EntityFramework_helper_has_no_problem_on_mocked_IQueryable()
         {
-            IRepository<Product> db = new MemoryRepository<Product>();
-            var z = db.All.Where(x => x.ProductId == 1).EagerLoadMany(x => x.PriceList).ToList();
+            IRepository<Product> db = new Repository<Product>();
+            // var z = db.All.Where(x => x.ProductId == 1).EagerLoadMany(x => x.PriceList).ToList();
+            var z = EF.EagerExtensionHelper.EagerLoad(db.All.Where(x => x.ProductId == 1), "PriceList").ToList();
         }
 
 
@@ -1227,8 +1230,8 @@ delete from Question;
 
             ITransactionBoundFactory xf = new MemoryTransactionBoundFactory();
 
-            IRepository<Product> prod = new MemoryRepository<Product>();
-            IRepository<Question> ques = new MemoryRepository<Question>();
+            IRepository<Product> prod = new Repository<Product>();
+            IRepository<Question> ques = new Repository<Question>();
             Common_Can_save_transaction(xf, prod, ques);
         }
 
@@ -1614,7 +1617,86 @@ delete from Question;
         }
 
 
+        [TestMethod]
+        public void Nh_Can_Fetch_Eager_Load()
+        {
+            EmptyDatabase();
+            IRepository<Question> db = new NH.Repository<Question>(NhModelsMapper.GetSession(connectionString));
+            Test_Can_Fetch_Eager_Load_Common(db);
+
+
+            // Arrange
+            EmptyDatabase();
+            Question qx = new Question { Text = "42" };
+            db.Save(qx);
+            db.Evict(qx.QuestionId);
+
+            // Act
+            var qq = NH.EagerExtensionHelper.EagerLoad(db.All.Where(x => x.QuestionId == qx.QuestionId), "Answers").SingleOrDefault();
+
+            // Assert
+            Assert.AreEqual("42", qq.Text);
+           
+        }
+
+        [TestMethod]
+        public void Ef_Can_Fetch_Eager_Load()
+        {
+            EmptyDatabase();
+            IRepository<Question> db = new EF.Repository<Question>(new EfDbMapper(connectionString));
+            Test_Can_Fetch_Eager_Load_Common(db);
+
+
+            // Arrange
+            EmptyDatabase();
+            Question qx = new Question { Text = "42" };
+            db.Save(qx);
+            db.Evict(qx.QuestionId);
+
+            // Act
+            var qq = EF.EagerExtensionHelper.EagerLoad(db.All.Where(x => x.QuestionId == qx.QuestionId), "Answers").SingleOrDefault();
+
+            // Assert
+            Assert.AreEqual("42", qq.Text);
+
+        }
+
+        public void Test_Can_Fetch_Eager_Load_Common(IRepository<Question> r)
+        {
+            var q = new Question { Text = "Hello", Answers = new List<Answer>(), Comments = new List<QuestionComment>() };
+            var c = new QuestionComment { Question = q, Text = "Hei" };
+            var a = new Answer { Question = q, Text = "Yes", Comments = new List<AnswerComment>() };
+
+            q.Comments.Add(c);
+                    
+
+            var ac = new AnswerComment { Answer = a, Text = "hahah" };
+            a.Comments.Add(ac);
+
+            q.Answers.Add(a);
+
+            r.Save(q);
+                                    
+
+            r.Evict(q.QuestionId);
+
+
+            var g = r.GetEager(q.QuestionId, "Answers", "Comments");
+
+
+
+            
+            
+            Assert.AreEqual("Hello", g.Text);
+            // System.Threading.Thread.Sleep(10000);
+            Assert.AreEqual("Hei", g.Comments[0].Text);
+            Assert.AreEqual("Yes", g.Answers[0].Text);
+            Assert.AreEqual("hahah", g.Answers[0].Comments[0].Text);
+
+        }
     
+
+
 
 
 
@@ -1626,4 +1708,7 @@ delete from Question;
     {
         public string[] Names { get; set; }
     }
+
+
 }
+    

@@ -11,6 +11,9 @@ using Ienablemuch.ToTheEfnhX.ForImplementorsOnly;
 using System.Collections;
 using System.Reflection;
 
+using System.Linq.Dynamic;
+using System.Linq.Expressions;
+
 namespace Ienablemuch.ToTheEfnhX.NHibernate
 {
 
@@ -393,8 +396,65 @@ namespace Ienablemuch.ToTheEfnhX.NHibernate
         {
             Evict(id);
             typeof(TEnt).DetectIdType(PrimaryKeyName, id);
-            return Get(id);
+
+
+            {
+                IQueryable<TEnt> query = ISession.Query<TEnt>().Where(string.Format("{0} = @0", PrimaryKeyName), id);
+                Type emType = typeof(global::NHibernate.Linq.EagerFetchingExtensionMethods);
+                MethodInfo mi = emType.GetMethod("FetchMany");
+
+                return query.EagerLoad(paths).SingleOrDefault();
+            }
+
+
+        }
+
+
+    }//class Repository
+
+    public static class EagerExtensionHelper
+    {
+        public static IEnumerable<T> EagerLoad<T>(this IQueryable<T> query, params string[] paths)
+        {
+            Type emType = typeof(global::NHibernate.Linq.EagerFetchingExtensionMethods);
+            MethodInfo mi = emType.GetMethod("FetchMany");
+
+            if (!(query.Provider is global::NHibernate.Linq.DefaultQueryProvider))
+            {
+                return query;
+            }
+
+
+
+            foreach (string s in paths)
+            {
+                ParameterExpression paramEx = Expression.Parameter(typeof(T), "x");
+                MemberExpression me = Expression.Property(paramEx, s);
+
+
+                PropertyInfo pi = typeof(T).GetProperty(s);
+
+                if (pi.PropertyType.IsGenericType)
+                {
+                    Type elemType = pi.PropertyType.GetGenericArguments()[0];
+
+                    var propertyExpressionType = typeof(Func<,>)
+                        .MakeGenericType(typeof(T), typeof(IEnumerable<>).MakeGenericType(elemType));
+
+                    LambdaExpression lambdaEx = Expression.Lambda(propertyExpressionType, me, paramEx);
+
+                    var gmi = mi.MakeGenericMethod(typeof(T), elemType);
+                    var fetchManyResult = (IQueryable<T>)gmi.Invoke(emType, new object[] { query, lambdaEx });
+                    
+                    fetchManyResult.ToFuture();
+                }
+            }
+
+            return query.ToFuture();
+            
+            
         }
     }
+
 
 }

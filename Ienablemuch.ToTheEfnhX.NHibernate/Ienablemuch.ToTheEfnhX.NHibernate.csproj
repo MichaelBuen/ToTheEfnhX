@@ -56,6 +56,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SystemLinqDynamic\SystemLinqDynamic.csproj">
+      <Project>{28439386-5974-461E-AD7E-5E922E95231F}</Project>
+      <Name>SystemLinqDynamic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ToTheEfnhX\Ienablemuch.ToTheEfnhX.csproj">
       <Project>{C67F9BBE-EDA6-4261-9742-42272CD784C4}</Project>
       <Name>Ienablemuch.ToTheEfnhX</Name>

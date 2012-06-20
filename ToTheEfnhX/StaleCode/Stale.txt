@@ -2319,3 +2319,123 @@ delete from Question;
 
 
 }
+
+
+----------------------------------------------------
+
+        public void Test_Can_Fetch_Eager_Load_Common_X(IRepository<Question> r)
+        {
+            var q = new Question { Text = "Hello", Answers = new List<Answer>(), Comments = new List<QuestionComment>() };
+            var c = new QuestionComment { Question = q, Text = "Hei" };
+            var a = new Answer { Question = q, Text = "Yes", Comments = new List<AnswerComment>() };
+
+            var zzz = (Ienablemuch.ToTheEfnhX.NHibernate.Repository<Question>)r;
+
+            q.Comments.Add(c);
+
+
+            var ac = new AnswerComment { Answer = a, Text = "hahah" };
+            a.Comments.Add(ac);
+
+            q.Answers.Add(a);
+
+            r.Save(q);
+
+
+            // var gx = r.GetEager(q.QuestionId, "Answers", "Comments");
+
+            r.Evict(q.QuestionId);
+
+
+
+
+
+
+            /*
+            zzz.ISession.Query<Question>()
+                .Where(x => x.QuestionId == q.QuestionId)
+                .FetchMany(x => x.Answers)
+                .ToFuture();*/
+
+            // zzz.ISession.Query<Question>()
+
+            // NHibernate.Linq.LinqExtensionMethods.Query<
+
+
+            
+            
+
+            // extension method type
+            /*Type emType = typeof(NHibernate.Linq.LinqExtensionMethods);
+            MethodInfo mi = emType.GetMethod("Query",new Type[] { typeof(NHibernate.ISession) });
+            mi = mi.MakeGenericMethod(typeof(Question));
+            mi.Invoke(emType, new object[] { zzz.ISession } );
+            */
+
+
+            IQueryable<Question> query = zzz.ISession.Query<Question>().Where(string.Format("{0} = @0", "QuestionId"), q.QuestionId);
+            Type emType = typeof(NHibernate.Linq.EagerFetchingExtensionMethods);
+            MethodInfo mi = emType.GetMethod("FetchMany");
+
+            //Type emType = typeof(LinqNh);
+            //MethodInfo mi = emType.GetMethod("XfetchMany");
+            
+            ParameterExpression paramEx = Expression.Parameter(typeof(Question), "t");
+            MemberExpression me = Expression.Property(paramEx, "Answers");
+            
+            // var me = Expression.Convert(Expression.Property(paramEx, "Answers"), typeof(IEnumerable<Answer>));
+
+            
+
+            var xxxx = typeof(Func<,>)
+                .MakeGenericType(typeof(Question), typeof(IEnumerable<>).MakeGenericType(typeof(Answer)));
+            
+            LambdaExpression lambdaEx = Expression.Lambda (xxxx, me, paramEx);
+
+            // var rs = Expression.Lambda<Func<TOriginating
+            
+            
+            
+            var xx =
+                (IQueryable<Question>)
+                mi.MakeGenericMethod(typeof(Question), typeof(Answer)).Invoke(emType, new object[] { query, lambdaEx });
+            
+            xx.ToFuture();
+
+
+            zzz.ISession.Query<Question>()
+                .Where(x => x.QuestionId == q.QuestionId)
+                .FetchMany(x => x.Comments)
+                .ToFuture();
+            
+
+
+            var g = zzz.ISession.Query<Question>()
+                .Where(x => x.QuestionId == q.QuestionId)
+                .ToFuture()
+                .SingleOrDefault();
+
+
+
+            
+
+            Assert.AreEqual("Hello", g.Text);
+            System.Threading.Thread.Sleep(10000);
+            Assert.AreEqual("Hei", g.Comments[0].Text);
+            Assert.AreEqual("Yes", g.Answers[0].Text);
+            Assert.AreEqual("hahah", g.Answers[0].Comments[0].Text);
+           
+        }
+    
+
+    public static class LinqNh
+    {
+        public static INhFetchRequest<TOriginating, TRelated> XfetchMany<TOriginating, TRelated>(
+            this IQueryable<TOriginating> query,
+            Expression<Func<TOriginating, IList<TRelated>>> relatedObjectSelector)
+        {
+            var rs = Expression.Lambda<Func<TOriginating, IEnumerable<TRelated>>>(relatedObjectSelector.Body, relatedObjectSelector.Parameters);
+            return NHibernate.Linq.EagerFetchingExtensionMethods.FetchMany(query, rs);
+        }
+    }
+

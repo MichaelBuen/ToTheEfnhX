@@ -14,6 +14,8 @@ namespace Ienablemuch.ToTheEfnhX
         TEnt Get(object id);
         TEnt GetEager(object id, params string[] paths);
 
+        
+
 
         void Delete(object id);
         void DeleteCascade(object id);

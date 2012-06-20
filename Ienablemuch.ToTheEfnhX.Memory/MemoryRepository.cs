@@ -12,14 +12,14 @@ using System.Reflection;
 
 namespace Ienablemuch.ToTheEfnhX.Memory
 {
-    public class MemoryRepository<TEnt> : IRepository<TEnt> where TEnt : class
+    public class Repository<TEnt> : IRepository<TEnt> where TEnt : class
     {
 
 
         IList<TEnt> _list = null;
         IQueryable<TEnt> _queryable = null;
 
-        public MemoryRepository()
+        public Repository()
         {
             _list = new List<TEnt>();
             _queryable = _list.AsQueryable();
@@ -235,7 +235,19 @@ namespace Ienablemuch.ToTheEfnhX.Memory
         {
             return Get(id);
         }
+
+
+    }// Repository
+
+
+    public static class EagerExtensionHelper
+    {
+        public static IEnumerable<T> EagerLoad<T>(this IQueryable<T> query, params string[] paths) where T : class
+        {
+            return query;
+        }
     }
+
 
     
 }

@@ -51,7 +51,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
             {
                 Type entType = typeof(TEnt);
 
-
+                
                 object pkValue = entType.InvokeMember(PrimaryKeyName, System.Reflection.BindingFlags.GetProperty, null, ent, new object[] { });
 
 
@@ -915,8 +915,7 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
         {
             var cachedEnt =
                 _ctx.ChangeTracker.Entries();
-
-
+            
             foreach (var x in cachedEnt)
                 _ctx.Entry(x.Entity).State = EntityState.Detached;
         }
@@ -1076,8 +1075,10 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
 
             Type entType = typeof(TEnt);
             var query = _ctx.Set<TEnt>().AsNoTracking().Where(string.Format("{0} = @0", PrimaryKeyName), pkValue);
-            
-            
+
+
+
+            TEnt r = null;
             if (!_ctx.Configuration.ProxyCreationEnabled)
             {
                 //  e.g.
@@ -1087,11 +1088,15 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
                 //query = query.Include("Comments");
 
                 foreach (string path in GetCollectionPaths(entType))
-                    query = query.Include(path);                
+                    query = query.Include(path);
 
             }
+            else
+            {
+                r = query.EagerLoad(paths).SingleOrDefault();
+            }
 
-            var r = query.SingleOrDefault();
+            
 
             // dummy-read all Reference type(possible Independent Associations), to prevent null problem
             // Without dummy reading EF, this fails:
@@ -1108,9 +1113,12 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
             _ctx.Configuration.ProxyCreationEnabled = oldValue;
 
             return r;
+
             // return (TEnt) r.Clone();
         }
     }//EfRepository
+
+
 
     public static class Helper
     {
@@ -1137,6 +1145,19 @@ namespace Ienablemuch.ToTheEfnhX.EntityFramework
             IEnumerable<string> keyNames = entitySet.ElementType.KeyMembers.Select(k => k.Name);
             return keyNames.ToArray();
 
+        }
+    }
+
+
+    public static class EagerExtensionHelper
+    {
+        public static IEnumerable<T> EagerLoad<T>(this IQueryable<T> query, params string[] paths) where T: class
+        {
+            
+            foreach (string path in paths)
+                query = query.Include(path);
+
+            return query;
         }
     }
 }
